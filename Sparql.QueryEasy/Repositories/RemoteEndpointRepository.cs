@@ -20,7 +20,7 @@ namespace Sparql.QueryEasy.Repositories
         {
             _httpClient = httpClient;
             _httpClient.DefaultRequestHeaders.Add("User-Agent", ".NET QueryEasy");
-            _wikidataApiUrl = "https://www.wikidata.org/w/api.php?action=wbsearchentities&continue=0&format=json&language=en&limit=20&origin=*&search=[search]&type=item&uselang=en";
+            _wikidataApiUrl = "https://www.wikidata.org/w/api.php?action=wbsearchentities&continue=0&format=json&language=en&limit=[QUERY_LIMIT]&origin=*&search=[search]&type=item&uselang=en";
         }
 
         public async Task<IEnumerable<PropertyDto>> GetElementRelationships(string elementId)
@@ -112,7 +112,7 @@ namespace Sparql.QueryEasy.Repositories
 
             if (_isWikidata)
             {
-                var response = await _httpClient.GetAsync(_wikidataApiUrl.Replace("[search]", search));
+                var response = await _httpClient.GetAsync(_wikidataApiUrl.Replace("[search]", search).Replace("[QUERY_LIMIT]", limit.ToString()));
                 if (response.IsSuccessStatusCode)
                 {
                     var responseData = await response.Content.ReadFromJsonAsync<WikidataApiResponseDto>();
@@ -138,7 +138,7 @@ namespace Sparql.QueryEasy.Repositories
                 .GetVariableLabel("?property")
                 .Filter(FilterType.Starts, "?propertyLabel", search)
                 .EndWhere()
-                .Limit(10)
+                .Limit(limit)
                 .Build();
 
             var results = await _endpoint.QueryWithResultSetAsync(query);
@@ -174,7 +174,7 @@ namespace Sparql.QueryEasy.Repositories
                 
             string query = _queryBuilder
                 .EndWhere()
-                .Limit(15)
+                .Limit(limit)
                 .Build();
 
             var results = await _endpoint.QueryWithResultSetAsync(query);
@@ -211,7 +211,7 @@ namespace Sparql.QueryEasy.Repositories
 
             string query = _queryBuilder
                 .EndWhere()
-                .Limit(15)
+                .Limit(limit)
                 .Build();
 
             return query;
