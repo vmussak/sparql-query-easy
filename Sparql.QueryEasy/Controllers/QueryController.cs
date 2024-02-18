@@ -39,7 +39,7 @@ namespace Sparql.QueryEasy.Controllers
         {
             var response = await _remoteEndpointRepository
                 .SetEndpoint(request.EndpointUrl)
-                .GetSearch(request.Search);
+                .GetSearch(request.Search, request.Limit);
 
             return Ok(new { Data = response });
         }
@@ -49,7 +49,7 @@ namespace Sparql.QueryEasy.Controllers
         {
             var response = await _remoteEndpointRepository
                 .SetEndpoint(request.EndpointUrl)
-                .GetQuery(request.Where, request.VariableName);
+                .GetQuery(request.Where, request.VariableName, request.Limit);
 
             return Ok(new { Data = response });
         }
@@ -59,7 +59,7 @@ namespace Sparql.QueryEasy.Controllers
         {
             var response = await _remoteEndpointRepository
                 .SetEndpoint(request.EndpointUrl)
-                .GetSparqlQuery(request.Where, request.VariableName);
+                .GetSparqlQuery(request.Where, request.VariableName, request.Limit);
 
             return Ok(new { Data = response });
         }

@@ -104,7 +104,7 @@ namespace Sparql.QueryEasy.Repositories
             );
         }
 
-        public async Task<IEnumerable<PropertyDto>> GetSearch(string search)
+        public async Task<IEnumerable<PropertyDto>> GetSearch(string search, int limit)
         {
             var relationships = new List<PropertyDto>();
 
@@ -156,7 +156,7 @@ namespace Sparql.QueryEasy.Repositories
             return relationships;
         }
 
-        public async Task<IEnumerable<PropertyDto>> GetQuery(IEnumerable<WhereRequest> where, string variableName)
+        public async Task<IEnumerable<PropertyDto>> GetQuery(IEnumerable<WhereRequest> where, string variableName, int limit)
         {
             var relationships = new List<PropertyDto>();
 
@@ -195,7 +195,7 @@ namespace Sparql.QueryEasy.Repositories
             );
         }
 
-        public async Task<string> GetSparqlQuery(IEnumerable<WhereRequest> where, string variableName)
+        public async Task<string> GetSparqlQuery(IEnumerable<WhereRequest> where, string variableName, int limit)
         {
             _queryBuilder
                 .AddDefaultPrefixes()
