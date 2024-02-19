@@ -10,9 +10,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHealthChecks();
+
 builder.Services.AddHttpClient<IRemoteEndpointRepository, RemoteEndpointRepository>();
 
 var app = builder.Build();
+
+app.MapHealthChecks("/health");
 
 app.UseSwagger();
 app.UseSwaggerUI();
