@@ -49,7 +49,7 @@ namespace Sparql.QueryEasy.Controllers
         {
             var response = await _remoteEndpointRepository
                 .SetEndpoint(request.EndpointUrl)
-                .GetQuery(request.Where, request.VariableName, request.Limit);
+                .GetQuery(request.Where, request.VariableName, request.Limit, request.IgnoreWikidata);
 
             return Ok(new { Data = response });
         }

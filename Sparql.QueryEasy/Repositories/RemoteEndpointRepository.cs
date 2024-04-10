@@ -156,7 +156,7 @@ namespace Sparql.QueryEasy.Repositories
             return relationships;
         }
 
-        public async Task<IEnumerable<PropertyDto>> GetQuery(IEnumerable<WhereRequest> where, string variableName, int limit)
+        public async Task<IEnumerable<PropertyDto>> GetQuery(IEnumerable<WhereRequest> where, string variableName, int limit, bool ignoreWikidata = true)
         {
             var relationships = new List<PropertyDto>();
 
@@ -169,7 +169,7 @@ namespace Sparql.QueryEasy.Repositories
             foreach(var item in where)
             {
                 _queryBuilder.Where(item.Subject, item.Predicate, item.Object)
-                    .GetVariableLabel(variableName, ignoreWikidata: true);
+                    .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
             }
                 
             string query = _queryBuilder

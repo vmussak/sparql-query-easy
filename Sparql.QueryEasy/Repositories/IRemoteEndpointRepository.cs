@@ -13,7 +13,7 @@ namespace Sparql.QueryEasy.Repositories
 
         Task<IEnumerable<PropertyDto>> GetSearch(string search, int limit);
 
-        Task<IEnumerable<PropertyDto>> GetQuery(IEnumerable<WhereRequest> where, string variableName, int limit);
+        Task<IEnumerable<PropertyDto>> GetQuery(IEnumerable<WhereRequest> where, string variableName, int limit, bool ignoreWikidata = true);
 
         Task<string> GetSparqlQuery(IEnumerable<WhereRequest> where, string variableName, int limit);
     }
