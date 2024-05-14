@@ -182,10 +182,14 @@ namespace Sparql.QueryEasy.Repositories
             var varName = variableName.Replace("?", "");
             foreach (var result in results)
             {
+                var labelProperty = result.GetStringValue($"{varName}Label");
+                var propertyId = result.GetStringValue(varName);
                 relationships.Add(new PropertyDto
                 {
-                    PropertyId = result.GetStringValue(varName),
-                    PropertyLabel = result.GetStringValue($"{varName}Label"),
+                    PropertyId = propertyId,
+                    PropertyLabel = string.IsNullOrEmpty(labelProperty)
+                        ? propertyId
+                        : labelProperty,
                     PropertyType = result.GetStringValue($"object")
                 });
             }
