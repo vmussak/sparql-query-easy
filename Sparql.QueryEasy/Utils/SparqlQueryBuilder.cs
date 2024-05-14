@@ -61,7 +61,11 @@ namespace Sparql.QueryEasy.Utils
         public SparqlQueryBuilder Where(string subject, string predicate, string @object)
         {
             //<http://www.wikidata.org/entity/Q529207> ?property [] .
-            _query.AppendLine($"{subject} {predicate} {@object} .");
+
+            var formatedObject = @object.StartsWith("<") ? @object : $"\"{@object}\"";
+            var formatedSubject = subject.StartsWith("<") ? subject : $"\"{subject}\"";
+
+            _query.AppendLine($"{formatedSubject} {predicate} {formatedObject} .");
             return this;
         }
 
