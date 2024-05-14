@@ -62,10 +62,10 @@ namespace Sparql.QueryEasy.Utils
         {
             //<http://www.wikidata.org/entity/Q529207> ?property [] .
 
-            var formatedObject = @object.StartsWith("<") ? @object : $"\"{@object}\"";
-            var formatedSubject = subject.StartsWith("<") ? subject : $"\"{subject}\"";
+            //var formatedObject = @object.StartsWith("<") ? @object : $"\"{@object}\"";
+            //var formatedSubject = subject.StartsWith("<") ? subject : $"\"{subject}\"";
 
-            _query.AppendLine($"{formatedSubject} {predicate} {formatedObject} .");
+            _query.AppendLine($"{subject} {predicate} {@object} .");
             return this;
         }
 
