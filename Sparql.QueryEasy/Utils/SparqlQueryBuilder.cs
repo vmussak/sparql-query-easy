@@ -61,7 +61,20 @@ namespace Sparql.QueryEasy.Utils
         public SparqlQueryBuilder Where(string subject, string predicate, string @object)
         {
             //<http://www.wikidata.org/entity/Q529207> ?property [] .
-            _query.AppendLine($"{subject} {predicate} {@object} .");
+
+            var isObjectLiteral = !@object.StartsWith("<") && !@object.StartsWith("[") && !@object.StartsWith("?");
+            var formatedSubject = subject.StartsWith("<") || subject.StartsWith("[") || subject.StartsWith("?") ? subject : $"\"{subject}\"";
+
+            if (isObjectLiteral)
+            {
+                var literalId = Guid.NewGuid().ToString()[..5];
+                _query.AppendLine($"{formatedSubject} {predicate} ?literalValue{literalId} .");
+                _query.AppendLine($"FILTER (str(?literalValue{literalId}) = \"{@object}\") . ");
+            }
+            else
+            {
+                _query.AppendLine($"{formatedSubject} {predicate} {@object} .");
+            }
             return this;
         }
 
