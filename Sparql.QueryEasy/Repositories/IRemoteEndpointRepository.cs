@@ -3,9 +3,9 @@ using Sparql.QueryEasy.Requests;
 
 namespace Sparql.QueryEasy.Repositories
 {
-    public interface IRemoteEndpointRepository
+    public interface IEndpointRepository
     {
-        IRemoteEndpointRepository SetEndpoint(string endpointUrl);
+        IEndpointRepository SetEndpoint(string endpointUrl);
 
         Task<IEnumerable<PropertyDto>> GetElementRelationships(string elementId);
 

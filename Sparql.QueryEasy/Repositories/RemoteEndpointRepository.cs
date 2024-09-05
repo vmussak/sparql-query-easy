@@ -1,4 +1,5 @@
 ﻿using AngleSharp.Dom;
+using Microsoft.Extensions.DependencyInjection;
 using Sparql.QueryEasy.Dtos;
 using Sparql.QueryEasy.Requests;
 using Sparql.QueryEasy.Utils;
@@ -8,19 +9,20 @@ using VDS.RDF.Storage;
 
 namespace Sparql.QueryEasy.Repositories
 {
-    public class RemoteEndpointRepository : IRemoteEndpointRepository
+    public class EndpointRepository : IEndpointRepository
     {
         private readonly HttpClient _httpClient;
         private SparqlQueryBuilder _queryBuilder;
-        private SparqlQueryClient _endpoint;
+        private IQueryExecutor _queryExecutor;
+        private readonly IServiceProvider _serviceProvider;
         private bool _isWikidata;
         private readonly string _wikidataApiUrl;
 
-        public RemoteEndpointRepository(HttpClient httpClient)
+        public EndpointRepository(HttpClient httpClient, IServiceProvider serviceProvider)
         {
             _httpClient = httpClient;
-            _httpClient.DefaultRequestHeaders.Add("User-Agent", ".NET QueryEasy");
             _wikidataApiUrl = "https://www.wikidata.org/w/api.php?action=wbsearchentities&continue=0&format=json&language=en&limit=[QUERY_LIMIT]&origin=*&search=[search]&type=item&uselang=en";
+            _serviceProvider = serviceProvider;
         }
 
         public async Task<IEnumerable<PropertyDto>> GetElementRelationships(string elementId)
@@ -37,7 +39,7 @@ namespace Sparql.QueryEasy.Repositories
                 .EndWhere()
                 .Build();
 
-            var results = await _endpoint.QueryWithResultSetAsync(query);
+            var results = await _queryExecutor.ExecuteAsync(query);
 
             foreach (var result in results)
             {
@@ -74,7 +76,7 @@ namespace Sparql.QueryEasy.Repositories
                 .EndWhere()
                 .Build();
 
-            var results = await _endpoint.QueryWithResultSetAsync(buildQuery);
+            var results = await _queryExecutor.ExecuteAsync(buildQuery);
 
             foreach (var result in results)
             {
@@ -117,7 +119,7 @@ namespace Sparql.QueryEasy.Repositories
                 {
                     var responseData = await response.Content.ReadFromJsonAsync<WikidataApiResponseDto>();
 
-                    foreach(var item in responseData.Search)
+                    foreach (var item in responseData.Search)
                     {
                         relationships.Add(new PropertyDto
                         {
@@ -127,21 +129,29 @@ namespace Sparql.QueryEasy.Repositories
                         });
                     }
                 }
-                
+
                 return relationships;
             }
 
-            string query = _queryBuilder
+            var isLocal = _queryExecutor is LocalQueryExecutor;
+
+            var queryBuilder = _queryBuilder
                 .AddDefaultPrefixes()
                 .Select("?property ?propertyLabel")
                 .StartWhere()
-                .GetVariableLabel("?property")
-                .Filter(FilterType.Starts, "?propertyLabel", search)
+                .GetVariableLabel("?property");
+
+            if (_queryExecutor is not LocalQueryExecutor)
+            {
+                queryBuilder = queryBuilder.Filter(FilterType.Starts, "?propertyLabel", search);
+            }
+
+            var query = queryBuilder
                 .EndWhere()
                 .Limit(limit)
                 .Build();
 
-            var results = await _endpoint.QueryWithResultSetAsync(query);
+            var results = await _queryExecutor.ExecuteAsync(query);
 
             foreach (var result in results)
             {
@@ -151,6 +161,11 @@ namespace Sparql.QueryEasy.Repositories
                     PropertyLabel = result.GetStringValue("propertyLabel"),
                     PropertyType = result.GetStringValue("propertyType")
                 });
+            }
+
+            if (isLocal)
+            {
+                return relationships.Where(x => x.PropertyLabel.ToLower().Contains(search.ToLower()));
             }
 
             return relationships;
@@ -166,18 +181,18 @@ namespace Sparql.QueryEasy.Repositories
                 .StartWhere();
 
 
-            foreach(var item in where)
+            foreach (var item in where)
             {
                 _queryBuilder.Where(item.Subject, item.Predicate, item.Object)
                     .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
             }
-                
+
             string query = _queryBuilder
                 .EndWhere()
                 .Limit(limit)
                 .Build();
 
-            var results = await _endpoint.QueryWithResultSetAsync(query);
+            var results = await _queryExecutor.ExecuteAsync(query);
 
             var varName = variableName.Replace("?", "");
             foreach (var result in results)
@@ -221,12 +236,22 @@ namespace Sparql.QueryEasy.Repositories
             return query;
         }
 
-        public IRemoteEndpointRepository SetEndpoint(string endpointUrl)
+        public IEndpointRepository SetEndpoint(string endpointUrl)
         {
             _isWikidata = endpointUrl.Contains("query.wikidata.org/sparql");
-
-            _endpoint = new SparqlQueryClient(_httpClient, new Uri(endpointUrl));
             _queryBuilder = new SparqlQueryBuilder(_isWikidata);
+
+            if (Guid.TryParse(endpointUrl, out _))
+            {
+                _queryExecutor = _serviceProvider.GetRequiredKeyedService<IQueryExecutor>("Local");
+            }
+            else
+            {
+                _queryExecutor = _serviceProvider.GetRequiredKeyedService<IQueryExecutor>("Remote");
+            }
+
+            _queryExecutor.SetDatabase(endpointUrl);
+
             return this;
         }
     }

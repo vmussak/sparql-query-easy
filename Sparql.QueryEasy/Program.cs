@@ -1,9 +1,13 @@
+using Microsoft.AspNetCore.Hosting.Builder;
 using Sparql.QueryEasy.Repositories;
 using Sparql.QueryEasy.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddMemoryCache();
+builder.Services.AddHttpClient();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -12,7 +16,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHealthChecks();
 
-builder.Services.AddHttpClient<IRemoteEndpointRepository, RemoteEndpointRepository>();
+builder.Services.AddKeyedScoped<IQueryExecutor, RemoteQueryExecutor>("Remote");
+builder.Services.AddKeyedScoped<IQueryExecutor, LocalQueryExecutor>("Local");
+builder.Services.AddHttpClient<IEndpointRepository, EndpointRepository>();
 
 var app = builder.Build();
 

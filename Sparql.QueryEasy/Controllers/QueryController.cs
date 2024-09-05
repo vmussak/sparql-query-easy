@@ -7,17 +7,17 @@ namespace Sparql.QueryEasy.Controllers
     [Route("api/query")]
     public class QueryController : ControllerBase
     {
-        private IRemoteEndpointRepository _remoteEndpointRepository;
+        private IEndpointRepository _endpointRepository;
 
-        public QueryController(IRemoteEndpointRepository remoteEndpointRepository)
+        public QueryController(IEndpointRepository endpointRepository)
         {
-            _remoteEndpointRepository = remoteEndpointRepository;
+            _endpointRepository = endpointRepository;
         }
 
         [HttpPost("relationships")]
         public async Task<IActionResult> GetElementRelationships([FromBody] GetElementRelationshipsRequest request)
         {
-            var response = await _remoteEndpointRepository
+            var response = await _endpointRepository
                 .SetEndpoint(request.EndpointUrl)
                 .GetElementRelationships(request.Id);
 
@@ -27,7 +27,7 @@ namespace Sparql.QueryEasy.Controllers
         [HttpPost("relationship-value")]
         public async Task<IActionResult> GetRelationshipValue([FromBody] GetRelationshipValueRequest request)
         {
-            var response = await _remoteEndpointRepository
+            var response = await _endpointRepository
                 .SetEndpoint(request.EndpointUrl)
                 .GetRelationshipValue(request.SubjectId, request.PredicateId, request.IsLiteral);
 
@@ -37,7 +37,7 @@ namespace Sparql.QueryEasy.Controllers
         [HttpPost("search")]
         public async Task<IActionResult> GetSearch([FromBody] GetSearchRequest request)
         {
-            var response = await _remoteEndpointRepository
+            var response = await _endpointRepository
                 .SetEndpoint(request.EndpointUrl)
                 .GetSearch(request.Search, request.Limit);
 
@@ -47,7 +47,7 @@ namespace Sparql.QueryEasy.Controllers
         [HttpPost]
         public async Task<IActionResult> GetQuery([FromBody] GetQueryRequest request)
         {
-            var response = await _remoteEndpointRepository
+            var response = await _endpointRepository
                 .SetEndpoint(request.EndpointUrl)
                 .GetQuery(request.Where, request.VariableName, request.Limit, request.IgnoreWikidata);
 
@@ -57,7 +57,7 @@ namespace Sparql.QueryEasy.Controllers
         [HttpPost("sparql")]
         public async Task<IActionResult> GetSparqlQuery([FromBody] GetQueryRequest request)
         {
-            var response = await _remoteEndpointRepository
+            var response = await _endpointRepository
                 .SetEndpoint(request.EndpointUrl)
                 .GetSparqlQuery(request.Where, request.VariableName, request.Limit);
 

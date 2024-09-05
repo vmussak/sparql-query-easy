@@ -108,7 +108,9 @@ namespace Sparql.QueryEasy.Utils
             {
                 _query.AppendLine($"{variableName} rdfs:label {variableName}Label .");
             }
+
             _query.AppendLine($"FILTER (lang({variableName}Label) = \"en\")");
+
             _query.AppendLine("}");
             return this;
         }
