@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting.Builder;
 using Sparql.QueryEasy.Repositories;
+using Sparql.QueryEasy.Services;
 using Sparql.QueryEasy.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,7 @@ builder.Services.AddHealthChecks();
 
 builder.Services.AddKeyedScoped<IQueryExecutor, RemoteQueryExecutor>("Remote");
 builder.Services.AddKeyedScoped<IQueryExecutor, LocalQueryExecutor>("Local");
-builder.Services.AddHttpClient<IEndpointRepository, EndpointRepository>();
+builder.Services.AddHttpClient<IEndpointService, EndpointService>();
 
 var app = builder.Build();
 

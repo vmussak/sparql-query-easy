@@ -1,15 +1,16 @@
 ﻿using AngleSharp.Dom;
 using Microsoft.Extensions.DependencyInjection;
 using Sparql.QueryEasy.Dtos;
+using Sparql.QueryEasy.Repositories;
 using Sparql.QueryEasy.Requests;
 using Sparql.QueryEasy.Utils;
 using System.Security.AccessControl;
 using VDS.RDF.Query;
 using VDS.RDF.Storage;
 
-namespace Sparql.QueryEasy.Repositories
+namespace Sparql.QueryEasy.Services
 {
-    public class EndpointRepository : IEndpointRepository
+    public class EndpointService : IEndpointService
     {
         private readonly HttpClient _httpClient;
         private SparqlQueryBuilder _queryBuilder;
@@ -18,7 +19,7 @@ namespace Sparql.QueryEasy.Repositories
         private bool _isWikidata;
         private readonly string _wikidataApiUrl;
 
-        public EndpointRepository(HttpClient httpClient, IServiceProvider serviceProvider)
+        public EndpointService(HttpClient httpClient, IServiceProvider serviceProvider)
         {
             _httpClient = httpClient;
             _wikidataApiUrl = "https://www.wikidata.org/w/api.php?action=wbsearchentities&continue=0&format=json&language=en&limit=[QUERY_LIMIT]&origin=*&search=[search]&type=item&uselang=en";
@@ -236,7 +237,7 @@ namespace Sparql.QueryEasy.Repositories
             return query;
         }
 
-        public IEndpointRepository SetEndpoint(string endpointUrl)
+        public IEndpointService SetEndpoint(string endpointUrl)
         {
             _isWikidata = endpointUrl.Contains("query.wikidata.org/sparql");
             _queryBuilder = new SparqlQueryBuilder(_isWikidata);

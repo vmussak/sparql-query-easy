@@ -1,11 +1,11 @@
 ﻿using Sparql.QueryEasy.Dtos;
 using Sparql.QueryEasy.Requests;
 
-namespace Sparql.QueryEasy.Repositories
+namespace Sparql.QueryEasy.Services
 {
-    public interface IEndpointRepository
+    public interface IEndpointService
     {
-        IEndpointRepository SetEndpoint(string endpointUrl);
+        IEndpointService SetEndpoint(string endpointUrl);
 
         Task<IEnumerable<PropertyDto>> GetElementRelationships(string elementId);
 

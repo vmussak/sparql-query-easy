@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Sparql.QueryEasy.Repositories;
 using Sparql.QueryEasy.Requests;
+using Sparql.QueryEasy.Services;
 
 namespace Sparql.QueryEasy.Controllers
 {
     [Route("api/query")]
     public class QueryController : ControllerBase
     {
-        private IEndpointRepository _endpointRepository;
+        private IEndpointService _endpointRepository;
 
-        public QueryController(IEndpointRepository endpointRepository)
+        public QueryController(IEndpointService endpointRepository)
         {
             _endpointRepository = endpointRepository;
         }
