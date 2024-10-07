@@ -188,6 +188,12 @@ namespace Sparql.QueryEasy.Services
                     .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
             }
 
+            if (!where.Any())
+            {
+                _queryBuilder.Where("?s", variableName, "?o")
+                   .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
+            }
+
             string query = _queryBuilder
                 .EndWhere()
                 .Limit(limit)
