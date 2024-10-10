@@ -196,9 +196,9 @@ namespace Sparql.QueryEasy.Services
 
             if (!where.Any())
             {
-                _queryBuilder.Where("?s", variableName, "?o")
+                _queryBuilder.Where(variableName, "?p" , "?o")
                    .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
-            }
+            } 
 
             string query = _queryBuilder
                 .EndWhere()
