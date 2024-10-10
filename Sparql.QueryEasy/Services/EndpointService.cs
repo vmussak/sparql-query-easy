@@ -18,6 +18,7 @@ namespace Sparql.QueryEasy.Services
         private readonly IServiceProvider _serviceProvider;
         private bool _isWikidata;
         private readonly string _wikidataApiUrl;
+        private string _queryType = "";
 
         public EndpointService(HttpClient httpClient, IServiceProvider serviceProvider)
         {
@@ -52,10 +53,15 @@ namespace Sparql.QueryEasy.Services
                 });
             }
 
-            return relationships.Where(
-                x => !string.IsNullOrEmpty(x.PropertyLabel)
-                && x.PropertyType != "outro"
-            );
+            if(_queryType != "Local")
+            {
+                return relationships.Where(
+                    x => !string.IsNullOrEmpty(x.PropertyLabel)
+                    && x.PropertyType != "outro"
+                );
+            }
+
+            return relationships;
         }
 
         public async Task<IEnumerable<PropertyDto>> GetRelationshipValue(string subjectId, string predicateId, bool isLiteral)
@@ -247,16 +253,18 @@ namespace Sparql.QueryEasy.Services
         {
             _isWikidata = endpointUrl.Contains("query.wikidata.org/sparql");
             _queryBuilder = new SparqlQueryBuilder(_isWikidata);
+            
 
             if (Guid.TryParse(endpointUrl, out _))
             {
-                _queryExecutor = _serviceProvider.GetRequiredKeyedService<IQueryExecutor>("Local");
+                _queryType = "Local";
             }
             else
             {
-                _queryExecutor = _serviceProvider.GetRequiredKeyedService<IQueryExecutor>("Remote");
+                _queryType = "Remote";
             }
 
+            _queryExecutor = _serviceProvider.GetRequiredKeyedService<IQueryExecutor>(_queryType);
             _queryExecutor.SetDatabase(endpointUrl);
 
             return this;
