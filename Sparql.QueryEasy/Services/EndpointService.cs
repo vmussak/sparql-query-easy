@@ -148,15 +148,19 @@ namespace Sparql.QueryEasy.Services
                 .StartWhere()
                 .GetVariableLabel("?property");
 
-            if (_queryExecutor is not LocalQueryExecutor)
+            if (!isLocal)
             {
                 queryBuilder = queryBuilder.Filter(FilterType.Starts, "?propertyLabel", search);
             }
 
-            var query = queryBuilder
-                .EndWhere()
-                .Limit(limit)
-                .Build();
+            queryBuilder.EndWhere();
+
+            if (!isLocal)
+            {
+                queryBuilder.Limit(limit);
+            }
+
+            var query = queryBuilder.Build();
 
             var results = await _queryExecutor.ExecuteAsync(query);
 
@@ -172,7 +176,7 @@ namespace Sparql.QueryEasy.Services
 
             if (isLocal)
             {
-                return relationships.Where(x => x.PropertyLabel.ToLower().Contains(search.ToLower()));
+                return relationships.Where(x => x.PropertyLabel.ToLower().Contains(search.ToLower())).Take(20);
             }
 
             return relationships;
