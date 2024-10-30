@@ -1,7 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using VDS.RDF.Writing;
+﻿using VDS.RDF.Writing;
 using VDS.RDF;
-using System.Runtime.CompilerServices;
 using VDS.RDF.Query;
 
 namespace Sparql.QueryEasy.Utils

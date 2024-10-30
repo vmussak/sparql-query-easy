@@ -17,6 +17,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHealthChecks();
 
+builder.Services.AddSingleton<BrasileiraoDatabase>(new BrasileiraoDatabase());
+
 builder.Services.AddKeyedScoped<IQueryExecutor, RemoteQueryExecutor>("Remote");
 builder.Services.AddKeyedScoped<IQueryExecutor, LocalQueryExecutor>("Local");
 builder.Services.AddHttpClient<IEndpointService, EndpointService>();

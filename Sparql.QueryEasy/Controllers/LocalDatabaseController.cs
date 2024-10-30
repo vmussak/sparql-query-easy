@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using Sparql.QueryEasy.Requests;
 using VDS.RDF.Parsing;
 using VDS.RDF;
 

@@ -259,7 +259,7 @@ namespace Sparql.QueryEasy.Services
             _queryBuilder = new SparqlQueryBuilder(_isWikidata);
             
 
-            if (Guid.TryParse(endpointUrl, out _))
+            if (Guid.TryParse(endpointUrl, out _) || endpointUrl == "CampeonatoBrasileiro2023")
             {
                 _queryType = "Local";
             }
