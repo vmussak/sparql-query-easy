@@ -58,7 +58,7 @@ namespace Sparql.QueryEasy.Utils
             return this;
         }
 
-        public SparqlQueryBuilder Where(string subject, string predicate, string @object)
+        public SparqlQueryBuilder Where(string subject, string predicate, string @object, FilterType? filterType = null)
         {
             //<http://www.wikidata.org/entity/Q529207> ?property [] .
 
@@ -69,7 +69,10 @@ namespace Sparql.QueryEasy.Utils
             {
                 var literalId = Guid.NewGuid().ToString()[..5];
                 _query.AppendLine($"{formatedSubject} {predicate} ?literalValue{literalId} .");
-                _query.AppendLine($"FILTER (str(?literalValue{literalId}) = \"{@object}\") . ");
+                if (filterType == null)
+                    _query.AppendLine($"FILTER (str(?literalValue{literalId}) = \"{@object}\") . ");
+                else
+                    Filter(filterType.Value, $"?literalValue{literalId}", @object);
             }
             else
             {
@@ -86,7 +89,7 @@ namespace Sparql.QueryEasy.Utils
                 _ => "CONTAINS",
             };
 
-            _query.AppendLine($"FILTER  ({filter}({variable}, \"{value}\")) .");
+            _query.AppendLine($"FILTER  ({filter}(STR({variable}), \"{value}\")) ");
             return this;
         }
         public SparqlQueryBuilder Limit(int limit)
@@ -130,6 +133,7 @@ namespace Sparql.QueryEasy.Utils
 
     public enum FilterType
     {
-        Starts
+        Starts,
+        Contains
     }
 }

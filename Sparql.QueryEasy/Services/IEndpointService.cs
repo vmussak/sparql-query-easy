@@ -1,5 +1,6 @@
 ﻿using Sparql.QueryEasy.Dtos;
 using Sparql.QueryEasy.Requests;
+using Sparql.QueryEasy.Utils;
 
 namespace Sparql.QueryEasy.Services
 {

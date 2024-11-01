@@ -191,10 +191,9 @@ namespace Sparql.QueryEasy.Services
                 .Select($"{variableName} {variableName}Label")
                 .StartWhere();
 
-
             foreach (var item in where)
             {
-                _queryBuilder.Where(item.Subject, item.Predicate, item.Object)
+                _queryBuilder.Where(item.Subject, item.Predicate, item.Object, item.FilterType)
                     .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
             }
 

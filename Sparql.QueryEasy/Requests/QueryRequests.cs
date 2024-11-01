@@ -1,4 +1,5 @@
 ﻿using Sparql.QueryEasy.Queries;
+using Sparql.QueryEasy.Utils;
 
 namespace Sparql.QueryEasy.Requests
 {
@@ -6,5 +7,5 @@ namespace Sparql.QueryEasy.Requests
     public record GetRelationshipValueRequest(string SubjectId, string PredicateId, bool IsLiteral) : BaseRequest;
     public record GetSearchRequest(string Search) : BaseRequest;
     public record GetQueryRequest(IEnumerable<WhereRequest> Where, string VariableName, bool IgnoreWikidata = true) : BaseRequest;
-    public record WhereRequest(string Subject, string Predicate, string Object);
+    public record WhereRequest(string Subject, string Predicate, string Object, FilterType? FilterType);
 }
