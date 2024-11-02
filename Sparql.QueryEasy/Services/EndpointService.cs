@@ -188,18 +188,20 @@ namespace Sparql.QueryEasy.Services
 
             _queryBuilder
                 .AddDefaultPrefixes()
-                .Select($"{variableName} {variableName}Label")
+                .Select($"{variableName} {variableName}Label {variableName}RdfType")
                 .StartWhere();
 
             foreach (var item in where)
             {
                 _queryBuilder.Where(item.Subject, item.Predicate, item.Object, item.FilterType)
+                   .GetVariableRdfType(variableName)
                     .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
             }
 
             if (!where.Any())
             {
-                _queryBuilder.Where(variableName, "?p" , "?o")
+                _queryBuilder.Where(variableName, "?p", "?o")
+                   .GetVariableRdfType(variableName)
                    .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
             } 
 
@@ -221,7 +223,8 @@ namespace Sparql.QueryEasy.Services
                     PropertyLabel = string.IsNullOrEmpty(labelProperty)
                         ? propertyId
                         : labelProperty,
-                    PropertyType = result.GetStringValue($"object")
+                    PropertyType = result.GetStringValue($"object"),
+                    PropertyClass = result.GetStringValue($"{varName}RdfType")
                 });
             }
 

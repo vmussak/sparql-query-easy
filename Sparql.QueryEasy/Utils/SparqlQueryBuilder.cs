@@ -118,6 +118,13 @@ namespace Sparql.QueryEasy.Utils
             return this;
         }
 
+        public SparqlQueryBuilder GetVariableRdfType(string variableName)
+        {
+            _query.AppendLine($"{variableName} rdf:type {variableName}RdfType .");
+
+            return this;
+        }
+
         public SparqlQueryBuilder AddVariableType(string variableName)
         {
             _query.AppendLine($"BIND(IF(EXISTS {{ {variableName} rdf:type owl:ObjectProperty}}, \"objeto\", IF(EXISTS {{{variableName} rdf:type owl:DatatypeProperty}}, \"label\", \"outro\")) as {variableName}Type)");
