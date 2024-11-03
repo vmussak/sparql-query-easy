@@ -10,8 +10,8 @@ namespace Sparql.QueryEasy.Repositories
         private readonly IGraph _graph;
         public BrasileiraoDatabase()
         {
-            ResourceManager resourceManager = new ResourceManager("Sparql.QueryEasy.SparqlResources", typeof(Program).Assembly);
-            string ttlString = resourceManager.GetString("BrasileiraoDatabase");
+            string ttlFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "futebol_completo.ttl");
+            string ttlString = File.ReadAllText(ttlFilePath);
             _graph = new Graph();
             StringParser.Parse(_graph, ttlString, new TurtleParser());
         }
