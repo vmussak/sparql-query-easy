@@ -6,6 +6,7 @@ namespace Sparql.QueryEasy.Utils
     {
         private readonly StringBuilder _query;
         private readonly bool _isWikidata;
+        private string _orderBy = "";
 
         public SparqlQueryBuilder(bool isWikidata)
         {
@@ -43,6 +44,10 @@ namespace Sparql.QueryEasy.Utils
         public SparqlQueryBuilder EndWhere()
         {
             _query.AppendLine("}");
+            if (!string.IsNullOrEmpty(_orderBy)) 
+            {
+                _query.AppendLine(_orderBy);
+            }
             return this;
         }
 
@@ -83,19 +88,32 @@ namespace Sparql.QueryEasy.Utils
 
         public SparqlQueryBuilder Filter(FilterType filterType, string variable, string value)
         {
-            var filter = filterType switch
+            if(filterType == FilterType.Max || filterType == FilterType.Min)
             {
-                FilterType.Starts => "STRSTARTS",
-                _ => "CONTAINS",
+                var order = filterType == FilterType.Max ? "DESC" : "ASC";
+                _orderBy = $"ORDER BY {order}({variable}) ";
+                return this;
+            }
+
+            var filterClause = filterType switch
+            {
+                FilterType.Starts => $"FILTER (STRSTARTS(STR({variable}), \"{value}\"))",
+                FilterType.Contains => $"FILTER (CONTAINS(STR({variable}), \"{value}\"))",
+                FilterType.Lesser => $"FILTER ({variable} <= {value})",
+                FilterType.Greater => $"FILTER ({variable} >= {value})",
+                _ => string.Empty
             };
 
-            _query.AppendLine($"FILTER  ({filter}(STR({variable}), \"{value}\")) ");
+            _query.AppendLine(filterClause);
+
             return this;
         }
+
         public SparqlQueryBuilder Limit(int limit)
         {
             //<http://www.wikidata.org/entity/Q529207> ?property [] .
-            _query.AppendLine($"LIMIT {limit}");
+            var finalLimit = string.IsNullOrEmpty(_orderBy) ? limit : 1;
+            _query.AppendLine($"LIMIT {finalLimit}");
             return this;
         }
 
@@ -141,6 +159,10 @@ namespace Sparql.QueryEasy.Utils
     public enum FilterType
     {
         Starts,
-        Contains
+        Contains,
+        Greater,
+        Lesser,
+        Max,
+        Min
     }
 }
