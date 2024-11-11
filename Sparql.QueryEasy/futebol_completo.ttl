@@ -20624,3 +20624,763 @@ fut:ClassificacaoBrasileirao2023AMG fut:classificadoLibertadores false .
     fut:ClassificacaoBrasileirao2023AMG fut:incluiVitorias 5 .  
     fut:ClassificacaoBrasileirao2023AMG fut:incluiDerrotas 24 .  
 
+fut:Partida9000 fut:realizadaNaData "2023-04-15T16:00:00" . 
+    
+fut:Partida9007 fut:realizadaNaData "2023-04-15T16:00:00" . 
+    
+fut:Partida8999 fut:realizadaNaData "2023-04-15T18:30:00" . 
+    
+fut:Partida9002 fut:realizadaNaData "2023-04-15T18:30:00" . 
+    
+fut:Partida9005 fut:realizadaNaData "2023-04-15T18:30:00" . 
+    
+fut:Partida9006 fut:realizadaNaData "2023-04-15T18:30:00" . 
+    
+fut:Partida9003 fut:realizadaNaData "2023-04-15T21:00:00" . 
+    
+fut:Partida8998 fut:realizadaNaData "2023-04-16T16:00:00" . 
+    
+fut:Partida9001 fut:realizadaNaData "2023-04-16T16:00:00" . 
+    
+fut:Partida9004 fut:realizadaNaData "2023-04-16T18:30:00" . 
+    
+fut:Partida9008 fut:realizadaNaData "2023-04-22T16:00:00" . 
+    
+fut:Partida9010 fut:realizadaNaData "2023-04-22T18:30:00" . 
+    
+fut:Partida9017 fut:realizadaNaData "2023-04-22T18:30:00" . 
+    
+fut:Partida9013 fut:realizadaNaData "2023-04-22T21:00:00" . 
+    
+fut:Partida9014 fut:realizadaNaData "2023-04-23T11:00:00" . 
+    
+fut:Partida9009 fut:realizadaNaData "2023-04-23T16:00:00" . 
+    
+fut:Partida9011 fut:realizadaNaData "2023-04-23T16:00:00" . 
+    
+fut:Partida9015 fut:realizadaNaData "2023-04-23T18:30:00" . 
+    
+fut:Partida9012 fut:realizadaNaData "2023-04-23T19:00:00" . 
+    
+fut:Partida9016 fut:realizadaNaData "2023-04-24T20:00:00" . 
+    
+fut:Partida9025 fut:realizadaNaData "2023-04-29T16:30:00" . 
+    
+fut:Partida9026 fut:realizadaNaData "2023-04-29T16:30:00" . 
+    
+fut:Partida9020 fut:realizadaNaData "2023-04-29T18:30:00" . 
+    
+fut:Partida9021 fut:realizadaNaData "2023-04-29T18:30:00" . 
+    
+fut:Partida9022 fut:realizadaNaData "2023-04-29T18:30:00" . 
+    
+fut:Partida9023 fut:realizadaNaData "2023-04-29T21:00:00" . 
+    
+fut:Partida9018 fut:realizadaNaData "2023-04-30T16:00:00" . 
+    
+fut:Partida9024 fut:realizadaNaData "2023-04-30T18:30:00" . 
+    
+fut:Partida9027 fut:realizadaNaData "2023-04-30T18:30:00" . 
+    
+fut:Partida9019 fut:realizadaNaData "2023-05-01T20:00:00" . 
+    
+fut:Partida9033 fut:realizadaNaData "2023-05-06T16:00:00" . 
+    
+fut:Partida9028 fut:realizadaNaData "2023-05-06T21:00:00" . 
+    
+fut:Partida9037 fut:realizadaNaData "2023-05-07T11:00:00" . 
+    
+fut:Partida9030 fut:realizadaNaData "2023-05-07T16:00:00" . 
+    
+fut:Partida9035 fut:realizadaNaData "2023-05-07T16:00:00" . 
+    
+fut:Partida9036 fut:realizadaNaData "2023-05-07T16:00:00" . 
+    
+fut:Partida9029 fut:realizadaNaData "2023-05-07T18:30:00" . 
+    
+fut:Partida9032 fut:realizadaNaData "2023-05-07T18:30:00" . 
+    
+fut:Partida9034 fut:realizadaNaData "2023-05-07T18:30:00" . 
+    
+fut:Partida9031 fut:realizadaNaData "2023-05-08T20:00:00" . 
+    
+fut:Partida9041 fut:realizadaNaData "2023-05-10T19:00:00" . 
+    
+fut:Partida9042 fut:realizadaNaData "2023-05-10T19:00:00" . 
+    
+fut:Partida9044 fut:realizadaNaData "2023-05-10T19:00:00" . 
+    
+fut:Partida9047 fut:realizadaNaData "2023-05-10T20:00:00" . 
+    
+fut:Partida9038 fut:realizadaNaData "2023-05-10T20:00:00" . 
+    
+fut:Partida9040 fut:realizadaNaData "2023-05-10T21:30:00" . 
+    
+fut:Partida9043 fut:realizadaNaData "2023-05-10T21:30:00" . 
+    
+fut:Partida9045 fut:realizadaNaData "2023-05-11T19:00:00" . 
+    
+fut:Partida9039 fut:realizadaNaData "2023-05-11T19:30:00" . 
+    
+fut:Partida9046 fut:realizadaNaData "2023-05-11T20:00:00" . 
+    
+fut:Partida9056 fut:realizadaNaData "2023-05-13T16:00:00" . 
+    
+fut:Partida9048 fut:realizadaNaData "2023-05-13T18:30:00" . 
+    
+fut:Partida9050 fut:realizadaNaData "2023-05-13T18:30:00" . 
+    
+fut:Partida9053 fut:realizadaNaData "2023-05-13T21:00:00" . 
+    
+fut:Partida9049 fut:realizadaNaData "2023-05-14T16:00:00" . 
+    
+fut:Partida9051 fut:realizadaNaData "2023-05-14T16:00:00" . 
+    
+fut:Partida9054 fut:realizadaNaData "2023-05-14T16:00:00" . 
+    
+fut:Partida9052 fut:realizadaNaData "2023-05-14T18:30:00" . 
+    
+fut:Partida9055 fut:realizadaNaData "2023-05-14T18:30:00" . 
+    
+fut:Partida9057 fut:realizadaNaData "2023-05-14T18:30:00" . 
+    
+fut:Partida9066 fut:realizadaNaData "2023-05-20T16:00:00" . 
+    
+fut:Partida9059 fut:realizadaNaData "2023-05-20T18:30:00" . 
+    
+fut:Partida9060 fut:realizadaNaData "2023-05-20T18:30:00" . 
+    
+fut:Partida9062 fut:realizadaNaData "2023-05-20T18:30:00" . 
+    
+fut:Partida9065 fut:realizadaNaData "2023-05-20T18:30:00" . 
+    
+fut:Partida9067 fut:realizadaNaData "2023-05-20T18:30:00" . 
+    
+fut:Partida9061 fut:realizadaNaData "2023-05-20T21:00:00" . 
+    
+fut:Partida9058 fut:realizadaNaData "2023-05-21T16:00:00" . 
+    
+fut:Partida9064 fut:realizadaNaData "2023-05-21T18:30:00" . 
+    
+fut:Partida9063 fut:realizadaNaData "2023-05-22T20:00:00" . 
+    
+fut:Partida9075 fut:realizadaNaData "2023-05-27T16:00:00" . 
+    
+fut:Partida9076 fut:realizadaNaData "2023-05-27T16:00:00" . 
+    
+fut:Partida9068 fut:realizadaNaData "2023-05-27T18:30:00" . 
+    
+fut:Partida9077 fut:realizadaNaData "2023-05-27T18:30:00" . 
+    
+fut:Partida9070 fut:realizadaNaData "2023-05-27T21:00:00" . 
+    
+fut:Partida9071 fut:realizadaNaData "2023-05-28T16:00:00" . 
+    
+fut:Partida9074 fut:realizadaNaData "2023-05-28T16:00:00" . 
+    
+fut:Partida9072 fut:realizadaNaData "2023-05-28T18:30:00" . 
+    
+fut:Partida9073 fut:realizadaNaData "2023-05-28T18:30:00" . 
+    
+fut:Partida9069 fut:realizadaNaData "2023-05-28T19:00:00" . 
+    
+fut:Partida9086 fut:realizadaNaData "2023-06-03T16:00:00" . 
+    
+fut:Partida9083 fut:realizadaNaData "2023-06-03T18:30:00" . 
+    
+fut:Partida9085 fut:realizadaNaData "2023-06-03T18:30:00" . 
+    
+fut:Partida9087 fut:realizadaNaData "2023-06-03T18:30:00" . 
+    
+fut:Partida9081 fut:realizadaNaData "2023-06-03T21:00:00" . 
+    
+fut:Partida9078 fut:realizadaNaData "2023-06-04T16:00:00" . 
+    
+fut:Partida9084 fut:realizadaNaData "2023-06-04T16:00:00" . 
+    
+fut:Partida9080 fut:realizadaNaData "2023-06-04T18:30:00" . 
+    
+fut:Partida9082 fut:realizadaNaData "2023-06-04T18:30:00" . 
+    
+fut:Partida9079 fut:realizadaNaData "2023-06-05T20:00:00" . 
+    
+fut:Partida9095 fut:realizadaNaData "2023-06-10T16:00:00" . 
+    
+fut:Partida9091 fut:realizadaNaData "2023-06-10T18:30:00" . 
+    
+fut:Partida9093 fut:realizadaNaData "2023-06-10T18:30:00" . 
+    
+fut:Partida9096 fut:realizadaNaData "2023-06-10T18:30:00" . 
+    
+fut:Partida9089 fut:realizadaNaData "2023-06-10T21:00:00" . 
+    
+fut:Partida9097 fut:realizadaNaData "2023-06-11T11:00:00" . 
+    
+fut:Partida9090 fut:realizadaNaData "2023-06-11T16:00:00" . 
+    
+fut:Partida9094 fut:realizadaNaData "2023-06-11T16:00:00" . 
+    
+fut:Partida9088 fut:realizadaNaData "2023-06-11T18:30:00" . 
+    
+fut:Partida9092 fut:realizadaNaData "2023-06-11T18:30:00" . 
+    
+fut:Partida9100 fut:realizadaNaData "2023-06-21T19:00:00" . 
+    
+fut:Partida9103 fut:realizadaNaData "2023-06-21T19:00:00" . 
+    
+fut:Partida9101 fut:realizadaNaData "2023-06-21T20:00:00" . 
+    
+fut:Partida9098 fut:realizadaNaData "2023-06-21T21:30:00" . 
+    
+fut:Partida9106 fut:realizadaNaData "2023-06-21T21:30:00" . 
+    
+fut:Partida9104 fut:realizadaNaData "2023-06-22T19:00:00" . 
+    
+fut:Partida9099 fut:realizadaNaData "2023-06-22T20:00:00" . 
+    
+fut:Partida9105 fut:realizadaNaData "2023-06-22T20:00:00" . 
+    
+fut:Partida9107 fut:realizadaNaData "2023-06-22T20:00:00" . 
+    
+fut:Partida9102 fut:realizadaNaData "2023-06-22T21:30:00" . 
+    
+fut:Partida9115 fut:realizadaNaData "2023-06-24T16:00:00" . 
+    
+fut:Partida9108 fut:realizadaNaData "2023-06-24T18:30:00" . 
+    
+fut:Partida9116 fut:realizadaNaData "2023-06-24T18:30:00" . 
+    
+fut:Partida9113 fut:realizadaNaData "2023-06-24T21:00:00" . 
+    
+fut:Partida9110 fut:realizadaNaData "2023-06-25T16:00:00" . 
+    
+fut:Partida9114 fut:realizadaNaData "2023-06-25T16:00:00" . 
+    
+fut:Partida9111 fut:realizadaNaData "2023-06-25T18:30:00" . 
+    
+fut:Partida9112 fut:realizadaNaData "2023-06-25T18:30:00" . 
+    
+fut:Partida9117 fut:realizadaNaData "2023-06-25T18:30:00" . 
+    
+fut:Partida9109 fut:realizadaNaData "2023-06-26T21:00:00" . 
+    
+fut:Partida9120 fut:realizadaNaData "2023-07-01T16:00:00" . 
+    
+fut:Partida9118 fut:realizadaNaData "2023-07-01T18:30:00" . 
+    
+fut:Partida9126 fut:realizadaNaData "2023-07-01T18:30:00" . 
+    
+fut:Partida9124 fut:realizadaNaData "2023-07-01T21:00:00" . 
+    
+fut:Partida9121 fut:realizadaNaData "2023-07-02T11:00:00" . 
+    
+fut:Partida9119 fut:realizadaNaData "2023-07-02T16:00:00" . 
+    
+fut:Partida9123 fut:realizadaNaData "2023-07-02T16:00:00" . 
+    
+fut:Partida9125 fut:realizadaNaData "2023-07-02T16:00:00" . 
+    
+fut:Partida9127 fut:realizadaNaData "2023-07-02T18:30:00" . 
+    
+fut:Partida9122 fut:realizadaNaData "2023-07-03T20:00:00" . 
+    
+fut:Partida9129 fut:realizadaNaData "2023-07-08T16:00:00" . 
+    
+fut:Partida9137 fut:realizadaNaData "2023-07-08T16:00:00" . 
+    
+fut:Partida9133 fut:realizadaNaData "2023-07-08T18:30:00" . 
+    
+fut:Partida9135 fut:realizadaNaData "2023-07-08T18:30:00" . 
+    
+fut:Partida9130 fut:realizadaNaData "2023-07-08T21:00:00" . 
+    
+fut:Partida9131 fut:realizadaNaData "2023-07-09T11:00:00" . 
+    
+fut:Partida9128 fut:realizadaNaData "2023-07-09T16:00:00" . 
+    
+fut:Partida9132 fut:realizadaNaData "2023-07-09T16:00:00" . 
+    
+fut:Partida9134 fut:realizadaNaData "2023-07-09T18:30:00" . 
+    
+fut:Partida9136 fut:realizadaNaData "2023-07-09T18:30:00" . 
+    
+fut:Partida9139 fut:realizadaNaData "2023-07-15T21:00:00" . 
+    
+fut:Partida9143 fut:realizadaNaData "2023-07-16T11:00:00" . 
+    
+fut:Partida9138 fut:realizadaNaData "2023-07-16T16:00:00" . 
+    
+fut:Partida9140 fut:realizadaNaData "2023-07-16T16:00:00" . 
+    
+fut:Partida9146 fut:realizadaNaData "2023-07-16T16:00:00" . 
+    
+fut:Partida9144 fut:realizadaNaData "2023-07-16T18:30:00" . 
+    
+fut:Partida9145 fut:realizadaNaData "2023-07-16T18:30:00" . 
+    
+fut:Partida9142 fut:realizadaNaData "2023-07-17T20:00:00" . 
+    
+fut:Partida9141 fut:realizadaNaData "2023-09-18T21:00:00" . 
+    
+fut:Partida9147 fut:realizadaNaData "2023-09-25T20:00:00" . 
+    
+fut:Partida9148 fut:realizadaNaData "2023-07-22T16:00:00" . 
+    
+fut:Partida9150 fut:realizadaNaData "2023-07-22T16:00:00" . 
+    
+fut:Partida9156 fut:realizadaNaData "2023-07-22T18:30:00" . 
+    
+fut:Partida9157 fut:realizadaNaData "2023-07-22T18:30:00" . 
+    
+fut:Partida9154 fut:realizadaNaData "2023-07-22T21:00:00" . 
+    
+fut:Partida9151 fut:realizadaNaData "2023-07-23T16:00:00" . 
+    
+fut:Partida9152 fut:realizadaNaData "2023-07-23T16:00:00" . 
+    
+fut:Partida9153 fut:realizadaNaData "2023-07-23T16:00:00" . 
+    
+fut:Partida9149 fut:realizadaNaData "2023-07-23T18:30:00" . 
+    
+fut:Partida9155 fut:realizadaNaData "2023-07-24T19:00:00" . 
+    
+fut:Partida9158 fut:realizadaNaData "2023-07-29T16:00:00" . 
+    
+fut:Partida9164 fut:realizadaNaData "2023-07-29T16:00:00" . 
+    
+fut:Partida9165 fut:realizadaNaData "2023-07-29T16:00:00" . 
+    
+fut:Partida9161 fut:realizadaNaData "2023-07-29T18:30:00" . 
+    
+fut:Partida9166 fut:realizadaNaData "2023-07-29T18:30:00" . 
+    
+fut:Partida9163 fut:realizadaNaData "2023-07-29T21:00:00" . 
+    
+fut:Partida9160 fut:realizadaNaData "2023-07-30T11:00:00" . 
+    
+fut:Partida9159 fut:realizadaNaData "2023-07-30T16:00:00" . 
+    
+fut:Partida9167 fut:realizadaNaData "2023-07-30T16:00:00" . 
+    
+fut:Partida9162 fut:realizadaNaData "2023-07-30T18:30:00" . 
+    
+fut:Partida9171 fut:realizadaNaData "2023-08-05T16:00:00" . 
+    
+fut:Partida9172 fut:realizadaNaData "2023-08-05T18:30:00" . 
+    
+fut:Partida9174 fut:realizadaNaData "2023-08-05T18:30:00" . 
+    
+fut:Partida9168 fut:realizadaNaData "2023-08-05T21:00:00" . 
+    
+fut:Partida9169 fut:realizadaNaData "2023-08-06T16:00:00" . 
+    
+fut:Partida9170 fut:realizadaNaData "2023-08-06T16:00:00" . 
+    
+fut:Partida9173 fut:realizadaNaData "2023-08-06T18:30:00" . 
+    
+fut:Partida9175 fut:realizadaNaData "2023-08-06T18:30:00" . 
+    
+fut:Partida9176 fut:realizadaNaData "2023-08-06T18:30:00" . 
+    
+fut:Partida9177 fut:realizadaNaData "2023-08-06T20:00:00" . 
+    
+fut:Partida9179 fut:realizadaNaData "2023-08-12T21:00:00" . 
+    
+fut:Partida9183 fut:realizadaNaData "2023-08-13T11:00:00" . 
+    
+fut:Partida9181 fut:realizadaNaData "2023-08-13T16:00:00" . 
+    
+fut:Partida9184 fut:realizadaNaData "2023-08-13T16:00:00" . 
+    
+fut:Partida9187 fut:realizadaNaData "2023-08-13T16:00:00" . 
+    
+fut:Partida9178 fut:realizadaNaData "2023-08-13T18:30:00" . 
+    
+fut:Partida9186 fut:realizadaNaData "2023-08-13T18:30:00" . 
+    
+fut:Partida9180 fut:realizadaNaData "2023-08-14T19:00:00" . 
+    
+fut:Partida9182 fut:realizadaNaData "2023-08-14T21:00:00" . 
+    
+fut:Partida9185 fut:realizadaNaData "2023-08-15T20:00:00" . 
+    
+fut:Partida9190 fut:realizadaNaData "2023-08-19T16:00:00" . 
+    
+fut:Partida9194 fut:realizadaNaData "2023-08-19T16:00:00" . 
+    
+fut:Partida9188 fut:realizadaNaData "2023-08-19T18:30:00" . 
+    
+fut:Partida9197 fut:realizadaNaData "2023-08-19T18:30:00" . 
+    
+fut:Partida9193 fut:realizadaNaData "2023-08-19T21:00:00" . 
+    
+fut:Partida9189 fut:realizadaNaData "2023-08-20T11:00:00" . 
+    
+fut:Partida9191 fut:realizadaNaData "2023-08-20T16:00:00" . 
+    
+fut:Partida9195 fut:realizadaNaData "2023-08-20T16:00:00" . 
+    
+fut:Partida9196 fut:realizadaNaData "2023-08-20T16:00:00" . 
+    
+fut:Partida9192 fut:realizadaNaData "2023-08-21T20:00:00" . 
+    
+fut:Partida9198 fut:realizadaNaData "2023-08-26T18:30:00" . 
+    
+fut:Partida9201 fut:realizadaNaData "2023-08-26T21:00:00" . 
+    
+fut:Partida9202 fut:realizadaNaData "2023-08-27T11:00:00" . 
+    
+fut:Partida9199 fut:realizadaNaData "2023-08-27T16:00:00" . 
+    
+fut:Partida9203 fut:realizadaNaData "2023-08-27T16:00:00" . 
+    
+fut:Partida9207 fut:realizadaNaData "2023-08-27T16:00:00" . 
+    
+fut:Partida9200 fut:realizadaNaData "2023-08-27T18:30:00" . 
+    
+fut:Partida9205 fut:realizadaNaData "2023-08-27T18:30:00" . 
+    
+fut:Partida9206 fut:realizadaNaData "2023-08-27T18:30:00" . 
+    
+fut:Partida9204 fut:realizadaNaData "2023-08-27T19:00:00" . 
+    
+fut:Partida9212 fut:realizadaNaData "2023-09-02T16:00:00" . 
+    
+fut:Partida9215 fut:realizadaNaData "2023-09-02T16:00:00" . 
+    
+fut:Partida9209 fut:realizadaNaData "2023-09-02T21:00:00" . 
+    
+fut:Partida9214 fut:realizadaNaData "2023-09-03T11:00:00" . 
+    
+fut:Partida9208 fut:realizadaNaData "2023-09-03T16:00:00" . 
+    
+fut:Partida9211 fut:realizadaNaData "2023-09-03T16:00:00" . 
+    
+fut:Partida9213 fut:realizadaNaData "2023-09-03T18:30:00" . 
+    
+fut:Partida9216 fut:realizadaNaData "2023-09-03T18:30:00" . 
+    
+fut:Partida9217 fut:realizadaNaData "2023-09-03T18:30:00" . 
+    
+fut:Partida9210 fut:realizadaNaData "2023-09-27T19:00:00" . 
+    
+fut:Partida9218 fut:realizadaNaData "2023-09-13T21:30:00" . 
+    
+fut:Partida9224 fut:realizadaNaData "2023-09-13T21:30:00" . 
+    
+fut:Partida9221 fut:realizadaNaData "2023-09-14T19:00:00" . 
+    
+fut:Partida9226 fut:realizadaNaData "2023-09-14T19:00:00" . 
+    
+fut:Partida9225 fut:realizadaNaData "2023-09-14T20:00:00" . 
+    
+fut:Partida9222 fut:realizadaNaData "2023-09-14T21:30:00" . 
+    
+fut:Partida9227 fut:realizadaNaData "2023-09-15T20:00:00" . 
+    
+fut:Partida9220 fut:realizadaNaData "2023-09-15T21:30:00" . 
+    
+fut:Partida9219 fut:realizadaNaData "2023-09-16T16:00:00" . 
+    
+fut:Partida9223 fut:realizadaNaData "2023-09-16T21:00:00" . 
+    
+fut:Partida9236 fut:realizadaNaData "2023-09-18T20:00:00" . 
+    
+fut:Partida9237 fut:realizadaNaData "2023-09-19T21:30:00" . 
+    
+fut:Partida9232 fut:realizadaNaData "2023-09-20T19:00:00" . 
+    
+fut:Partida9228 fut:realizadaNaData "2023-09-20T21:30:00" . 
+    
+fut:Partida9230 fut:realizadaNaData "2023-09-20T21:30:00" . 
+    
+fut:Partida9229 fut:realizadaNaData "2023-09-21T19:00:00" . 
+    
+fut:Partida9235 fut:realizadaNaData "2023-09-21T19:30:00" . 
+    
+fut:Partida9234 fut:realizadaNaData "2023-09-21T21:30:00" . 
+    
+fut:Partida9231 fut:realizadaNaData "2023-09-22T20:00:00" . 
+    
+fut:Partida9233 fut:realizadaNaData "2023-09-23T21:00:00" . 
+    
+fut:Partida9238 fut:realizadaNaData "2023-09-30T16:00:00" . 
+    
+fut:Partida9246 fut:realizadaNaData "2023-09-30T16:00:00" . 
+    
+fut:Partida9240 fut:realizadaNaData "2023-09-30T18:30:00" . 
+    
+fut:Partida9247 fut:realizadaNaData "2023-09-30T18:30:00" . 
+    
+fut:Partida9244 fut:realizadaNaData "2023-09-30T21:00:00" . 
+    
+fut:Partida9241 fut:realizadaNaData "2023-10-01T16:00:00" . 
+    
+fut:Partida9243 fut:realizadaNaData "2023-10-01T16:00:00" . 
+    
+fut:Partida9245 fut:realizadaNaData "2023-10-01T16:00:00" . 
+    
+fut:Partida9242 fut:realizadaNaData "2023-10-01T18:30:00" . 
+    
+fut:Partida9239 fut:realizadaNaData "2023-10-02T20:00:00" . 
+    
+fut:Partida9252 fut:realizadaNaData "2023-10-07T16:00:00" . 
+    
+fut:Partida9249 fut:realizadaNaData "2023-10-07T18:30:00" . 
+    
+fut:Partida9251 fut:realizadaNaData "2023-10-07T21:00:00" . 
+    
+fut:Partida9248 fut:realizadaNaData "2023-10-08T16:00:00" . 
+    
+fut:Partida9250 fut:realizadaNaData "2023-10-08T16:00:00" . 
+    
+fut:Partida9254 fut:realizadaNaData "2023-10-08T16:00:00" . 
+    
+fut:Partida9253 fut:realizadaNaData "2023-10-08T18:30:00" . 
+    
+fut:Partida9255 fut:realizadaNaData "2023-10-08T18:30:00" . 
+    
+fut:Partida9256 fut:realizadaNaData "2023-10-08T18:30:00" . 
+    
+fut:Partida9257 fut:realizadaNaData "2023-10-14T21:00:00" . 
+    
+fut:Partida9264 fut:realizadaNaData "2023-10-18T19:00:00" . 
+    
+fut:Partida9265 fut:realizadaNaData "2023-10-18T20:00:00" . 
+    
+fut:Partida9267 fut:realizadaNaData "2023-10-18T20:00:00" . 
+    
+fut:Partida9259 fut:realizadaNaData "2023-10-18T21:30:00" . 
+    
+fut:Partida9262 fut:realizadaNaData "2023-10-18T21:30:00" . 
+    
+fut:Partida9266 fut:realizadaNaData "2023-10-18T21:30:00" . 
+    
+fut:Partida9260 fut:realizadaNaData "2023-10-19T19:00:00" . 
+    
+fut:Partida9263 fut:realizadaNaData "2023-10-19T19:00:00" . 
+    
+fut:Partida9261 fut:realizadaNaData "2023-10-19T20:00:00" . 
+    
+fut:Partida9258 fut:realizadaNaData "2023-10-19T21:30:00" . 
+    
+fut:Partida9270 fut:realizadaNaData "2023-10-21T18:30:00" . 
+    
+fut:Partida9276 fut:realizadaNaData "2023-10-21T18:30:00" . 
+    
+fut:Partida9277 fut:realizadaNaData "2023-10-21T18:30:00" . 
+    
+fut:Partida9269 fut:realizadaNaData "2023-10-22T15:00:00" . 
+    
+fut:Partida9268 fut:realizadaNaData "2023-10-22T16:00:00" . 
+    
+fut:Partida9273 fut:realizadaNaData "2023-10-22T16:00:00" . 
+    
+fut:Partida9274 fut:realizadaNaData "2023-10-22T16:00:00" . 
+    
+fut:Partida9271 fut:realizadaNaData "2023-10-22T18:30:00" . 
+    
+fut:Partida9272 fut:realizadaNaData "2023-10-22T18:30:00" . 
+    
+fut:Partida9275 fut:realizadaNaData "2023-10-22T18:30:00" . 
+    
+fut:Partida9278 fut:realizadaNaData "2023-10-25T19:00:00" . 
+    
+fut:Partida9282 fut:realizadaNaData "2023-10-25T19:00:00" . 
+    
+fut:Partida9285 fut:realizadaNaData "2023-10-25T19:00:00" . 
+    
+fut:Partida9280 fut:realizadaNaData "2023-10-25T20:00:00" . 
+    
+fut:Partida9283 fut:realizadaNaData "2023-10-25T20:00:00" . 
+    
+fut:Partida9284 fut:realizadaNaData "2023-10-25T21:30:00" . 
+    
+fut:Partida9287 fut:realizadaNaData "2023-10-25T21:30:00" . 
+    
+fut:Partida9279 fut:realizadaNaData "2023-10-26T19:00:00" . 
+    
+fut:Partida9281 fut:realizadaNaData "2023-10-26T21:30:00" . 
+    
+fut:Partida9286 fut:realizadaNaData "2023-11-23T19:00:00" . 
+    
+fut:Partida9290 fut:realizadaNaData "2023-10-28T19:00:00" . 
+    
+fut:Partida9297 fut:realizadaNaData "2023-10-28T19:00:00" . 
+    
+fut:Partida9293 fut:realizadaNaData "2023-10-28T21:00:00" . 
+    
+fut:Partida9292 fut:realizadaNaData "2023-10-29T16:00:00" . 
+    
+fut:Partida9295 fut:realizadaNaData "2023-10-29T16:00:00" . 
+    
+fut:Partida9291 fut:realizadaNaData "2023-10-29T18:30:00" . 
+    
+fut:Partida9294 fut:realizadaNaData "2023-10-29T18:30:00" . 
+    
+fut:Partida9289 fut:realizadaNaData "2023-10-29T20:00:00" . 
+    
+fut:Partida9296 fut:realizadaNaData "2023-11-18T18:30:00" . 
+    
+fut:Partida9288 fut:realizadaNaData "2023-11-23T21:30:00" . 
+    
+fut:Partida9306 fut:realizadaNaData "2023-10-31T19:00:00" . 
+    
+fut:Partida9304 fut:realizadaNaData "2023-11-01T19:00:00" . 
+    
+fut:Partida9301 fut:realizadaNaData "2023-11-01T19:00:00" . 
+    
+fut:Partida9305 fut:realizadaNaData "2023-11-01T20:00:00" . 
+    
+fut:Partida9298 fut:realizadaNaData "2023-11-01T20:00:00" . 
+    
+fut:Partida9303 fut:realizadaNaData "2023-11-01T21:30:00" . 
+    
+fut:Partida9299 fut:realizadaNaData "2023-11-01T21:30:00" . 
+    
+fut:Partida9307 fut:realizadaNaData "2023-11-02T17:00:00" . 
+    
+fut:Partida9302 fut:realizadaNaData "2023-11-02T18:00:00" . 
+    
+fut:Partida9300 fut:realizadaNaData "2023-11-02T20:00:00" . 
+    
+fut:Partida9314 fut:realizadaNaData "2023-11-04T19:30:00" . 
+    
+fut:Partida9317 fut:realizadaNaData "2023-11-04T19:30:00" . 
+    
+fut:Partida9310 fut:realizadaNaData "2023-11-04T21:30:00" . 
+    
+fut:Partida9312 fut:realizadaNaData "2023-11-05T16:00:00" . 
+    
+fut:Partida9313 fut:realizadaNaData "2023-11-05T16:00:00" . 
+    
+fut:Partida9316 fut:realizadaNaData "2023-11-05T16:00:00" . 
+    
+fut:Partida9315 fut:realizadaNaData "2023-11-05T18:30:00" . 
+    
+fut:Partida9309 fut:realizadaNaData "2023-11-06T19:00:00" . 
+    
+fut:Partida9311 fut:realizadaNaData "2023-11-06T21:00:00" . 
+    
+fut:Partida9308 fut:realizadaNaData "2023-11-22T21:30:00" . 
+    
+fut:Partida9324 fut:realizadaNaData "2023-11-08T19:00:00" . 
+    
+fut:Partida9327 fut:realizadaNaData "2023-11-08T19:00:00" . 
+    
+fut:Partida9320 fut:realizadaNaData "2023-11-08T20:00:00" . 
+    
+fut:Partida9325 fut:realizadaNaData "2023-11-08T20:00:00" . 
+    
+fut:Partida9318 fut:realizadaNaData "2023-11-08T21:30:00" . 
+    
+fut:Partida9321 fut:realizadaNaData "2023-11-09T19:00:00" . 
+    
+fut:Partida9322 fut:realizadaNaData "2023-11-09T19:00:00" . 
+    
+fut:Partida9319 fut:realizadaNaData "2023-11-09T20:00:00" . 
+    
+fut:Partida9326 fut:realizadaNaData "2023-11-09T20:00:00" . 
+    
+fut:Partida9323 fut:realizadaNaData "2023-11-22T19:00:00" . 
+    
+fut:Partida9335 fut:realizadaNaData "2023-11-11T16:00:00" . 
+    
+fut:Partida9328 fut:realizadaNaData "2023-11-11T18:30:00" . 
+    
+fut:Partida9330 fut:realizadaNaData "2023-11-11T21:00:00" . 
+    
+fut:Partida9332 fut:realizadaNaData "2023-11-12T16:00:00" . 
+    
+fut:Partida9334 fut:realizadaNaData "2023-11-12T16:00:00" . 
+    
+fut:Partida9329 fut:realizadaNaData "2023-11-12T18:30:00" . 
+    
+fut:Partida9331 fut:realizadaNaData "2023-11-12T18:30:00" . 
+    
+fut:Partida9333 fut:realizadaNaData "2023-11-12T18:30:00" . 
+    
+fut:Partida9336 fut:realizadaNaData "2023-11-12T18:30:00" . 
+    
+fut:Partida9337 fut:realizadaNaData "2023-11-12T18:30:00" . 
+    
+fut:Partida9341 fut:realizadaNaData "2023-11-24T21:00:00" . 
+    
+fut:Partida9345 fut:realizadaNaData "2023-11-25T19:30:00" . 
+    
+fut:Partida9338 fut:realizadaNaData "2023-11-25T21:00:00" . 
+    
+fut:Partida9339 fut:realizadaNaData "2023-11-26T16:00:00" . 
+    
+fut:Partida9343 fut:realizadaNaData "2023-11-26T16:00:00" . 
+    
+fut:Partida9340 fut:realizadaNaData "2023-11-26T18:30:00" . 
+    
+fut:Partida9344 fut:realizadaNaData "2023-11-26T18:30:00" . 
+    
+fut:Partida9346 fut:realizadaNaData "2023-11-26T18:30:00" . 
+    
+fut:Partida9347 fut:realizadaNaData "2023-11-26T18:30:00" . 
+    
+fut:Partida9342 fut:realizadaNaData "2023-11-27T21:00:00" . 
+    
+fut:Partida9349 fut:realizadaNaData "2023-11-28T21:30:00" . 
+    
+fut:Partida9351 fut:realizadaNaData "2023-11-29T19:00:00" . 
+    
+fut:Partida9348 fut:realizadaNaData "2023-11-29T19:30:00" . 
+    
+fut:Partida9356 fut:realizadaNaData "2023-11-29T20:00:00" . 
+    
+fut:Partida9357 fut:realizadaNaData "2023-11-29T20:00:00" . 
+    
+fut:Partida9350 fut:realizadaNaData "2023-11-29T21:30:00" . 
+    
+fut:Partida9355 fut:realizadaNaData "2023-11-29T21:30:00" . 
+    
+fut:Partida9354 fut:realizadaNaData "2023-11-30T19:00:00" . 
+    
+fut:Partida9353 fut:realizadaNaData "2023-11-30T20:00:00" . 
+    
+fut:Partida9352 fut:realizadaNaData "2023-11-30T20:30:00" . 
+    
+fut:Partida9361 fut:realizadaNaData "2023-12-02T18:00:00" . 
+    
+fut:Partida9363 fut:realizadaNaData "2023-12-02T21:00:00" . 
+    
+fut:Partida9358 fut:realizadaNaData "2023-12-03T16:00:00" . 
+    
+fut:Partida9360 fut:realizadaNaData "2023-12-03T16:00:00" . 
+    
+fut:Partida9359 fut:realizadaNaData "2023-12-03T18:30:00" . 
+    
+fut:Partida9362 fut:realizadaNaData "2023-12-03T18:30:00" . 
+    
+fut:Partida9364 fut:realizadaNaData "2023-12-03T18:30:00" . 
+    
+fut:Partida9365 fut:realizadaNaData "2023-12-03T18:30:00" . 
+    
+fut:Partida9366 fut:realizadaNaData "2023-12-03T18:30:00" . 
+    
+fut:Partida9367 fut:realizadaNaData "2023-12-03T18:30:00" . 
+    
+fut:Partida9372 fut:realizadaNaData "2023-12-06T19:00:00" . 
+    
+fut:Partida9368 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9369 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9370 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9371 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9373 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9374 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9375 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9376 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+fut:Partida9377 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
