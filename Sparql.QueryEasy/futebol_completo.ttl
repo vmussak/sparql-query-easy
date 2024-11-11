@@ -384,6 +384,22 @@
                                         rdfs:range xsd:dateTime ;
                                         rdfs:label "realizadaNaData"@en .
 
+###  http://futebol.usp.br#vitoriaMandante
+<http://futebol.usp.br#vitoriaMandante> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:boolean ;
+                                        rdfs:label "vitoriaMandante"@en .
+
+###  http://futebol.usp.br#empate
+<http://futebol.usp.br#empate> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:boolean ;
+                                        rdfs:label "empate"@en .
+
 
 ###  http://futebol.usp.br#rebaixado
 <http://futebol.usp.br#rebaixado> rdf:type owl:DatatypeProperty ;
@@ -21383,4 +21399,1146 @@ fut:Partida9375 fut:realizadaNaData "2023-12-06T21:30:00" .
 fut:Partida9376 fut:realizadaNaData "2023-12-06T21:30:00" . 
     
 fut:Partida9377 fut:realizadaNaData "2023-12-06T21:30:00" . 
+    
+
+    
+fut:Partida9000 fut:vitoriaMandante true . 
+                        fut:Partida9000 fut:empate false . 
+    
+fut:Partida9007 fut:vitoriaMandante false . 
+                        fut:Partida9007 fut:empate false . 
+    
+fut:Partida8999 fut:vitoriaMandante true . 
+                        fut:Partida8999 fut:empate false . 
+    
+fut:Partida9002 fut:vitoriaMandante true . 
+                        fut:Partida9002 fut:empate false . 
+    
+fut:Partida9005 fut:vitoriaMandante true . 
+                        fut:Partida9005 fut:empate false . 
+    
+fut:Partida9006 fut:vitoriaMandante false . 
+                        fut:Partida9006 fut:empate true . 
+    
+fut:Partida9003 fut:vitoriaMandante false . 
+                        fut:Partida9003 fut:empate false . 
+    
+fut:Partida8998 fut:vitoriaMandante true . 
+                        fut:Partida8998 fut:empate false . 
+    
+fut:Partida9001 fut:vitoriaMandante true . 
+                        fut:Partida9001 fut:empate false . 
+    
+fut:Partida9004 fut:vitoriaMandante true . 
+                        fut:Partida9004 fut:empate false . 
+    
+fut:Partida9008 fut:vitoriaMandante true . 
+                        fut:Partida9008 fut:empate false . 
+    
+fut:Partida9010 fut:vitoriaMandante true . 
+                        fut:Partida9010 fut:empate false . 
+    
+fut:Partida9017 fut:vitoriaMandante false . 
+                        fut:Partida9017 fut:empate true . 
+    
+fut:Partida9013 fut:vitoriaMandante true . 
+                        fut:Partida9013 fut:empate false . 
+    
+fut:Partida9014 fut:vitoriaMandante true . 
+                        fut:Partida9014 fut:empate false . 
+    
+fut:Partida9009 fut:vitoriaMandante false . 
+                        fut:Partida9009 fut:empate true . 
+    
+fut:Partida9011 fut:vitoriaMandante false . 
+                        fut:Partida9011 fut:empate true . 
+    
+fut:Partida9015 fut:vitoriaMandante false . 
+                        fut:Partida9015 fut:empate false . 
+    
+fut:Partida9012 fut:vitoriaMandante true . 
+                        fut:Partida9012 fut:empate false . 
+    
+fut:Partida9016 fut:vitoriaMandante false . 
+                        fut:Partida9016 fut:empate false . 
+    
+fut:Partida9025 fut:vitoriaMandante false . 
+                        fut:Partida9025 fut:empate true . 
+    
+fut:Partida9026 fut:vitoriaMandante true . 
+                        fut:Partida9026 fut:empate false . 
+    
+fut:Partida9020 fut:vitoriaMandante true . 
+                        fut:Partida9020 fut:empate false . 
+    
+fut:Partida9021 fut:vitoriaMandante true . 
+                        fut:Partida9021 fut:empate false . 
+    
+fut:Partida9022 fut:vitoriaMandante false . 
+                        fut:Partida9022 fut:empate false . 
+    
+fut:Partida9023 fut:vitoriaMandante true . 
+                        fut:Partida9023 fut:empate false . 
+    
+fut:Partida9018 fut:vitoriaMandante false . 
+                        fut:Partida9018 fut:empate false . 
+    
+fut:Partida9024 fut:vitoriaMandante true . 
+                        fut:Partida9024 fut:empate false . 
+    
+fut:Partida9027 fut:vitoriaMandante false . 
+                        fut:Partida9027 fut:empate false . 
+    
+fut:Partida9019 fut:vitoriaMandante false . 
+                        fut:Partida9019 fut:empate false . 
+    
+fut:Partida9033 fut:vitoriaMandante true . 
+                        fut:Partida9033 fut:empate false . 
+    
+fut:Partida9028 fut:vitoriaMandante false . 
+                        fut:Partida9028 fut:empate true . 
+    
+fut:Partida9037 fut:vitoriaMandante false . 
+                        fut:Partida9037 fut:empate false . 
+    
+fut:Partida9030 fut:vitoriaMandante true . 
+                        fut:Partida9030 fut:empate false . 
+    
+fut:Partida9035 fut:vitoriaMandante true . 
+                        fut:Partida9035 fut:empate false . 
+    
+fut:Partida9036 fut:vitoriaMandante true . 
+                        fut:Partida9036 fut:empate false . 
+    
+fut:Partida9029 fut:vitoriaMandante true . 
+                        fut:Partida9029 fut:empate false . 
+    
+fut:Partida9032 fut:vitoriaMandante false . 
+                        fut:Partida9032 fut:empate false . 
+    
+fut:Partida9034 fut:vitoriaMandante false . 
+                        fut:Partida9034 fut:empate true . 
+    
+fut:Partida9031 fut:vitoriaMandante false . 
+                        fut:Partida9031 fut:empate true . 
+    
+fut:Partida9041 fut:vitoriaMandante true . 
+                        fut:Partida9041 fut:empate false . 
+    
+fut:Partida9042 fut:vitoriaMandante false . 
+                        fut:Partida9042 fut:empate true . 
+    
+fut:Partida9044 fut:vitoriaMandante false . 
+                        fut:Partida9044 fut:empate false . 
+    
+fut:Partida9047 fut:vitoriaMandante false . 
+                        fut:Partida9047 fut:empate false . 
+    
+fut:Partida9038 fut:vitoriaMandante true . 
+                        fut:Partida9038 fut:empate false . 
+    
+fut:Partida9040 fut:vitoriaMandante true . 
+                        fut:Partida9040 fut:empate false . 
+    
+fut:Partida9043 fut:vitoriaMandante false . 
+                        fut:Partida9043 fut:empate false . 
+    
+fut:Partida9045 fut:vitoriaMandante false . 
+                        fut:Partida9045 fut:empate true . 
+    
+fut:Partida9039 fut:vitoriaMandante true . 
+                        fut:Partida9039 fut:empate false . 
+    
+fut:Partida9046 fut:vitoriaMandante false . 
+                        fut:Partida9046 fut:empate true . 
+    
+fut:Partida9056 fut:vitoriaMandante false . 
+                        fut:Partida9056 fut:empate false . 
+    
+fut:Partida9048 fut:vitoriaMandante true . 
+                        fut:Partida9048 fut:empate false . 
+    
+fut:Partida9050 fut:vitoriaMandante false . 
+                        fut:Partida9050 fut:empate true . 
+    
+fut:Partida9053 fut:vitoriaMandante true . 
+                        fut:Partida9053 fut:empate false . 
+    
+fut:Partida9049 fut:vitoriaMandante false . 
+                        fut:Partida9049 fut:empate false . 
+    
+fut:Partida9051 fut:vitoriaMandante false . 
+                        fut:Partida9051 fut:empate true . 
+    
+fut:Partida9054 fut:vitoriaMandante false . 
+                        fut:Partida9054 fut:empate true . 
+    
+fut:Partida9052 fut:vitoriaMandante true . 
+                        fut:Partida9052 fut:empate false . 
+    
+fut:Partida9055 fut:vitoriaMandante true . 
+                        fut:Partida9055 fut:empate false . 
+    
+fut:Partida9057 fut:vitoriaMandante false . 
+                        fut:Partida9057 fut:empate false . 
+    
+fut:Partida9066 fut:vitoriaMandante false . 
+                        fut:Partida9066 fut:empate true . 
+    
+fut:Partida9059 fut:vitoriaMandante true . 
+                        fut:Partida9059 fut:empate false . 
+    
+fut:Partida9060 fut:vitoriaMandante true . 
+                        fut:Partida9060 fut:empate false . 
+    
+fut:Partida9062 fut:vitoriaMandante true . 
+                        fut:Partida9062 fut:empate false . 
+    
+fut:Partida9065 fut:vitoriaMandante false . 
+                        fut:Partida9065 fut:empate false . 
+    
+fut:Partida9067 fut:vitoriaMandante true . 
+                        fut:Partida9067 fut:empate false . 
+    
+fut:Partida9061 fut:vitoriaMandante false . 
+                        fut:Partida9061 fut:empate true . 
+    
+fut:Partida9058 fut:vitoriaMandante true . 
+                        fut:Partida9058 fut:empate false . 
+    
+fut:Partida9064 fut:vitoriaMandante true . 
+                        fut:Partida9064 fut:empate false . 
+    
+fut:Partida9063 fut:vitoriaMandante false . 
+                        fut:Partida9063 fut:empate false . 
+    
+fut:Partida9075 fut:vitoriaMandante false . 
+                        fut:Partida9075 fut:empate false . 
+    
+fut:Partida9076 fut:vitoriaMandante true . 
+                        fut:Partida9076 fut:empate false . 
+    
+fut:Partida9068 fut:vitoriaMandante false . 
+                        fut:Partida9068 fut:empate true . 
+    
+fut:Partida9077 fut:vitoriaMandante false . 
+                        fut:Partida9077 fut:empate true . 
+    
+fut:Partida9070 fut:vitoriaMandante true . 
+                        fut:Partida9070 fut:empate false . 
+    
+fut:Partida9071 fut:vitoriaMandante true . 
+                        fut:Partida9071 fut:empate false . 
+    
+fut:Partida9074 fut:vitoriaMandante true . 
+                        fut:Partida9074 fut:empate false . 
+    
+fut:Partida9072 fut:vitoriaMandante true . 
+                        fut:Partida9072 fut:empate false . 
+    
+fut:Partida9073 fut:vitoriaMandante false . 
+                        fut:Partida9073 fut:empate true . 
+    
+fut:Partida9069 fut:vitoriaMandante true . 
+                        fut:Partida9069 fut:empate false . 
+    
+fut:Partida9086 fut:vitoriaMandante false . 
+                        fut:Partida9086 fut:empate true . 
+    
+fut:Partida9083 fut:vitoriaMandante false . 
+                        fut:Partida9083 fut:empate false . 
+    
+fut:Partida9085 fut:vitoriaMandante true . 
+                        fut:Partida9085 fut:empate false . 
+    
+fut:Partida9087 fut:vitoriaMandante true . 
+                        fut:Partida9087 fut:empate false . 
+    
+fut:Partida9081 fut:vitoriaMandante false . 
+                        fut:Partida9081 fut:empate true . 
+    
+fut:Partida9078 fut:vitoriaMandante true . 
+                        fut:Partida9078 fut:empate false . 
+    
+fut:Partida9084 fut:vitoriaMandante true . 
+                        fut:Partida9084 fut:empate false . 
+    
+fut:Partida9080 fut:vitoriaMandante true . 
+                        fut:Partida9080 fut:empate false . 
+    
+fut:Partida9082 fut:vitoriaMandante false . 
+                        fut:Partida9082 fut:empate false . 
+    
+fut:Partida9079 fut:vitoriaMandante false . 
+                        fut:Partida9079 fut:empate false . 
+    
+fut:Partida9095 fut:vitoriaMandante false . 
+                        fut:Partida9095 fut:empate true . 
+    
+fut:Partida9091 fut:vitoriaMandante false . 
+                        fut:Partida9091 fut:empate true . 
+    
+fut:Partida9093 fut:vitoriaMandante false . 
+                        fut:Partida9093 fut:empate true . 
+    
+fut:Partida9096 fut:vitoriaMandante false . 
+                        fut:Partida9096 fut:empate true . 
+    
+fut:Partida9089 fut:vitoriaMandante true . 
+                        fut:Partida9089 fut:empate false . 
+    
+fut:Partida9097 fut:vitoriaMandante false . 
+                        fut:Partida9097 fut:empate true . 
+    
+fut:Partida9090 fut:vitoriaMandante false . 
+                        fut:Partida9090 fut:empate false . 
+    
+fut:Partida9094 fut:vitoriaMandante true . 
+                        fut:Partida9094 fut:empate false . 
+    
+fut:Partida9088 fut:vitoriaMandante true . 
+                        fut:Partida9088 fut:empate false . 
+    
+fut:Partida9092 fut:vitoriaMandante false . 
+                        fut:Partida9092 fut:empate true . 
+    
+fut:Partida9100 fut:vitoriaMandante true . 
+                        fut:Partida9100 fut:empate false . 
+    
+fut:Partida9103 fut:vitoriaMandante false . 
+                        fut:Partida9103 fut:empate false . 
+    
+fut:Partida9101 fut:vitoriaMandante false . 
+                        fut:Partida9101 fut:empate false . 
+    
+fut:Partida9098 fut:vitoriaMandante false . 
+                        fut:Partida9098 fut:empate true . 
+    
+fut:Partida9106 fut:vitoriaMandante true . 
+                        fut:Partida9106 fut:empate false . 
+    
+fut:Partida9104 fut:vitoriaMandante true . 
+                        fut:Partida9104 fut:empate false . 
+    
+fut:Partida9099 fut:vitoriaMandante false . 
+                        fut:Partida9099 fut:empate false . 
+    
+fut:Partida9105 fut:vitoriaMandante false . 
+                        fut:Partida9105 fut:empate false . 
+    
+fut:Partida9107 fut:vitoriaMandante false . 
+                        fut:Partida9107 fut:empate false . 
+    
+fut:Partida9102 fut:vitoriaMandante true . 
+                        fut:Partida9102 fut:empate false . 
+    
+fut:Partida9115 fut:vitoriaMandante true . 
+                        fut:Partida9115 fut:empate false . 
+    
+fut:Partida9108 fut:vitoriaMandante true . 
+                        fut:Partida9108 fut:empate false . 
+    
+fut:Partida9116 fut:vitoriaMandante true . 
+                        fut:Partida9116 fut:empate false . 
+    
+fut:Partida9113 fut:vitoriaMandante true . 
+                        fut:Partida9113 fut:empate false . 
+    
+fut:Partida9110 fut:vitoriaMandante false . 
+                        fut:Partida9110 fut:empate false . 
+    
+fut:Partida9114 fut:vitoriaMandante true . 
+                        fut:Partida9114 fut:empate false . 
+    
+fut:Partida9111 fut:vitoriaMandante false . 
+                        fut:Partida9111 fut:empate false . 
+    
+fut:Partida9112 fut:vitoriaMandante true . 
+                        fut:Partida9112 fut:empate false . 
+    
+fut:Partida9117 fut:vitoriaMandante false . 
+                        fut:Partida9117 fut:empate false . 
+    
+fut:Partida9109 fut:vitoriaMandante true . 
+                        fut:Partida9109 fut:empate false . 
+    
+fut:Partida9120 fut:vitoriaMandante true . 
+                        fut:Partida9120 fut:empate false . 
+    
+fut:Partida9118 fut:vitoriaMandante true . 
+                        fut:Partida9118 fut:empate false . 
+    
+fut:Partida9126 fut:vitoriaMandante false . 
+                        fut:Partida9126 fut:empate false . 
+    
+fut:Partida9124 fut:vitoriaMandante false . 
+                        fut:Partida9124 fut:empate true . 
+    
+fut:Partida9121 fut:vitoriaMandante false . 
+                        fut:Partida9121 fut:empate false . 
+    
+fut:Partida9119 fut:vitoriaMandante true . 
+                        fut:Partida9119 fut:empate false . 
+    
+fut:Partida9123 fut:vitoriaMandante false . 
+                        fut:Partida9123 fut:empate true . 
+    
+fut:Partida9125 fut:vitoriaMandante false . 
+                        fut:Partida9125 fut:empate true . 
+    
+fut:Partida9127 fut:vitoriaMandante true . 
+                        fut:Partida9127 fut:empate false . 
+    
+fut:Partida9122 fut:vitoriaMandante false . 
+                        fut:Partida9122 fut:empate false . 
+    
+fut:Partida9129 fut:vitoriaMandante false . 
+                        fut:Partida9129 fut:empate false . 
+    
+fut:Partida9137 fut:vitoriaMandante false . 
+                        fut:Partida9137 fut:empate true . 
+    
+fut:Partida9133 fut:vitoriaMandante false . 
+                        fut:Partida9133 fut:empate false . 
+    
+fut:Partida9135 fut:vitoriaMandante true . 
+                        fut:Partida9135 fut:empate false . 
+    
+fut:Partida9130 fut:vitoriaMandante false . 
+                        fut:Partida9130 fut:empate true . 
+    
+fut:Partida9131 fut:vitoriaMandante true . 
+                        fut:Partida9131 fut:empate false . 
+    
+fut:Partida9128 fut:vitoriaMandante true . 
+                        fut:Partida9128 fut:empate false . 
+    
+fut:Partida9132 fut:vitoriaMandante false . 
+                        fut:Partida9132 fut:empate true . 
+    
+fut:Partida9134 fut:vitoriaMandante false . 
+                        fut:Partida9134 fut:empate false . 
+    
+fut:Partida9136 fut:vitoriaMandante true . 
+                        fut:Partida9136 fut:empate false . 
+    
+fut:Partida9139 fut:vitoriaMandante true . 
+                        fut:Partida9139 fut:empate false . 
+    
+fut:Partida9143 fut:vitoriaMandante false . 
+                        fut:Partida9143 fut:empate true . 
+    
+fut:Partida9138 fut:vitoriaMandante false . 
+                        fut:Partida9138 fut:empate true . 
+    
+fut:Partida9140 fut:vitoriaMandante true . 
+                        fut:Partida9140 fut:empate false . 
+    
+fut:Partida9146 fut:vitoriaMandante false . 
+                        fut:Partida9146 fut:empate false . 
+    
+fut:Partida9144 fut:vitoriaMandante false . 
+                        fut:Partida9144 fut:empate true . 
+    
+fut:Partida9145 fut:vitoriaMandante true . 
+                        fut:Partida9145 fut:empate false . 
+    
+fut:Partida9142 fut:vitoriaMandante false . 
+                        fut:Partida9142 fut:empate true . 
+    
+fut:Partida9141 fut:vitoriaMandante false . 
+                        fut:Partida9141 fut:empate true . 
+    
+fut:Partida9147 fut:vitoriaMandante false . 
+                        fut:Partida9147 fut:empate false . 
+    
+fut:Partida9148 fut:vitoriaMandante false . 
+                        fut:Partida9148 fut:empate true . 
+    
+fut:Partida9150 fut:vitoriaMandante true . 
+                        fut:Partida9150 fut:empate false . 
+    
+fut:Partida9156 fut:vitoriaMandante false . 
+                        fut:Partida9156 fut:empate true . 
+    
+fut:Partida9157 fut:vitoriaMandante true . 
+                        fut:Partida9157 fut:empate false . 
+    
+fut:Partida9154 fut:vitoriaMandante true . 
+                        fut:Partida9154 fut:empate false . 
+    
+fut:Partida9151 fut:vitoriaMandante false . 
+                        fut:Partida9151 fut:empate true . 
+    
+fut:Partida9152 fut:vitoriaMandante false . 
+                        fut:Partida9152 fut:empate true . 
+    
+fut:Partida9153 fut:vitoriaMandante false . 
+                        fut:Partida9153 fut:empate false . 
+    
+fut:Partida9149 fut:vitoriaMandante false . 
+                        fut:Partida9149 fut:empate false . 
+    
+fut:Partida9155 fut:vitoriaMandante true . 
+                        fut:Partida9155 fut:empate false . 
+    
+fut:Partida9158 fut:vitoriaMandante true . 
+                        fut:Partida9158 fut:empate false . 
+    
+fut:Partida9164 fut:vitoriaMandante false . 
+                        fut:Partida9164 fut:empate false . 
+    
+fut:Partida9165 fut:vitoriaMandante false . 
+                        fut:Partida9165 fut:empate true . 
+    
+fut:Partida9161 fut:vitoriaMandante true . 
+                        fut:Partida9161 fut:empate false . 
+    
+fut:Partida9166 fut:vitoriaMandante false . 
+                        fut:Partida9166 fut:empate false . 
+    
+fut:Partida9163 fut:vitoriaMandante false . 
+                        fut:Partida9163 fut:empate false . 
+    
+fut:Partida9160 fut:vitoriaMandante false . 
+                        fut:Partida9160 fut:empate true . 
+    
+fut:Partida9159 fut:vitoriaMandante true . 
+                        fut:Partida9159 fut:empate false . 
+    
+fut:Partida9167 fut:vitoriaMandante false . 
+                        fut:Partida9167 fut:empate false . 
+    
+fut:Partida9162 fut:vitoriaMandante false . 
+                        fut:Partida9162 fut:empate true . 
+    
+fut:Partida9171 fut:vitoriaMandante false . 
+                        fut:Partida9171 fut:empate true . 
+    
+fut:Partida9172 fut:vitoriaMandante true . 
+                        fut:Partida9172 fut:empate false . 
+    
+fut:Partida9174 fut:vitoriaMandante false . 
+                        fut:Partida9174 fut:empate true . 
+    
+fut:Partida9168 fut:vitoriaMandante true . 
+                        fut:Partida9168 fut:empate false . 
+    
+fut:Partida9169 fut:vitoriaMandante true . 
+                        fut:Partida9169 fut:empate false . 
+    
+fut:Partida9170 fut:vitoriaMandante false . 
+                        fut:Partida9170 fut:empate false . 
+    
+fut:Partida9173 fut:vitoriaMandante false . 
+                        fut:Partida9173 fut:empate true . 
+    
+fut:Partida9175 fut:vitoriaMandante false . 
+                        fut:Partida9175 fut:empate false . 
+    
+fut:Partida9176 fut:vitoriaMandante true . 
+                        fut:Partida9176 fut:empate false . 
+    
+fut:Partida9177 fut:vitoriaMandante true . 
+                        fut:Partida9177 fut:empate false . 
+    
+fut:Partida9179 fut:vitoriaMandante true . 
+                        fut:Partida9179 fut:empate false . 
+    
+fut:Partida9183 fut:vitoriaMandante true . 
+                        fut:Partida9183 fut:empate false . 
+    
+fut:Partida9181 fut:vitoriaMandante true . 
+                        fut:Partida9181 fut:empate false . 
+    
+fut:Partida9184 fut:vitoriaMandante true . 
+                        fut:Partida9184 fut:empate false . 
+    
+fut:Partida9187 fut:vitoriaMandante false . 
+                        fut:Partida9187 fut:empate false . 
+    
+fut:Partida9178 fut:vitoriaMandante false . 
+                        fut:Partida9178 fut:empate true . 
+    
+fut:Partida9186 fut:vitoriaMandante true . 
+                        fut:Partida9186 fut:empate false . 
+    
+fut:Partida9180 fut:vitoriaMandante true . 
+                        fut:Partida9180 fut:empate false . 
+    
+fut:Partida9182 fut:vitoriaMandante false . 
+                        fut:Partida9182 fut:empate true . 
+    
+fut:Partida9185 fut:vitoriaMandante true . 
+                        fut:Partida9185 fut:empate false . 
+    
+fut:Partida9190 fut:vitoriaMandante false . 
+                        fut:Partida9190 fut:empate true . 
+    
+fut:Partida9194 fut:vitoriaMandante false . 
+                        fut:Partida9194 fut:empate false . 
+    
+fut:Partida9188 fut:vitoriaMandante true . 
+                        fut:Partida9188 fut:empate false . 
+    
+fut:Partida9197 fut:vitoriaMandante false . 
+                        fut:Partida9197 fut:empate false . 
+    
+fut:Partida9193 fut:vitoriaMandante false . 
+                        fut:Partida9193 fut:empate true . 
+    
+fut:Partida9189 fut:vitoriaMandante true . 
+                        fut:Partida9189 fut:empate false . 
+    
+fut:Partida9191 fut:vitoriaMandante true . 
+                        fut:Partida9191 fut:empate false . 
+    
+fut:Partida9195 fut:vitoriaMandante false . 
+                        fut:Partida9195 fut:empate false . 
+    
+fut:Partida9196 fut:vitoriaMandante true . 
+                        fut:Partida9196 fut:empate false . 
+    
+fut:Partida9192 fut:vitoriaMandante false . 
+                        fut:Partida9192 fut:empate true . 
+    
+fut:Partida9198 fut:vitoriaMandante false . 
+                        fut:Partida9198 fut:empate true . 
+    
+fut:Partida9201 fut:vitoriaMandante false . 
+                        fut:Partida9201 fut:empate true . 
+    
+fut:Partida9202 fut:vitoriaMandante true . 
+                        fut:Partida9202 fut:empate false . 
+    
+fut:Partida9199 fut:vitoriaMandante true . 
+                        fut:Partida9199 fut:empate false . 
+    
+fut:Partida9203 fut:vitoriaMandante true . 
+                        fut:Partida9203 fut:empate false . 
+    
+fut:Partida9207 fut:vitoriaMandante true . 
+                        fut:Partida9207 fut:empate false . 
+    
+fut:Partida9200 fut:vitoriaMandante true . 
+                        fut:Partida9200 fut:empate false . 
+    
+fut:Partida9205 fut:vitoriaMandante false . 
+                        fut:Partida9205 fut:empate true . 
+    
+fut:Partida9206 fut:vitoriaMandante true . 
+                        fut:Partida9206 fut:empate false . 
+    
+fut:Partida9204 fut:vitoriaMandante true . 
+                        fut:Partida9204 fut:empate false . 
+    
+fut:Partida9212 fut:vitoriaMandante false . 
+                        fut:Partida9212 fut:empate true . 
+    
+fut:Partida9215 fut:vitoriaMandante false . 
+                        fut:Partida9215 fut:empate true . 
+    
+fut:Partida9209 fut:vitoriaMandante false . 
+                        fut:Partida9209 fut:empate false . 
+    
+fut:Partida9214 fut:vitoriaMandante true . 
+                        fut:Partida9214 fut:empate false . 
+    
+fut:Partida9208 fut:vitoriaMandante true . 
+                        fut:Partida9208 fut:empate false . 
+    
+fut:Partida9211 fut:vitoriaMandante false . 
+                        fut:Partida9211 fut:empate true . 
+    
+fut:Partida9213 fut:vitoriaMandante false . 
+                        fut:Partida9213 fut:empate true . 
+    
+fut:Partida9216 fut:vitoriaMandante false . 
+                        fut:Partida9216 fut:empate true . 
+    
+fut:Partida9217 fut:vitoriaMandante true . 
+                        fut:Partida9217 fut:empate false . 
+    
+fut:Partida9210 fut:vitoriaMandante true . 
+                        fut:Partida9210 fut:empate false . 
+    
+fut:Partida9218 fut:vitoriaMandante false . 
+                        fut:Partida9218 fut:empate false . 
+    
+fut:Partida9224 fut:vitoriaMandante true . 
+                        fut:Partida9224 fut:empate false . 
+    
+fut:Partida9221 fut:vitoriaMandante false . 
+                        fut:Partida9221 fut:empate false . 
+    
+fut:Partida9226 fut:vitoriaMandante true . 
+                        fut:Partida9226 fut:empate false . 
+    
+fut:Partida9225 fut:vitoriaMandante false . 
+                        fut:Partida9225 fut:empate false . 
+    
+fut:Partida9222 fut:vitoriaMandante true . 
+                        fut:Partida9222 fut:empate false . 
+    
+fut:Partida9227 fut:vitoriaMandante false . 
+                        fut:Partida9227 fut:empate true . 
+    
+fut:Partida9220 fut:vitoriaMandante true . 
+                        fut:Partida9220 fut:empate false . 
+    
+fut:Partida9219 fut:vitoriaMandante true . 
+                        fut:Partida9219 fut:empate false . 
+    
+fut:Partida9223 fut:vitoriaMandante true . 
+                        fut:Partida9223 fut:empate false . 
+    
+fut:Partida9236 fut:vitoriaMandante false . 
+                        fut:Partida9236 fut:empate false . 
+    
+fut:Partida9237 fut:vitoriaMandante false . 
+                        fut:Partida9237 fut:empate false . 
+    
+fut:Partida9232 fut:vitoriaMandante false . 
+                        fut:Partida9232 fut:empate true . 
+    
+fut:Partida9228 fut:vitoriaMandante true . 
+                        fut:Partida9228 fut:empate false . 
+    
+fut:Partida9230 fut:vitoriaMandante false . 
+                        fut:Partida9230 fut:empate false . 
+    
+fut:Partida9229 fut:vitoriaMandante true . 
+                        fut:Partida9229 fut:empate false . 
+    
+fut:Partida9235 fut:vitoriaMandante true . 
+                        fut:Partida9235 fut:empate false . 
+    
+fut:Partida9234 fut:vitoriaMandante true . 
+                        fut:Partida9234 fut:empate false . 
+    
+fut:Partida9231 fut:vitoriaMandante true . 
+                        fut:Partida9231 fut:empate false . 
+    
+fut:Partida9233 fut:vitoriaMandante true . 
+                        fut:Partida9233 fut:empate false . 
+    
+fut:Partida9238 fut:vitoriaMandante true . 
+                        fut:Partida9238 fut:empate false . 
+    
+fut:Partida9246 fut:vitoriaMandante false . 
+                        fut:Partida9246 fut:empate true . 
+    
+fut:Partida9240 fut:vitoriaMandante true . 
+                        fut:Partida9240 fut:empate false . 
+    
+fut:Partida9247 fut:vitoriaMandante true . 
+                        fut:Partida9247 fut:empate false . 
+    
+fut:Partida9244 fut:vitoriaMandante false . 
+                        fut:Partida9244 fut:empate false . 
+    
+fut:Partida9241 fut:vitoriaMandante true . 
+                        fut:Partida9241 fut:empate false . 
+    
+fut:Partida9243 fut:vitoriaMandante false . 
+                        fut:Partida9243 fut:empate true . 
+    
+fut:Partida9245 fut:vitoriaMandante true . 
+                        fut:Partida9245 fut:empate false . 
+    
+fut:Partida9242 fut:vitoriaMandante true . 
+                        fut:Partida9242 fut:empate false . 
+    
+fut:Partida9239 fut:vitoriaMandante false . 
+                        fut:Partida9239 fut:empate true . 
+    
+fut:Partida9252 fut:vitoriaMandante false . 
+                        fut:Partida9252 fut:empate false . 
+    
+fut:Partida9249 fut:vitoriaMandante false . 
+                        fut:Partida9249 fut:empate true . 
+    
+fut:Partida9251 fut:vitoriaMandante false . 
+                        fut:Partida9251 fut:empate true . 
+    
+fut:Partida9248 fut:vitoriaMandante false . 
+                        fut:Partida9248 fut:empate false . 
+    
+fut:Partida9250 fut:vitoriaMandante false . 
+                        fut:Partida9250 fut:empate false . 
+    
+fut:Partida9254 fut:vitoriaMandante true . 
+                        fut:Partida9254 fut:empate false . 
+    
+fut:Partida9253 fut:vitoriaMandante false . 
+                        fut:Partida9253 fut:empate false . 
+    
+fut:Partida9255 fut:vitoriaMandante false . 
+                        fut:Partida9255 fut:empate true . 
+    
+fut:Partida9256 fut:vitoriaMandante true . 
+                        fut:Partida9256 fut:empate false . 
+    
+fut:Partida9257 fut:vitoriaMandante false . 
+                        fut:Partida9257 fut:empate true . 
+    
+fut:Partida9264 fut:vitoriaMandante false . 
+                        fut:Partida9264 fut:empate false . 
+    
+fut:Partida9265 fut:vitoriaMandante false . 
+                        fut:Partida9265 fut:empate false . 
+    
+fut:Partida9267 fut:vitoriaMandante false . 
+                        fut:Partida9267 fut:empate false . 
+    
+fut:Partida9259 fut:vitoriaMandante true . 
+                        fut:Partida9259 fut:empate false . 
+    
+fut:Partida9262 fut:vitoriaMandante true . 
+                        fut:Partida9262 fut:empate false . 
+    
+fut:Partida9266 fut:vitoriaMandante true . 
+                        fut:Partida9266 fut:empate false . 
+    
+fut:Partida9260 fut:vitoriaMandante false . 
+                        fut:Partida9260 fut:empate false . 
+    
+fut:Partida9263 fut:vitoriaMandante false . 
+                        fut:Partida9263 fut:empate false . 
+    
+fut:Partida9261 fut:vitoriaMandante false . 
+                        fut:Partida9261 fut:empate false . 
+    
+fut:Partida9258 fut:vitoriaMandante false . 
+                        fut:Partida9258 fut:empate true . 
+    
+fut:Partida9270 fut:vitoriaMandante true . 
+                        fut:Partida9270 fut:empate false . 
+    
+fut:Partida9276 fut:vitoriaMandante true . 
+                        fut:Partida9276 fut:empate false . 
+    
+fut:Partida9277 fut:vitoriaMandante false . 
+                        fut:Partida9277 fut:empate true . 
+    
+fut:Partida9269 fut:vitoriaMandante false . 
+                        fut:Partida9269 fut:empate true . 
+    
+fut:Partida9268 fut:vitoriaMandante true . 
+                        fut:Partida9268 fut:empate false . 
+    
+fut:Partida9273 fut:vitoriaMandante false . 
+                        fut:Partida9273 fut:empate false . 
+    
+fut:Partida9274 fut:vitoriaMandante true . 
+                        fut:Partida9274 fut:empate false . 
+    
+fut:Partida9271 fut:vitoriaMandante false . 
+                        fut:Partida9271 fut:empate true . 
+    
+fut:Partida9272 fut:vitoriaMandante true . 
+                        fut:Partida9272 fut:empate false . 
+    
+fut:Partida9275 fut:vitoriaMandante false . 
+                        fut:Partida9275 fut:empate false . 
+    
+fut:Partida9278 fut:vitoriaMandante true . 
+                        fut:Partida9278 fut:empate false . 
+    
+fut:Partida9282 fut:vitoriaMandante false . 
+                        fut:Partida9282 fut:empate false . 
+    
+fut:Partida9285 fut:vitoriaMandante true . 
+                        fut:Partida9285 fut:empate false . 
+    
+fut:Partida9280 fut:vitoriaMandante true . 
+                        fut:Partida9280 fut:empate false . 
+    
+fut:Partida9283 fut:vitoriaMandante true . 
+                        fut:Partida9283 fut:empate false . 
+    
+fut:Partida9284 fut:vitoriaMandante true . 
+                        fut:Partida9284 fut:empate false . 
+    
+fut:Partida9287 fut:vitoriaMandante false . 
+                        fut:Partida9287 fut:empate false . 
+    
+fut:Partida9279 fut:vitoriaMandante false . 
+                        fut:Partida9279 fut:empate false . 
+    
+fut:Partida9281 fut:vitoriaMandante true . 
+                        fut:Partida9281 fut:empate false . 
+    
+fut:Partida9286 fut:vitoriaMandante false . 
+                        fut:Partida9286 fut:empate true . 
+    
+fut:Partida9290 fut:vitoriaMandante true . 
+                        fut:Partida9290 fut:empate false . 
+    
+fut:Partida9297 fut:vitoriaMandante false . 
+                        fut:Partida9297 fut:empate false . 
+    
+fut:Partida9293 fut:vitoriaMandante true . 
+                        fut:Partida9293 fut:empate false . 
+    
+fut:Partida9292 fut:vitoriaMandante false . 
+                        fut:Partida9292 fut:empate true . 
+    
+fut:Partida9295 fut:vitoriaMandante false . 
+                        fut:Partida9295 fut:empate true . 
+    
+fut:Partida9291 fut:vitoriaMandante false . 
+                        fut:Partida9291 fut:empate true . 
+    
+fut:Partida9294 fut:vitoriaMandante false . 
+                        fut:Partida9294 fut:empate false . 
+    
+fut:Partida9289 fut:vitoriaMandante false . 
+                        fut:Partida9289 fut:empate false . 
+    
+fut:Partida9296 fut:vitoriaMandante false . 
+                        fut:Partida9296 fut:empate false . 
+    
+fut:Partida9288 fut:vitoriaMandante true . 
+                        fut:Partida9288 fut:empate false . 
+    
+fut:Partida9306 fut:vitoriaMandante true . 
+                        fut:Partida9306 fut:empate false . 
+    
+fut:Partida9304 fut:vitoriaMandante false . 
+                        fut:Partida9304 fut:empate true . 
+    
+fut:Partida9301 fut:vitoriaMandante true . 
+                        fut:Partida9301 fut:empate false . 
+    
+fut:Partida9305 fut:vitoriaMandante false . 
+                        fut:Partida9305 fut:empate false . 
+    
+fut:Partida9298 fut:vitoriaMandante false . 
+                        fut:Partida9298 fut:empate false . 
+    
+fut:Partida9303 fut:vitoriaMandante true . 
+                        fut:Partida9303 fut:empate false . 
+    
+fut:Partida9299 fut:vitoriaMandante false . 
+                        fut:Partida9299 fut:empate false . 
+    
+fut:Partida9307 fut:vitoriaMandante false . 
+                        fut:Partida9307 fut:empate false . 
+    
+fut:Partida9302 fut:vitoriaMandante false . 
+                        fut:Partida9302 fut:empate false . 
+    
+fut:Partida9300 fut:vitoriaMandante true . 
+                        fut:Partida9300 fut:empate false . 
+    
+fut:Partida9314 fut:vitoriaMandante true . 
+                        fut:Partida9314 fut:empate false . 
+    
+fut:Partida9317 fut:vitoriaMandante false . 
+                        fut:Partida9317 fut:empate true . 
+    
+fut:Partida9310 fut:vitoriaMandante true . 
+                        fut:Partida9310 fut:empate false . 
+    
+fut:Partida9312 fut:vitoriaMandante true . 
+                        fut:Partida9312 fut:empate false . 
+    
+fut:Partida9313 fut:vitoriaMandante false . 
+                        fut:Partida9313 fut:empate false . 
+    
+fut:Partida9316 fut:vitoriaMandante false . 
+                        fut:Partida9316 fut:empate false . 
+    
+fut:Partida9315 fut:vitoriaMandante false . 
+                        fut:Partida9315 fut:empate false . 
+    
+fut:Partida9309 fut:vitoriaMandante true . 
+                        fut:Partida9309 fut:empate false . 
+    
+fut:Partida9311 fut:vitoriaMandante false . 
+                        fut:Partida9311 fut:empate true . 
+    
+fut:Partida9308 fut:vitoriaMandante true . 
+                        fut:Partida9308 fut:empate false . 
+    
+fut:Partida9324 fut:vitoriaMandante false . 
+                        fut:Partida9324 fut:empate true . 
+    
+fut:Partida9327 fut:vitoriaMandante false . 
+                        fut:Partida9327 fut:empate false . 
+    
+fut:Partida9320 fut:vitoriaMandante true . 
+                        fut:Partida9320 fut:empate false . 
+    
+fut:Partida9325 fut:vitoriaMandante false . 
+                        fut:Partida9325 fut:empate true . 
+    
+fut:Partida9318 fut:vitoriaMandante true . 
+                        fut:Partida9318 fut:empate false . 
+    
+fut:Partida9321 fut:vitoriaMandante false . 
+                        fut:Partida9321 fut:empate true . 
+    
+fut:Partida9322 fut:vitoriaMandante false . 
+                        fut:Partida9322 fut:empate false . 
+    
+fut:Partida9319 fut:vitoriaMandante false . 
+                        fut:Partida9319 fut:empate false . 
+    
+fut:Partida9326 fut:vitoriaMandante false . 
+                        fut:Partida9326 fut:empate false . 
+    
+fut:Partida9323 fut:vitoriaMandante false . 
+                        fut:Partida9323 fut:empate true . 
+    
+fut:Partida9335 fut:vitoriaMandante true . 
+                        fut:Partida9335 fut:empate false . 
+    
+fut:Partida9328 fut:vitoriaMandante false . 
+                        fut:Partida9328 fut:empate true . 
+    
+fut:Partida9330 fut:vitoriaMandante true . 
+                        fut:Partida9330 fut:empate false . 
+    
+fut:Partida9332 fut:vitoriaMandante false . 
+                        fut:Partida9332 fut:empate true . 
+    
+fut:Partida9334 fut:vitoriaMandante false . 
+                        fut:Partida9334 fut:empate false . 
+    
+fut:Partida9329 fut:vitoriaMandante true . 
+                        fut:Partida9329 fut:empate false . 
+    
+fut:Partida9331 fut:vitoriaMandante false . 
+                        fut:Partida9331 fut:empate true . 
+    
+fut:Partida9333 fut:vitoriaMandante true . 
+                        fut:Partida9333 fut:empate false . 
+    
+fut:Partida9336 fut:vitoriaMandante false . 
+                        fut:Partida9336 fut:empate true . 
+    
+fut:Partida9337 fut:vitoriaMandante true . 
+                        fut:Partida9337 fut:empate false . 
+    
+fut:Partida9341 fut:vitoriaMandante false . 
+                        fut:Partida9341 fut:empate false . 
+    
+fut:Partida9345 fut:vitoriaMandante false . 
+                        fut:Partida9345 fut:empate true . 
+    
+fut:Partida9338 fut:vitoriaMandante true . 
+                        fut:Partida9338 fut:empate false . 
+    
+fut:Partida9339 fut:vitoriaMandante false . 
+                        fut:Partida9339 fut:empate true . 
+    
+fut:Partida9343 fut:vitoriaMandante true . 
+                        fut:Partida9343 fut:empate false . 
+    
+fut:Partida9340 fut:vitoriaMandante false . 
+                        fut:Partida9340 fut:empate true . 
+    
+fut:Partida9344 fut:vitoriaMandante true . 
+                        fut:Partida9344 fut:empate false . 
+    
+fut:Partida9346 fut:vitoriaMandante false . 
+                        fut:Partida9346 fut:empate true . 
+    
+fut:Partida9347 fut:vitoriaMandante false . 
+                        fut:Partida9347 fut:empate false . 
+    
+fut:Partida9342 fut:vitoriaMandante false . 
+                        fut:Partida9342 fut:empate false . 
+    
+fut:Partida9349 fut:vitoriaMandante false . 
+                        fut:Partida9349 fut:empate false . 
+    
+fut:Partida9351 fut:vitoriaMandante false . 
+                        fut:Partida9351 fut:empate false . 
+    
+fut:Partida9348 fut:vitoriaMandante false . 
+                        fut:Partida9348 fut:empate false . 
+    
+fut:Partida9356 fut:vitoriaMandante false . 
+                        fut:Partida9356 fut:empate false . 
+    
+fut:Partida9357 fut:vitoriaMandante false . 
+                        fut:Partida9357 fut:empate false . 
+    
+fut:Partida9350 fut:vitoriaMandante true . 
+                        fut:Partida9350 fut:empate false . 
+    
+fut:Partida9355 fut:vitoriaMandante false . 
+                        fut:Partida9355 fut:empate true . 
+    
+fut:Partida9354 fut:vitoriaMandante true . 
+                        fut:Partida9354 fut:empate false . 
+    
+fut:Partida9353 fut:vitoriaMandante false . 
+                        fut:Partida9353 fut:empate true . 
+    
+fut:Partida9352 fut:vitoriaMandante false . 
+                        fut:Partida9352 fut:empate false . 
+    
+fut:Partida9361 fut:vitoriaMandante false . 
+                        fut:Partida9361 fut:empate false . 
+    
+fut:Partida9363 fut:vitoriaMandante true . 
+                        fut:Partida9363 fut:empate false . 
+    
+fut:Partida9358 fut:vitoriaMandante true . 
+                        fut:Partida9358 fut:empate false . 
+    
+fut:Partida9360 fut:vitoriaMandante true . 
+                        fut:Partida9360 fut:empate false . 
+    
+fut:Partida9359 fut:vitoriaMandante false . 
+                        fut:Partida9359 fut:empate true . 
+    
+fut:Partida9362 fut:vitoriaMandante true . 
+                        fut:Partida9362 fut:empate false . 
+    
+fut:Partida9364 fut:vitoriaMandante true . 
+                        fut:Partida9364 fut:empate false . 
+    
+fut:Partida9365 fut:vitoriaMandante true . 
+                        fut:Partida9365 fut:empate false . 
+    
+fut:Partida9366 fut:vitoriaMandante true . 
+                        fut:Partida9366 fut:empate false . 
+    
+fut:Partida9367 fut:vitoriaMandante true . 
+                        fut:Partida9367 fut:empate false . 
+    
+fut:Partida9372 fut:vitoriaMandante true . 
+                        fut:Partida9372 fut:empate false . 
+    
+fut:Partida9368 fut:vitoriaMandante false . 
+                        fut:Partida9368 fut:empate false . 
+    
+fut:Partida9369 fut:vitoriaMandante true . 
+                        fut:Partida9369 fut:empate false . 
+    
+fut:Partida9370 fut:vitoriaMandante true . 
+                        fut:Partida9370 fut:empate false . 
+    
+fut:Partida9371 fut:vitoriaMandante false . 
+                        fut:Partida9371 fut:empate false . 
+    
+fut:Partida9373 fut:vitoriaMandante false . 
+                        fut:Partida9373 fut:empate true . 
+    
+fut:Partida9374 fut:vitoriaMandante true . 
+                        fut:Partida9374 fut:empate false . 
+    
+fut:Partida9375 fut:vitoriaMandante false . 
+                        fut:Partida9375 fut:empate false . 
+    
+fut:Partida9376 fut:vitoriaMandante true . 
+                        fut:Partida9376 fut:empate false . 
+    
+fut:Partida9377 fut:vitoriaMandante true . 
+                        fut:Partida9377 fut:empate false . 
     
