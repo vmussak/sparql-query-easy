@@ -20,13 +20,13 @@
                                    rdfs:label "competePor"@en .
 
 
-###  http://futebol.usp.br#contemPartida
-<http://futebol.usp.br#contemPartida> rdf:type owl:ObjectProperty ;
+###  http://futebol.usp.br#contem
+<http://futebol.usp.br#contem> rdf:type owl:ObjectProperty ;
                                       rdfs:subPropertyOf owl:topObjectProperty ;
                                       owl:inverseOf <http://futebol.usp.br#ocorreEm> ;
                                       rdfs:domain <http://futebol.usp.br#Rodada> ;
                                       rdfs:range <http://futebol.usp.br#Partida> ;
-                                      rdfs:label "contemPartida"@en .
+                                      rdfs:label "contem"@en .
 
 
 ###  http://futebol.usp.br#formadaPor
@@ -92,7 +92,6 @@
 ###  http://futebol.usp.br#participaDe
 <http://futebol.usp.br#participaDe> rdf:type owl:ObjectProperty ;
                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                    owl:inverseOf <http://futebol.usp.br#compostoPelaEquipe> ;
                                     rdfs:domain <http://futebol.usp.br#Equipe> ;
                                     rdfs:range <http://futebol.usp.br#Campeonato> ;
                                     rdfs:label "participaDe"@en .
@@ -126,7 +125,7 @@
 ###  http://futebol.usp.br#refereSeA
 <http://futebol.usp.br#refereSeA> rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                  owl:inverseOf <http://futebol.usp.br#classifica> ;
+                                  owl:inverseOf <http://futebol.usp.br#possui> ;
                                   rdfs:domain <http://futebol.usp.br#Classificacao> ;
                                   rdfs:range <http://futebol.usp.br#Campeonato> ;
                                   rdfs:label "refere-se"@en .
@@ -143,7 +142,7 @@
 ###  http://futebol.usp.br#temMandante
 <http://futebol.usp.br#temMandante> rdf:type owl:ObjectProperty ;
                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                    owl:inverseOf <http://futebol.usp.br#manda> ;
+                                    owl:inverseOf <http://futebol.usp.br#eMandante> ;
                                     rdfs:domain <http://futebol.usp.br#Partida> ;
                                     rdfs:range <http://futebol.usp.br#Equipe> ;
                                     rdfs:label "temMandante"@en .
@@ -152,27 +151,17 @@
 ###  http://futebol.usp.br#temVisitante
 <http://futebol.usp.br#temVisitante> rdf:type owl:ObjectProperty ;
                                      rdfs:subPropertyOf owl:topObjectProperty ;
-                                     owl:inverseOf <http://futebol.usp.br#visita> ;
+                                     owl:inverseOf <http://futebol.usp.br#eVisitante> ;
                                      rdfs:domain <http://futebol.usp.br#Partida> ;
                                      rdfs:range <http://futebol.usp.br#Equipe> ;
                                      rdfs:label "temVisitante"@en .
 
-###  <http://futebol.usp.br#classifica>
-<http://futebol.usp.br#classifica> rdf:type owl:ObjectProperty ;
+###  <http://futebol.usp.br#possui>
+<http://futebol.usp.br#possui> rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain <http://futebol.usp.br#Campeonato> ;
             rdfs:range <http://futebol.usp.br#Classificacao> ;
-            rdfs:label "classifica"@en .
-
-
-###  urn:usp:ontology:futebol#compostoPelaEquipe
-<http://futebol.usp.br#compostoPelaEquipe> rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty ;
-                    rdf:type owl:FunctionalProperty ;
-                    rdfs:domain <http://futebol.usp.br#Equipe> ;
-                    rdfs:range <http://futebol.usp.br#Campeonato> ;
-                    rdfs:label "compostoPelaEquipe"@en .
-
+            rdfs:label "possui"@en .
 
 ###  urn:usp:ontology:futebol#compostoPor
 <http://futebol.usp.br#compostoPor> rdf:type owl:ObjectProperty ;
@@ -182,20 +171,20 @@
              rdfs:label "compostoPor"@en .
 
 
-###  urn:usp:ontology:futebol#manda
-<http://futebol.usp.br#manda> rdf:type owl:ObjectProperty ;
+###  urn:usp:ontology:futebol#eMandante
+<http://futebol.usp.br#eMandante> rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf owl:topObjectProperty ;
        rdfs:domain <http://futebol.usp.br#Equipe> ;
        rdfs:range <http://futebol.usp.br#Partida> ;
-       rdfs:label "manda"@en .
+       rdfs:label "eMandante"@en .
 
 
-###  urn:usp:ontology:futebol#visita
-<http://futebol.usp.br#visita> rdf:type owl:ObjectProperty ;
+###  urn:usp:ontology:futebol#eVisitante
+<http://futebol.usp.br#eVisitante> rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf owl:topObjectProperty ;
         rdfs:domain <http://futebol.usp.br#Equipe> ;
         rdfs:range <http://futebol.usp.br#Partida> ;
-        rdfs:label "visita"@en .
+        rdfs:label "eVisitante"@en .
 
 
 #################################################################
@@ -391,6 +380,14 @@
                                         rdfs:domain <http://futebol.usp.br#Partida> ;
                                         rdfs:range xsd:boolean ;
                                         rdfs:label "vitoriaMandante"@en .
+
+###  http://futebol.usp.br#vitoriaVisitante
+<http://futebol.usp.br#vitoriaVisitante> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:boolean ;
+                                        rdfs:label "vitoriaVisitante"@en .
 
 ###  http://futebol.usp.br#empate
 <http://futebol.usp.br#empate> rdf:type owl:DatatypeProperty ;
@@ -15941,7 +15938,7 @@ fut:ClassificacaoBrasileirao2023PAL rdf:type
                                                             
 fut:EquipePAL fut:possuiClassificacao fut:ClassificacaoBrasileirao2023PAL .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023PAL .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023PAL .
     
 fut:ClassificacaoBrasileirao2023GRE rdf:type 
                                                             fut:Classificacao ;
@@ -15953,7 +15950,7 @@ fut:ClassificacaoBrasileirao2023GRE rdf:type
                                                             
 fut:EquipeGRE fut:possuiClassificacao fut:ClassificacaoBrasileirao2023GRE .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023GRE .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023GRE .
     
 fut:ClassificacaoBrasileirao2023CAM rdf:type 
                                                             fut:Classificacao ;
@@ -15965,7 +15962,7 @@ fut:ClassificacaoBrasileirao2023CAM rdf:type
                                                             
 fut:EquipeCAM fut:possuiClassificacao fut:ClassificacaoBrasileirao2023CAM .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023CAM .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023CAM .
     
 fut:ClassificacaoBrasileirao2023FLA rdf:type 
                                                             fut:Classificacao ;
@@ -15977,7 +15974,7 @@ fut:ClassificacaoBrasileirao2023FLA rdf:type
                                                             
 fut:EquipeFLA fut:possuiClassificacao fut:ClassificacaoBrasileirao2023FLA .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023FLA .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023FLA .
     
 fut:ClassificacaoBrasileirao2023BOT rdf:type 
                                                             fut:Classificacao ;
@@ -15989,7 +15986,7 @@ fut:ClassificacaoBrasileirao2023BOT rdf:type
                                                             
 fut:EquipeBOT fut:possuiClassificacao fut:ClassificacaoBrasileirao2023BOT .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023BOT .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023BOT .
     
 fut:ClassificacaoBrasileirao2023BGT rdf:type 
                                                             fut:Classificacao ;
@@ -16001,7 +15998,7 @@ fut:ClassificacaoBrasileirao2023BGT rdf:type
                                                             
 fut:EquipeBGT fut:possuiClassificacao fut:ClassificacaoBrasileirao2023BGT .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023BGT .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023BGT .
     
 fut:ClassificacaoBrasileirao2023FLU rdf:type 
                                                             fut:Classificacao ;
@@ -16013,7 +16010,7 @@ fut:ClassificacaoBrasileirao2023FLU rdf:type
                                                             
 fut:EquipeFLU fut:possuiClassificacao fut:ClassificacaoBrasileirao2023FLU .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023FLU .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023FLU .
     
 fut:ClassificacaoBrasileirao2023CAP rdf:type 
                                                             fut:Classificacao ;
@@ -16025,7 +16022,7 @@ fut:ClassificacaoBrasileirao2023CAP rdf:type
                                                             
 fut:EquipeCAP fut:possuiClassificacao fut:ClassificacaoBrasileirao2023CAP .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023CAP .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023CAP .
     
 fut:ClassificacaoBrasileirao2023INT rdf:type 
                                                             fut:Classificacao ;
@@ -16037,7 +16034,7 @@ fut:ClassificacaoBrasileirao2023INT rdf:type
                                                             
 fut:EquipeINT fut:possuiClassificacao fut:ClassificacaoBrasileirao2023INT .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023INT .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023INT .
     
 fut:ClassificacaoBrasileirao2023FOR rdf:type 
                                                             fut:Classificacao ;
@@ -16049,7 +16046,7 @@ fut:ClassificacaoBrasileirao2023FOR rdf:type
                                                             
 fut:EquipeFOR fut:possuiClassificacao fut:ClassificacaoBrasileirao2023FOR .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023FOR .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023FOR .
     
 fut:ClassificacaoBrasileirao2023SAO rdf:type 
                                                             fut:Classificacao ;
@@ -16061,7 +16058,7 @@ fut:ClassificacaoBrasileirao2023SAO rdf:type
                                                             
 fut:EquipeSAO fut:possuiClassificacao fut:ClassificacaoBrasileirao2023SAO .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023SAO .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023SAO .
     
 fut:ClassificacaoBrasileirao2023CUI rdf:type 
                                                             fut:Classificacao ;
@@ -16073,7 +16070,7 @@ fut:ClassificacaoBrasileirao2023CUI rdf:type
                                                             
 fut:EquipeCUI fut:possuiClassificacao fut:ClassificacaoBrasileirao2023CUI .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023CUI .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023CUI .
     
 fut:ClassificacaoBrasileirao2023COR rdf:type 
                                                             fut:Classificacao ;
@@ -16085,7 +16082,7 @@ fut:ClassificacaoBrasileirao2023COR rdf:type
                                                             
 fut:EquipeCOR fut:possuiClassificacao fut:ClassificacaoBrasileirao2023COR .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023COR .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023COR .
     
 fut:ClassificacaoBrasileirao2023CRU rdf:type 
                                                             fut:Classificacao ;
@@ -16097,7 +16094,7 @@ fut:ClassificacaoBrasileirao2023CRU rdf:type
                                                             
 fut:EquipeCRU fut:possuiClassificacao fut:ClassificacaoBrasileirao2023CRU .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023CRU .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023CRU .
     
 fut:ClassificacaoBrasileirao2023VAS rdf:type 
                                                             fut:Classificacao ;
@@ -16109,7 +16106,7 @@ fut:ClassificacaoBrasileirao2023VAS rdf:type
                                                             
 fut:EquipeVAS fut:possuiClassificacao fut:ClassificacaoBrasileirao2023VAS .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023VAS .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023VAS .
     
 fut:ClassificacaoBrasileirao2023BAH rdf:type 
                                                             fut:Classificacao ;
@@ -16121,7 +16118,7 @@ fut:ClassificacaoBrasileirao2023BAH rdf:type
                                                             
 fut:EquipeBAH fut:possuiClassificacao fut:ClassificacaoBrasileirao2023BAH .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023BAH .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023BAH .
     
 fut:ClassificacaoBrasileirao2023SAN rdf:type 
                                                             fut:Classificacao ;
@@ -16133,7 +16130,7 @@ fut:ClassificacaoBrasileirao2023SAN rdf:type
                                                             
 fut:EquipeSAN fut:possuiClassificacao fut:ClassificacaoBrasileirao2023SAN .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023SAN .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023SAN .
     
 fut:ClassificacaoBrasileirao2023GOI rdf:type 
                                                             fut:Classificacao ;
@@ -16145,7 +16142,7 @@ fut:ClassificacaoBrasileirao2023GOI rdf:type
                                                             
 fut:EquipeGOI fut:possuiClassificacao fut:ClassificacaoBrasileirao2023GOI .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023GOI .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023GOI .
     
 fut:ClassificacaoBrasileirao2023CFC rdf:type 
                                                             fut:Classificacao ;
@@ -16157,7 +16154,7 @@ fut:ClassificacaoBrasileirao2023CFC rdf:type
                                                             
 fut:EquipeCFC fut:possuiClassificacao fut:ClassificacaoBrasileirao2023CFC .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023CFC .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023CFC .
     
 fut:ClassificacaoBrasileirao2023AMG rdf:type 
                                                             fut:Classificacao ;
@@ -16169,767 +16166,767 @@ fut:ClassificacaoBrasileirao2023AMG rdf:type
                                                             
 fut:EquipeAMG fut:possuiClassificacao fut:ClassificacaoBrasileirao2023AMG .
     
-fut:CampeonatoBrasileiro2023 fut:classifica fut:ClassificacaoBrasileirao2023AMG .
+fut:CampeonatoBrasileiro2023 fut:possui fut:ClassificacaoBrasileirao2023AMG .
     
-fut:Rodada1 fut:contemPartida fut:Partida9000 . 
+fut:Rodada1 fut:contem fut:Partida9000 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida9007 . 
+fut:Rodada1 fut:contem fut:Partida9007 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida8999 . 
+fut:Rodada1 fut:contem fut:Partida8999 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida9002 . 
+fut:Rodada1 fut:contem fut:Partida9002 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida9005 . 
+fut:Rodada1 fut:contem fut:Partida9005 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida9006 . 
+fut:Rodada1 fut:contem fut:Partida9006 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida9003 . 
+fut:Rodada1 fut:contem fut:Partida9003 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida8998 . 
+fut:Rodada1 fut:contem fut:Partida8998 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida9001 . 
+fut:Rodada1 fut:contem fut:Partida9001 . 
     
-fut:Rodada1 fut:contemPartida fut:Partida9004 . 
+fut:Rodada1 fut:contem fut:Partida9004 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9008 . 
+fut:Rodada2 fut:contem fut:Partida9008 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9010 . 
+fut:Rodada2 fut:contem fut:Partida9010 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9017 . 
+fut:Rodada2 fut:contem fut:Partida9017 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9013 . 
+fut:Rodada2 fut:contem fut:Partida9013 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9014 . 
+fut:Rodada2 fut:contem fut:Partida9014 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9009 . 
+fut:Rodada2 fut:contem fut:Partida9009 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9011 . 
+fut:Rodada2 fut:contem fut:Partida9011 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9015 . 
+fut:Rodada2 fut:contem fut:Partida9015 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9012 . 
+fut:Rodada2 fut:contem fut:Partida9012 . 
     
-fut:Rodada2 fut:contemPartida fut:Partida9016 . 
+fut:Rodada2 fut:contem fut:Partida9016 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9025 . 
+fut:Rodada3 fut:contem fut:Partida9025 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9026 . 
+fut:Rodada3 fut:contem fut:Partida9026 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9020 . 
+fut:Rodada3 fut:contem fut:Partida9020 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9021 . 
+fut:Rodada3 fut:contem fut:Partida9021 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9022 . 
+fut:Rodada3 fut:contem fut:Partida9022 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9023 . 
+fut:Rodada3 fut:contem fut:Partida9023 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9018 . 
+fut:Rodada3 fut:contem fut:Partida9018 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9024 . 
+fut:Rodada3 fut:contem fut:Partida9024 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9027 . 
+fut:Rodada3 fut:contem fut:Partida9027 . 
     
-fut:Rodada3 fut:contemPartida fut:Partida9019 . 
+fut:Rodada3 fut:contem fut:Partida9019 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9033 . 
+fut:Rodada4 fut:contem fut:Partida9033 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9028 . 
+fut:Rodada4 fut:contem fut:Partida9028 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9037 . 
+fut:Rodada4 fut:contem fut:Partida9037 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9030 . 
+fut:Rodada4 fut:contem fut:Partida9030 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9035 . 
+fut:Rodada4 fut:contem fut:Partida9035 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9036 . 
+fut:Rodada4 fut:contem fut:Partida9036 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9029 . 
+fut:Rodada4 fut:contem fut:Partida9029 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9032 . 
+fut:Rodada4 fut:contem fut:Partida9032 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9034 . 
+fut:Rodada4 fut:contem fut:Partida9034 . 
     
-fut:Rodada4 fut:contemPartida fut:Partida9031 . 
+fut:Rodada4 fut:contem fut:Partida9031 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9041 . 
+fut:Rodada5 fut:contem fut:Partida9041 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9042 . 
+fut:Rodada5 fut:contem fut:Partida9042 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9044 . 
+fut:Rodada5 fut:contem fut:Partida9044 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9047 . 
+fut:Rodada5 fut:contem fut:Partida9047 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9038 . 
+fut:Rodada5 fut:contem fut:Partida9038 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9040 . 
+fut:Rodada5 fut:contem fut:Partida9040 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9043 . 
+fut:Rodada5 fut:contem fut:Partida9043 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9045 . 
+fut:Rodada5 fut:contem fut:Partida9045 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9039 . 
+fut:Rodada5 fut:contem fut:Partida9039 . 
     
-fut:Rodada5 fut:contemPartida fut:Partida9046 . 
+fut:Rodada5 fut:contem fut:Partida9046 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9056 . 
+fut:Rodada6 fut:contem fut:Partida9056 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9048 . 
+fut:Rodada6 fut:contem fut:Partida9048 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9050 . 
+fut:Rodada6 fut:contem fut:Partida9050 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9053 . 
+fut:Rodada6 fut:contem fut:Partida9053 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9049 . 
+fut:Rodada6 fut:contem fut:Partida9049 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9051 . 
+fut:Rodada6 fut:contem fut:Partida9051 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9054 . 
+fut:Rodada6 fut:contem fut:Partida9054 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9052 . 
+fut:Rodada6 fut:contem fut:Partida9052 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9055 . 
+fut:Rodada6 fut:contem fut:Partida9055 . 
     
-fut:Rodada6 fut:contemPartida fut:Partida9057 . 
+fut:Rodada6 fut:contem fut:Partida9057 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9066 . 
+fut:Rodada7 fut:contem fut:Partida9066 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9059 . 
+fut:Rodada7 fut:contem fut:Partida9059 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9060 . 
+fut:Rodada7 fut:contem fut:Partida9060 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9062 . 
+fut:Rodada7 fut:contem fut:Partida9062 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9065 . 
+fut:Rodada7 fut:contem fut:Partida9065 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9067 . 
+fut:Rodada7 fut:contem fut:Partida9067 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9061 . 
+fut:Rodada7 fut:contem fut:Partida9061 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9058 . 
+fut:Rodada7 fut:contem fut:Partida9058 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9064 . 
+fut:Rodada7 fut:contem fut:Partida9064 . 
     
-fut:Rodada7 fut:contemPartida fut:Partida9063 . 
+fut:Rodada7 fut:contem fut:Partida9063 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9075 . 
+fut:Rodada8 fut:contem fut:Partida9075 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9076 . 
+fut:Rodada8 fut:contem fut:Partida9076 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9068 . 
+fut:Rodada8 fut:contem fut:Partida9068 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9077 . 
+fut:Rodada8 fut:contem fut:Partida9077 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9070 . 
+fut:Rodada8 fut:contem fut:Partida9070 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9071 . 
+fut:Rodada8 fut:contem fut:Partida9071 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9074 . 
+fut:Rodada8 fut:contem fut:Partida9074 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9072 . 
+fut:Rodada8 fut:contem fut:Partida9072 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9073 . 
+fut:Rodada8 fut:contem fut:Partida9073 . 
     
-fut:Rodada8 fut:contemPartida fut:Partida9069 . 
+fut:Rodada8 fut:contem fut:Partida9069 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9086 . 
+fut:Rodada9 fut:contem fut:Partida9086 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9083 . 
+fut:Rodada9 fut:contem fut:Partida9083 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9085 . 
+fut:Rodada9 fut:contem fut:Partida9085 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9087 . 
+fut:Rodada9 fut:contem fut:Partida9087 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9081 . 
+fut:Rodada9 fut:contem fut:Partida9081 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9078 . 
+fut:Rodada9 fut:contem fut:Partida9078 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9084 . 
+fut:Rodada9 fut:contem fut:Partida9084 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9080 . 
+fut:Rodada9 fut:contem fut:Partida9080 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9082 . 
+fut:Rodada9 fut:contem fut:Partida9082 . 
     
-fut:Rodada9 fut:contemPartida fut:Partida9079 . 
+fut:Rodada9 fut:contem fut:Partida9079 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9095 . 
+fut:Rodada10 fut:contem fut:Partida9095 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9091 . 
+fut:Rodada10 fut:contem fut:Partida9091 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9093 . 
+fut:Rodada10 fut:contem fut:Partida9093 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9096 . 
+fut:Rodada10 fut:contem fut:Partida9096 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9089 . 
+fut:Rodada10 fut:contem fut:Partida9089 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9097 . 
+fut:Rodada10 fut:contem fut:Partida9097 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9090 . 
+fut:Rodada10 fut:contem fut:Partida9090 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9094 . 
+fut:Rodada10 fut:contem fut:Partida9094 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9088 . 
+fut:Rodada10 fut:contem fut:Partida9088 . 
     
-fut:Rodada10 fut:contemPartida fut:Partida9092 . 
+fut:Rodada10 fut:contem fut:Partida9092 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9100 . 
+fut:Rodada11 fut:contem fut:Partida9100 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9103 . 
+fut:Rodada11 fut:contem fut:Partida9103 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9101 . 
+fut:Rodada11 fut:contem fut:Partida9101 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9098 . 
+fut:Rodada11 fut:contem fut:Partida9098 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9106 . 
+fut:Rodada11 fut:contem fut:Partida9106 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9104 . 
+fut:Rodada11 fut:contem fut:Partida9104 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9099 . 
+fut:Rodada11 fut:contem fut:Partida9099 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9105 . 
+fut:Rodada11 fut:contem fut:Partida9105 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9107 . 
+fut:Rodada11 fut:contem fut:Partida9107 . 
     
-fut:Rodada11 fut:contemPartida fut:Partida9102 . 
+fut:Rodada11 fut:contem fut:Partida9102 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9115 . 
+fut:Rodada12 fut:contem fut:Partida9115 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9108 . 
+fut:Rodada12 fut:contem fut:Partida9108 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9116 . 
+fut:Rodada12 fut:contem fut:Partida9116 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9113 . 
+fut:Rodada12 fut:contem fut:Partida9113 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9110 . 
+fut:Rodada12 fut:contem fut:Partida9110 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9114 . 
+fut:Rodada12 fut:contem fut:Partida9114 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9111 . 
+fut:Rodada12 fut:contem fut:Partida9111 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9112 . 
+fut:Rodada12 fut:contem fut:Partida9112 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9117 . 
+fut:Rodada12 fut:contem fut:Partida9117 . 
     
-fut:Rodada12 fut:contemPartida fut:Partida9109 . 
+fut:Rodada12 fut:contem fut:Partida9109 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9120 . 
+fut:Rodada13 fut:contem fut:Partida9120 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9118 . 
+fut:Rodada13 fut:contem fut:Partida9118 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9126 . 
+fut:Rodada13 fut:contem fut:Partida9126 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9124 . 
+fut:Rodada13 fut:contem fut:Partida9124 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9121 . 
+fut:Rodada13 fut:contem fut:Partida9121 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9119 . 
+fut:Rodada13 fut:contem fut:Partida9119 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9123 . 
+fut:Rodada13 fut:contem fut:Partida9123 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9125 . 
+fut:Rodada13 fut:contem fut:Partida9125 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9127 . 
+fut:Rodada13 fut:contem fut:Partida9127 . 
     
-fut:Rodada13 fut:contemPartida fut:Partida9122 . 
+fut:Rodada13 fut:contem fut:Partida9122 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9129 . 
+fut:Rodada14 fut:contem fut:Partida9129 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9137 . 
+fut:Rodada14 fut:contem fut:Partida9137 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9133 . 
+fut:Rodada14 fut:contem fut:Partida9133 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9135 . 
+fut:Rodada14 fut:contem fut:Partida9135 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9130 . 
+fut:Rodada14 fut:contem fut:Partida9130 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9131 . 
+fut:Rodada14 fut:contem fut:Partida9131 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9128 . 
+fut:Rodada14 fut:contem fut:Partida9128 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9132 . 
+fut:Rodada14 fut:contem fut:Partida9132 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9134 . 
+fut:Rodada14 fut:contem fut:Partida9134 . 
     
-fut:Rodada14 fut:contemPartida fut:Partida9136 . 
+fut:Rodada14 fut:contem fut:Partida9136 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9139 . 
+fut:Rodada15 fut:contem fut:Partida9139 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9143 . 
+fut:Rodada15 fut:contem fut:Partida9143 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9138 . 
+fut:Rodada15 fut:contem fut:Partida9138 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9140 . 
+fut:Rodada15 fut:contem fut:Partida9140 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9146 . 
+fut:Rodada15 fut:contem fut:Partida9146 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9144 . 
+fut:Rodada15 fut:contem fut:Partida9144 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9145 . 
+fut:Rodada15 fut:contem fut:Partida9145 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9142 . 
+fut:Rodada15 fut:contem fut:Partida9142 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9141 . 
+fut:Rodada15 fut:contem fut:Partida9141 . 
     
-fut:Rodada15 fut:contemPartida fut:Partida9147 . 
+fut:Rodada15 fut:contem fut:Partida9147 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9148 . 
+fut:Rodada16 fut:contem fut:Partida9148 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9150 . 
+fut:Rodada16 fut:contem fut:Partida9150 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9156 . 
+fut:Rodada16 fut:contem fut:Partida9156 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9157 . 
+fut:Rodada16 fut:contem fut:Partida9157 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9154 . 
+fut:Rodada16 fut:contem fut:Partida9154 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9151 . 
+fut:Rodada16 fut:contem fut:Partida9151 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9152 . 
+fut:Rodada16 fut:contem fut:Partida9152 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9153 . 
+fut:Rodada16 fut:contem fut:Partida9153 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9149 . 
+fut:Rodada16 fut:contem fut:Partida9149 . 
     
-fut:Rodada16 fut:contemPartida fut:Partida9155 . 
+fut:Rodada16 fut:contem fut:Partida9155 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9158 . 
+fut:Rodada17 fut:contem fut:Partida9158 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9164 . 
+fut:Rodada17 fut:contem fut:Partida9164 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9165 . 
+fut:Rodada17 fut:contem fut:Partida9165 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9161 . 
+fut:Rodada17 fut:contem fut:Partida9161 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9166 . 
+fut:Rodada17 fut:contem fut:Partida9166 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9163 . 
+fut:Rodada17 fut:contem fut:Partida9163 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9160 . 
+fut:Rodada17 fut:contem fut:Partida9160 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9159 . 
+fut:Rodada17 fut:contem fut:Partida9159 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9167 . 
+fut:Rodada17 fut:contem fut:Partida9167 . 
     
-fut:Rodada17 fut:contemPartida fut:Partida9162 . 
+fut:Rodada17 fut:contem fut:Partida9162 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9171 . 
+fut:Rodada18 fut:contem fut:Partida9171 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9172 . 
+fut:Rodada18 fut:contem fut:Partida9172 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9174 . 
+fut:Rodada18 fut:contem fut:Partida9174 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9168 . 
+fut:Rodada18 fut:contem fut:Partida9168 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9169 . 
+fut:Rodada18 fut:contem fut:Partida9169 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9170 . 
+fut:Rodada18 fut:contem fut:Partida9170 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9173 . 
+fut:Rodada18 fut:contem fut:Partida9173 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9175 . 
+fut:Rodada18 fut:contem fut:Partida9175 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9176 . 
+fut:Rodada18 fut:contem fut:Partida9176 . 
     
-fut:Rodada18 fut:contemPartida fut:Partida9177 . 
+fut:Rodada18 fut:contem fut:Partida9177 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9179 . 
+fut:Rodada19 fut:contem fut:Partida9179 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9183 . 
+fut:Rodada19 fut:contem fut:Partida9183 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9181 . 
+fut:Rodada19 fut:contem fut:Partida9181 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9184 . 
+fut:Rodada19 fut:contem fut:Partida9184 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9187 . 
+fut:Rodada19 fut:contem fut:Partida9187 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9178 . 
+fut:Rodada19 fut:contem fut:Partida9178 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9186 . 
+fut:Rodada19 fut:contem fut:Partida9186 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9180 . 
+fut:Rodada19 fut:contem fut:Partida9180 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9182 . 
+fut:Rodada19 fut:contem fut:Partida9182 . 
     
-fut:Rodada19 fut:contemPartida fut:Partida9185 . 
+fut:Rodada19 fut:contem fut:Partida9185 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9190 . 
+fut:Rodada20 fut:contem fut:Partida9190 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9194 . 
+fut:Rodada20 fut:contem fut:Partida9194 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9188 . 
+fut:Rodada20 fut:contem fut:Partida9188 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9197 . 
+fut:Rodada20 fut:contem fut:Partida9197 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9193 . 
+fut:Rodada20 fut:contem fut:Partida9193 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9189 . 
+fut:Rodada20 fut:contem fut:Partida9189 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9191 . 
+fut:Rodada20 fut:contem fut:Partida9191 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9195 . 
+fut:Rodada20 fut:contem fut:Partida9195 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9196 . 
+fut:Rodada20 fut:contem fut:Partida9196 . 
     
-fut:Rodada20 fut:contemPartida fut:Partida9192 . 
+fut:Rodada20 fut:contem fut:Partida9192 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9198 . 
+fut:Rodada21 fut:contem fut:Partida9198 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9201 . 
+fut:Rodada21 fut:contem fut:Partida9201 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9202 . 
+fut:Rodada21 fut:contem fut:Partida9202 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9199 . 
+fut:Rodada21 fut:contem fut:Partida9199 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9203 . 
+fut:Rodada21 fut:contem fut:Partida9203 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9207 . 
+fut:Rodada21 fut:contem fut:Partida9207 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9200 . 
+fut:Rodada21 fut:contem fut:Partida9200 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9205 . 
+fut:Rodada21 fut:contem fut:Partida9205 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9206 . 
+fut:Rodada21 fut:contem fut:Partida9206 . 
     
-fut:Rodada21 fut:contemPartida fut:Partida9204 . 
+fut:Rodada21 fut:contem fut:Partida9204 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9212 . 
+fut:Rodada22 fut:contem fut:Partida9212 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9215 . 
+fut:Rodada22 fut:contem fut:Partida9215 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9209 . 
+fut:Rodada22 fut:contem fut:Partida9209 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9214 . 
+fut:Rodada22 fut:contem fut:Partida9214 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9208 . 
+fut:Rodada22 fut:contem fut:Partida9208 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9211 . 
+fut:Rodada22 fut:contem fut:Partida9211 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9213 . 
+fut:Rodada22 fut:contem fut:Partida9213 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9216 . 
+fut:Rodada22 fut:contem fut:Partida9216 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9217 . 
+fut:Rodada22 fut:contem fut:Partida9217 . 
     
-fut:Rodada22 fut:contemPartida fut:Partida9210 . 
+fut:Rodada22 fut:contem fut:Partida9210 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9218 . 
+fut:Rodada23 fut:contem fut:Partida9218 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9224 . 
+fut:Rodada23 fut:contem fut:Partida9224 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9221 . 
+fut:Rodada23 fut:contem fut:Partida9221 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9226 . 
+fut:Rodada23 fut:contem fut:Partida9226 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9225 . 
+fut:Rodada23 fut:contem fut:Partida9225 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9222 . 
+fut:Rodada23 fut:contem fut:Partida9222 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9227 . 
+fut:Rodada23 fut:contem fut:Partida9227 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9220 . 
+fut:Rodada23 fut:contem fut:Partida9220 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9219 . 
+fut:Rodada23 fut:contem fut:Partida9219 . 
     
-fut:Rodada23 fut:contemPartida fut:Partida9223 . 
+fut:Rodada23 fut:contem fut:Partida9223 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9236 . 
+fut:Rodada24 fut:contem fut:Partida9236 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9237 . 
+fut:Rodada24 fut:contem fut:Partida9237 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9232 . 
+fut:Rodada24 fut:contem fut:Partida9232 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9228 . 
+fut:Rodada24 fut:contem fut:Partida9228 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9230 . 
+fut:Rodada24 fut:contem fut:Partida9230 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9229 . 
+fut:Rodada24 fut:contem fut:Partida9229 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9235 . 
+fut:Rodada24 fut:contem fut:Partida9235 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9234 . 
+fut:Rodada24 fut:contem fut:Partida9234 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9231 . 
+fut:Rodada24 fut:contem fut:Partida9231 . 
     
-fut:Rodada24 fut:contemPartida fut:Partida9233 . 
+fut:Rodada24 fut:contem fut:Partida9233 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9238 . 
+fut:Rodada25 fut:contem fut:Partida9238 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9246 . 
+fut:Rodada25 fut:contem fut:Partida9246 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9240 . 
+fut:Rodada25 fut:contem fut:Partida9240 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9247 . 
+fut:Rodada25 fut:contem fut:Partida9247 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9244 . 
+fut:Rodada25 fut:contem fut:Partida9244 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9241 . 
+fut:Rodada25 fut:contem fut:Partida9241 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9243 . 
+fut:Rodada25 fut:contem fut:Partida9243 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9245 . 
+fut:Rodada25 fut:contem fut:Partida9245 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9242 . 
+fut:Rodada25 fut:contem fut:Partida9242 . 
     
-fut:Rodada25 fut:contemPartida fut:Partida9239 . 
+fut:Rodada25 fut:contem fut:Partida9239 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9252 . 
+fut:Rodada26 fut:contem fut:Partida9252 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9249 . 
+fut:Rodada26 fut:contem fut:Partida9249 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9251 . 
+fut:Rodada26 fut:contem fut:Partida9251 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9248 . 
+fut:Rodada26 fut:contem fut:Partida9248 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9250 . 
+fut:Rodada26 fut:contem fut:Partida9250 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9254 . 
+fut:Rodada26 fut:contem fut:Partida9254 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9253 . 
+fut:Rodada26 fut:contem fut:Partida9253 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9255 . 
+fut:Rodada26 fut:contem fut:Partida9255 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9256 . 
+fut:Rodada26 fut:contem fut:Partida9256 . 
     
-fut:Rodada26 fut:contemPartida fut:Partida9257 . 
+fut:Rodada26 fut:contem fut:Partida9257 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9264 . 
+fut:Rodada27 fut:contem fut:Partida9264 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9265 . 
+fut:Rodada27 fut:contem fut:Partida9265 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9267 . 
+fut:Rodada27 fut:contem fut:Partida9267 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9259 . 
+fut:Rodada27 fut:contem fut:Partida9259 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9262 . 
+fut:Rodada27 fut:contem fut:Partida9262 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9266 . 
+fut:Rodada27 fut:contem fut:Partida9266 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9260 . 
+fut:Rodada27 fut:contem fut:Partida9260 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9263 . 
+fut:Rodada27 fut:contem fut:Partida9263 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9261 . 
+fut:Rodada27 fut:contem fut:Partida9261 . 
     
-fut:Rodada27 fut:contemPartida fut:Partida9258 . 
+fut:Rodada27 fut:contem fut:Partida9258 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9270 . 
+fut:Rodada28 fut:contem fut:Partida9270 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9276 . 
+fut:Rodada28 fut:contem fut:Partida9276 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9277 . 
+fut:Rodada28 fut:contem fut:Partida9277 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9269 . 
+fut:Rodada28 fut:contem fut:Partida9269 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9268 . 
+fut:Rodada28 fut:contem fut:Partida9268 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9273 . 
+fut:Rodada28 fut:contem fut:Partida9273 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9274 . 
+fut:Rodada28 fut:contem fut:Partida9274 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9271 . 
+fut:Rodada28 fut:contem fut:Partida9271 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9272 . 
+fut:Rodada28 fut:contem fut:Partida9272 . 
     
-fut:Rodada28 fut:contemPartida fut:Partida9275 . 
+fut:Rodada28 fut:contem fut:Partida9275 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9278 . 
+fut:Rodada29 fut:contem fut:Partida9278 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9282 . 
+fut:Rodada29 fut:contem fut:Partida9282 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9285 . 
+fut:Rodada29 fut:contem fut:Partida9285 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9280 . 
+fut:Rodada29 fut:contem fut:Partida9280 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9283 . 
+fut:Rodada29 fut:contem fut:Partida9283 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9284 . 
+fut:Rodada29 fut:contem fut:Partida9284 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9287 . 
+fut:Rodada29 fut:contem fut:Partida9287 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9279 . 
+fut:Rodada29 fut:contem fut:Partida9279 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9281 . 
+fut:Rodada29 fut:contem fut:Partida9281 . 
     
-fut:Rodada29 fut:contemPartida fut:Partida9286 . 
+fut:Rodada29 fut:contem fut:Partida9286 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9290 . 
+fut:Rodada30 fut:contem fut:Partida9290 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9297 . 
+fut:Rodada30 fut:contem fut:Partida9297 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9293 . 
+fut:Rodada30 fut:contem fut:Partida9293 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9292 . 
+fut:Rodada30 fut:contem fut:Partida9292 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9295 . 
+fut:Rodada30 fut:contem fut:Partida9295 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9291 . 
+fut:Rodada30 fut:contem fut:Partida9291 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9294 . 
+fut:Rodada30 fut:contem fut:Partida9294 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9289 . 
+fut:Rodada30 fut:contem fut:Partida9289 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9296 . 
+fut:Rodada30 fut:contem fut:Partida9296 . 
     
-fut:Rodada30 fut:contemPartida fut:Partida9288 . 
+fut:Rodada30 fut:contem fut:Partida9288 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9306 . 
+fut:Rodada31 fut:contem fut:Partida9306 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9304 . 
+fut:Rodada31 fut:contem fut:Partida9304 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9301 . 
+fut:Rodada31 fut:contem fut:Partida9301 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9305 . 
+fut:Rodada31 fut:contem fut:Partida9305 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9298 . 
+fut:Rodada31 fut:contem fut:Partida9298 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9303 . 
+fut:Rodada31 fut:contem fut:Partida9303 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9299 . 
+fut:Rodada31 fut:contem fut:Partida9299 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9307 . 
+fut:Rodada31 fut:contem fut:Partida9307 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9302 . 
+fut:Rodada31 fut:contem fut:Partida9302 . 
     
-fut:Rodada31 fut:contemPartida fut:Partida9300 . 
+fut:Rodada31 fut:contem fut:Partida9300 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9314 . 
+fut:Rodada32 fut:contem fut:Partida9314 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9317 . 
+fut:Rodada32 fut:contem fut:Partida9317 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9310 . 
+fut:Rodada32 fut:contem fut:Partida9310 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9312 . 
+fut:Rodada32 fut:contem fut:Partida9312 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9313 . 
+fut:Rodada32 fut:contem fut:Partida9313 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9316 . 
+fut:Rodada32 fut:contem fut:Partida9316 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9315 . 
+fut:Rodada32 fut:contem fut:Partida9315 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9309 . 
+fut:Rodada32 fut:contem fut:Partida9309 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9311 . 
+fut:Rodada32 fut:contem fut:Partida9311 . 
     
-fut:Rodada32 fut:contemPartida fut:Partida9308 . 
+fut:Rodada32 fut:contem fut:Partida9308 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9324 . 
+fut:Rodada33 fut:contem fut:Partida9324 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9327 . 
+fut:Rodada33 fut:contem fut:Partida9327 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9320 . 
+fut:Rodada33 fut:contem fut:Partida9320 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9325 . 
+fut:Rodada33 fut:contem fut:Partida9325 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9318 . 
+fut:Rodada33 fut:contem fut:Partida9318 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9321 . 
+fut:Rodada33 fut:contem fut:Partida9321 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9322 . 
+fut:Rodada33 fut:contem fut:Partida9322 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9319 . 
+fut:Rodada33 fut:contem fut:Partida9319 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9326 . 
+fut:Rodada33 fut:contem fut:Partida9326 . 
     
-fut:Rodada33 fut:contemPartida fut:Partida9323 . 
+fut:Rodada33 fut:contem fut:Partida9323 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9335 . 
+fut:Rodada34 fut:contem fut:Partida9335 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9328 . 
+fut:Rodada34 fut:contem fut:Partida9328 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9330 . 
+fut:Rodada34 fut:contem fut:Partida9330 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9332 . 
+fut:Rodada34 fut:contem fut:Partida9332 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9334 . 
+fut:Rodada34 fut:contem fut:Partida9334 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9329 . 
+fut:Rodada34 fut:contem fut:Partida9329 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9331 . 
+fut:Rodada34 fut:contem fut:Partida9331 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9333 . 
+fut:Rodada34 fut:contem fut:Partida9333 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9336 . 
+fut:Rodada34 fut:contem fut:Partida9336 . 
     
-fut:Rodada34 fut:contemPartida fut:Partida9337 . 
+fut:Rodada34 fut:contem fut:Partida9337 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9341 . 
+fut:Rodada35 fut:contem fut:Partida9341 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9345 . 
+fut:Rodada35 fut:contem fut:Partida9345 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9338 . 
+fut:Rodada35 fut:contem fut:Partida9338 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9339 . 
+fut:Rodada35 fut:contem fut:Partida9339 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9343 . 
+fut:Rodada35 fut:contem fut:Partida9343 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9340 . 
+fut:Rodada35 fut:contem fut:Partida9340 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9344 . 
+fut:Rodada35 fut:contem fut:Partida9344 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9346 . 
+fut:Rodada35 fut:contem fut:Partida9346 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9347 . 
+fut:Rodada35 fut:contem fut:Partida9347 . 
     
-fut:Rodada35 fut:contemPartida fut:Partida9342 . 
+fut:Rodada35 fut:contem fut:Partida9342 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9349 . 
+fut:Rodada36 fut:contem fut:Partida9349 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9351 . 
+fut:Rodada36 fut:contem fut:Partida9351 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9348 . 
+fut:Rodada36 fut:contem fut:Partida9348 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9356 . 
+fut:Rodada36 fut:contem fut:Partida9356 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9357 . 
+fut:Rodada36 fut:contem fut:Partida9357 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9350 . 
+fut:Rodada36 fut:contem fut:Partida9350 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9355 . 
+fut:Rodada36 fut:contem fut:Partida9355 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9354 . 
+fut:Rodada36 fut:contem fut:Partida9354 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9353 . 
+fut:Rodada36 fut:contem fut:Partida9353 . 
     
-fut:Rodada36 fut:contemPartida fut:Partida9352 . 
+fut:Rodada36 fut:contem fut:Partida9352 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9361 . 
+fut:Rodada37 fut:contem fut:Partida9361 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9363 . 
+fut:Rodada37 fut:contem fut:Partida9363 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9358 . 
+fut:Rodada37 fut:contem fut:Partida9358 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9360 . 
+fut:Rodada37 fut:contem fut:Partida9360 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9359 . 
+fut:Rodada37 fut:contem fut:Partida9359 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9362 . 
+fut:Rodada37 fut:contem fut:Partida9362 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9364 . 
+fut:Rodada37 fut:contem fut:Partida9364 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9365 . 
+fut:Rodada37 fut:contem fut:Partida9365 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9366 . 
+fut:Rodada37 fut:contem fut:Partida9366 . 
     
-fut:Rodada37 fut:contemPartida fut:Partida9367 . 
+fut:Rodada37 fut:contem fut:Partida9367 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9372 . 
+fut:Rodada38 fut:contem fut:Partida9372 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9368 . 
+fut:Rodada38 fut:contem fut:Partida9368 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9369 . 
+fut:Rodada38 fut:contem fut:Partida9369 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9370 . 
+fut:Rodada38 fut:contem fut:Partida9370 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9371 . 
+fut:Rodada38 fut:contem fut:Partida9371 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9373 . 
+fut:Rodada38 fut:contem fut:Partida9373 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9374 . 
+fut:Rodada38 fut:contem fut:Partida9374 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9375 . 
+fut:Rodada38 fut:contem fut:Partida9375 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9376 . 
+fut:Rodada38 fut:contem fut:Partida9376 . 
     
-fut:Rodada38 fut:contemPartida fut:Partida9377 . 
+fut:Rodada38 fut:contem fut:Partida9377 . 
         
 fut:EquipePAL fut:participaDe fut:CampeonatoBrasileiro2023 .
         
@@ -16970,27 +16967,6 @@ fut:EquipeCRU fut:participaDe fut:CampeonatoBrasileiro2023 .
 fut:EquipeGRE fut:participaDe fut:CampeonatoBrasileiro2023 .
         
 fut:EquipeSAN fut:participaDe fut:CampeonatoBrasileiro2023 .
-
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipePAL .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeCUI .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeAMG .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeFLU .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeBOT .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeSAO .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeBGT .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeBAH .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeCAP .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeGOI .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeFOR .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeINT .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeCAM .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeVAS .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeFLA .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeCFC .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeCOR .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeCRU .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeGRE .
-fut:CampeonatoBrasileiro2023 fut:compostoPelaEquipe fut:EquipeSAN .
 
 fut:Atleta2062 fut:competePor fut:EquipePAL .
 
@@ -22541,4 +22517,1904 @@ fut:Partida9376 fut:vitoriaMandante true .
     
 fut:Partida9377 fut:vitoriaMandante true . 
                         fut:Partida9377 fut:empate false . 
+    
+fut:Partida9000 fut:vitoriaVisitante false . 
+    
+fut:Partida9007 fut:vitoriaVisitante true . 
+    
+fut:Partida8999 fut:vitoriaVisitante false . 
+    
+fut:Partida9002 fut:vitoriaVisitante false . 
+    
+fut:Partida9005 fut:vitoriaVisitante false . 
+    
+fut:Partida9006 fut:vitoriaVisitante false . 
+    
+fut:Partida9003 fut:vitoriaVisitante true . 
+    
+fut:Partida8998 fut:vitoriaVisitante false . 
+    
+fut:Partida9001 fut:vitoriaVisitante false . 
+    
+fut:Partida9004 fut:vitoriaVisitante false . 
+    
+fut:Partida9008 fut:vitoriaVisitante false . 
+    
+fut:Partida9010 fut:vitoriaVisitante false . 
+    
+fut:Partida9017 fut:vitoriaVisitante false . 
+    
+fut:Partida9013 fut:vitoriaVisitante false . 
+    
+fut:Partida9014 fut:vitoriaVisitante false . 
+    
+fut:Partida9009 fut:vitoriaVisitante false . 
+    
+fut:Partida9011 fut:vitoriaVisitante false . 
+    
+fut:Partida9015 fut:vitoriaVisitante true . 
+    
+fut:Partida9012 fut:vitoriaVisitante false . 
+    
+fut:Partida9016 fut:vitoriaVisitante true . 
+    
+fut:Partida9025 fut:vitoriaVisitante false . 
+    
+fut:Partida9026 fut:vitoriaVisitante false . 
+    
+fut:Partida9020 fut:vitoriaVisitante false . 
+    
+fut:Partida9021 fut:vitoriaVisitante false . 
+    
+fut:Partida9022 fut:vitoriaVisitante true . 
+    
+fut:Partida9023 fut:vitoriaVisitante false . 
+    
+fut:Partida9018 fut:vitoriaVisitante true . 
+    
+fut:Partida9024 fut:vitoriaVisitante false . 
+    
+fut:Partida9027 fut:vitoriaVisitante true . 
+    
+fut:Partida9019 fut:vitoriaVisitante true . 
+    
+fut:Partida9033 fut:vitoriaVisitante false . 
+    
+fut:Partida9028 fut:vitoriaVisitante false . 
+    
+fut:Partida9037 fut:vitoriaVisitante true . 
+    
+fut:Partida9030 fut:vitoriaVisitante false . 
+    
+fut:Partida9035 fut:vitoriaVisitante false . 
+    
+fut:Partida9036 fut:vitoriaVisitante false . 
+    
+fut:Partida9029 fut:vitoriaVisitante false . 
+    
+fut:Partida9032 fut:vitoriaVisitante true . 
+    
+fut:Partida9034 fut:vitoriaVisitante false . 
+    
+fut:Partida9031 fut:vitoriaVisitante false . 
+    
+fut:Partida9041 fut:vitoriaVisitante false . 
+    
+fut:Partida9042 fut:vitoriaVisitante false . 
+    
+fut:Partida9044 fut:vitoriaVisitante true . 
+    
+fut:Partida9047 fut:vitoriaVisitante true . 
+    
+fut:Partida9038 fut:vitoriaVisitante false . 
+    
+fut:Partida9040 fut:vitoriaVisitante false . 
+    
+fut:Partida9043 fut:vitoriaVisitante true . 
+    
+fut:Partida9045 fut:vitoriaVisitante false . 
+    
+fut:Partida9039 fut:vitoriaVisitante false . 
+    
+fut:Partida9046 fut:vitoriaVisitante false . 
+    
+fut:Partida9056 fut:vitoriaVisitante true . 
+    
+fut:Partida9048 fut:vitoriaVisitante false . 
+    
+fut:Partida9050 fut:vitoriaVisitante false . 
+    
+fut:Partida9053 fut:vitoriaVisitante false . 
+    
+fut:Partida9049 fut:vitoriaVisitante true . 
+    
+fut:Partida9051 fut:vitoriaVisitante false . 
+    
+fut:Partida9054 fut:vitoriaVisitante false . 
+    
+fut:Partida9052 fut:vitoriaVisitante false . 
+    
+fut:Partida9055 fut:vitoriaVisitante false . 
+    
+fut:Partida9057 fut:vitoriaVisitante true . 
+    
+fut:Partida9066 fut:vitoriaVisitante false . 
+    
+fut:Partida9059 fut:vitoriaVisitante false . 
+    
+fut:Partida9060 fut:vitoriaVisitante false . 
+    
+fut:Partida9062 fut:vitoriaVisitante false . 
+    
+fut:Partida9065 fut:vitoriaVisitante true . 
+    
+fut:Partida9067 fut:vitoriaVisitante false . 
+    
+fut:Partida9061 fut:vitoriaVisitante false . 
+    
+fut:Partida9058 fut:vitoriaVisitante false . 
+    
+fut:Partida9064 fut:vitoriaVisitante false . 
+    
+fut:Partida9063 fut:vitoriaVisitante true . 
+    
+fut:Partida9075 fut:vitoriaVisitante true . 
+    
+fut:Partida9076 fut:vitoriaVisitante false . 
+    
+fut:Partida9068 fut:vitoriaVisitante false . 
+    
+fut:Partida9077 fut:vitoriaVisitante false . 
+    
+fut:Partida9070 fut:vitoriaVisitante false . 
+    
+fut:Partida9071 fut:vitoriaVisitante false . 
+    
+fut:Partida9074 fut:vitoriaVisitante false . 
+    
+fut:Partida9072 fut:vitoriaVisitante false . 
+    
+fut:Partida9073 fut:vitoriaVisitante false . 
+    
+fut:Partida9069 fut:vitoriaVisitante false . 
+    
+fut:Partida9086 fut:vitoriaVisitante false . 
+    
+fut:Partida9083 fut:vitoriaVisitante true . 
+    
+fut:Partida9085 fut:vitoriaVisitante false . 
+    
+fut:Partida9087 fut:vitoriaVisitante false . 
+    
+fut:Partida9081 fut:vitoriaVisitante false . 
+    
+fut:Partida9078 fut:vitoriaVisitante false . 
+    
+fut:Partida9084 fut:vitoriaVisitante false . 
+    
+fut:Partida9080 fut:vitoriaVisitante false . 
+    
+fut:Partida9082 fut:vitoriaVisitante true . 
+    
+fut:Partida9079 fut:vitoriaVisitante true . 
+    
+fut:Partida9095 fut:vitoriaVisitante false . 
+    
+fut:Partida9091 fut:vitoriaVisitante false . 
+    
+fut:Partida9093 fut:vitoriaVisitante false . 
+    
+fut:Partida9096 fut:vitoriaVisitante false . 
+    
+fut:Partida9089 fut:vitoriaVisitante false . 
+    
+fut:Partida9097 fut:vitoriaVisitante false . 
+    
+fut:Partida9090 fut:vitoriaVisitante true . 
+    
+fut:Partida9094 fut:vitoriaVisitante false . 
+    
+fut:Partida9088 fut:vitoriaVisitante false . 
+    
+fut:Partida9092 fut:vitoriaVisitante false . 
+    
+fut:Partida9100 fut:vitoriaVisitante false . 
+    
+fut:Partida9103 fut:vitoriaVisitante true . 
+    
+fut:Partida9101 fut:vitoriaVisitante true . 
+    
+fut:Partida9098 fut:vitoriaVisitante false . 
+    
+fut:Partida9106 fut:vitoriaVisitante false . 
+    
+fut:Partida9104 fut:vitoriaVisitante false . 
+    
+fut:Partida9099 fut:vitoriaVisitante true . 
+    
+fut:Partida9105 fut:vitoriaVisitante true . 
+    
+fut:Partida9107 fut:vitoriaVisitante true . 
+    
+fut:Partida9102 fut:vitoriaVisitante false . 
+    
+fut:Partida9115 fut:vitoriaVisitante false . 
+    
+fut:Partida9108 fut:vitoriaVisitante false . 
+    
+fut:Partida9116 fut:vitoriaVisitante false . 
+    
+fut:Partida9113 fut:vitoriaVisitante false . 
+    
+fut:Partida9110 fut:vitoriaVisitante true . 
+    
+fut:Partida9114 fut:vitoriaVisitante false . 
+    
+fut:Partida9111 fut:vitoriaVisitante true . 
+    
+fut:Partida9112 fut:vitoriaVisitante false . 
+    
+fut:Partida9117 fut:vitoriaVisitante true . 
+    
+fut:Partida9109 fut:vitoriaVisitante false . 
+    
+fut:Partida9120 fut:vitoriaVisitante false . 
+    
+fut:Partida9118 fut:vitoriaVisitante false . 
+    
+fut:Partida9126 fut:vitoriaVisitante true . 
+    
+fut:Partida9124 fut:vitoriaVisitante false . 
+    
+fut:Partida9121 fut:vitoriaVisitante true . 
+    
+fut:Partida9119 fut:vitoriaVisitante false . 
+    
+fut:Partida9123 fut:vitoriaVisitante false . 
+    
+fut:Partida9125 fut:vitoriaVisitante false . 
+    
+fut:Partida9127 fut:vitoriaVisitante false . 
+    
+fut:Partida9122 fut:vitoriaVisitante true . 
+    
+fut:Partida9129 fut:vitoriaVisitante true . 
+    
+fut:Partida9137 fut:vitoriaVisitante false . 
+    
+fut:Partida9133 fut:vitoriaVisitante true . 
+    
+fut:Partida9135 fut:vitoriaVisitante false . 
+    
+fut:Partida9130 fut:vitoriaVisitante false . 
+    
+fut:Partida9131 fut:vitoriaVisitante false . 
+    
+fut:Partida9128 fut:vitoriaVisitante false . 
+    
+fut:Partida9132 fut:vitoriaVisitante false . 
+    
+fut:Partida9134 fut:vitoriaVisitante true . 
+    
+fut:Partida9136 fut:vitoriaVisitante false . 
+    
+fut:Partida9139 fut:vitoriaVisitante false . 
+    
+fut:Partida9143 fut:vitoriaVisitante false . 
+    
+fut:Partida9138 fut:vitoriaVisitante false . 
+    
+fut:Partida9140 fut:vitoriaVisitante false . 
+    
+fut:Partida9146 fut:vitoriaVisitante true . 
+    
+fut:Partida9144 fut:vitoriaVisitante false . 
+    
+fut:Partida9145 fut:vitoriaVisitante false . 
+    
+fut:Partida9142 fut:vitoriaVisitante false . 
+    
+fut:Partida9141 fut:vitoriaVisitante false . 
+    
+fut:Partida9147 fut:vitoriaVisitante true . 
+    
+fut:Partida9148 fut:vitoriaVisitante false . 
+    
+fut:Partida9150 fut:vitoriaVisitante false . 
+    
+fut:Partida9156 fut:vitoriaVisitante false . 
+    
+fut:Partida9157 fut:vitoriaVisitante false . 
+    
+fut:Partida9154 fut:vitoriaVisitante false . 
+    
+fut:Partida9151 fut:vitoriaVisitante false . 
+    
+fut:Partida9152 fut:vitoriaVisitante false . 
+    
+fut:Partida9153 fut:vitoriaVisitante true . 
+    
+fut:Partida9149 fut:vitoriaVisitante true . 
+    
+fut:Partida9155 fut:vitoriaVisitante false . 
+    
+fut:Partida9158 fut:vitoriaVisitante false . 
+    
+fut:Partida9164 fut:vitoriaVisitante true . 
+    
+fut:Partida9165 fut:vitoriaVisitante false . 
+    
+fut:Partida9161 fut:vitoriaVisitante false . 
+    
+fut:Partida9166 fut:vitoriaVisitante true . 
+    
+fut:Partida9163 fut:vitoriaVisitante true . 
+    
+fut:Partida9160 fut:vitoriaVisitante false . 
+    
+fut:Partida9159 fut:vitoriaVisitante false . 
+    
+fut:Partida9167 fut:vitoriaVisitante true . 
+    
+fut:Partida9162 fut:vitoriaVisitante false . 
+    
+fut:Partida9171 fut:vitoriaVisitante false . 
+    
+fut:Partida9172 fut:vitoriaVisitante false . 
+    
+fut:Partida9174 fut:vitoriaVisitante false . 
+    
+fut:Partida9168 fut:vitoriaVisitante false . 
+    
+fut:Partida9169 fut:vitoriaVisitante false . 
+    
+fut:Partida9170 fut:vitoriaVisitante true . 
+    
+fut:Partida9173 fut:vitoriaVisitante false . 
+    
+fut:Partida9175 fut:vitoriaVisitante true . 
+    
+fut:Partida9176 fut:vitoriaVisitante false . 
+    
+fut:Partida9177 fut:vitoriaVisitante false . 
+    
+fut:Partida9179 fut:vitoriaVisitante false . 
+    
+fut:Partida9183 fut:vitoriaVisitante false . 
+    
+fut:Partida9181 fut:vitoriaVisitante false . 
+    
+fut:Partida9184 fut:vitoriaVisitante false . 
+    
+fut:Partida9187 fut:vitoriaVisitante true . 
+    
+fut:Partida9178 fut:vitoriaVisitante false . 
+    
+fut:Partida9186 fut:vitoriaVisitante false . 
+    
+fut:Partida9180 fut:vitoriaVisitante false . 
+    
+fut:Partida9182 fut:vitoriaVisitante false . 
+    
+fut:Partida9185 fut:vitoriaVisitante false . 
+    
+fut:Partida9190 fut:vitoriaVisitante false . 
+    
+fut:Partida9194 fut:vitoriaVisitante true . 
+    
+fut:Partida9188 fut:vitoriaVisitante false . 
+    
+fut:Partida9197 fut:vitoriaVisitante true . 
+    
+fut:Partida9193 fut:vitoriaVisitante false . 
+    
+fut:Partida9189 fut:vitoriaVisitante false . 
+    
+fut:Partida9191 fut:vitoriaVisitante false . 
+    
+fut:Partida9195 fut:vitoriaVisitante true . 
+    
+fut:Partida9196 fut:vitoriaVisitante false . 
+    
+fut:Partida9192 fut:vitoriaVisitante false . 
+    
+fut:Partida9198 fut:vitoriaVisitante false . 
+    
+fut:Partida9201 fut:vitoriaVisitante false . 
+    
+fut:Partida9202 fut:vitoriaVisitante false . 
+    
+fut:Partida9199 fut:vitoriaVisitante false . 
+    
+fut:Partida9203 fut:vitoriaVisitante false . 
+    
+fut:Partida9207 fut:vitoriaVisitante false . 
+    
+fut:Partida9200 fut:vitoriaVisitante false . 
+    
+fut:Partida9205 fut:vitoriaVisitante false . 
+    
+fut:Partida9206 fut:vitoriaVisitante false . 
+    
+fut:Partida9204 fut:vitoriaVisitante false . 
+    
+fut:Partida9212 fut:vitoriaVisitante false . 
+    
+fut:Partida9215 fut:vitoriaVisitante false . 
+    
+fut:Partida9209 fut:vitoriaVisitante true . 
+    
+fut:Partida9214 fut:vitoriaVisitante false . 
+    
+fut:Partida9208 fut:vitoriaVisitante false . 
+    
+fut:Partida9211 fut:vitoriaVisitante false . 
+    
+fut:Partida9213 fut:vitoriaVisitante false . 
+    
+fut:Partida9216 fut:vitoriaVisitante false . 
+    
+fut:Partida9217 fut:vitoriaVisitante false . 
+    
+fut:Partida9210 fut:vitoriaVisitante false . 
+    
+fut:Partida9218 fut:vitoriaVisitante true . 
+    
+fut:Partida9224 fut:vitoriaVisitante false . 
+    
+fut:Partida9221 fut:vitoriaVisitante true . 
+    
+fut:Partida9226 fut:vitoriaVisitante false . 
+    
+fut:Partida9225 fut:vitoriaVisitante true . 
+    
+fut:Partida9222 fut:vitoriaVisitante false . 
+    
+fut:Partida9227 fut:vitoriaVisitante false . 
+    
+fut:Partida9220 fut:vitoriaVisitante false . 
+    
+fut:Partida9219 fut:vitoriaVisitante false . 
+    
+fut:Partida9223 fut:vitoriaVisitante false . 
+    
+fut:Partida9236 fut:vitoriaVisitante true . 
+    
+fut:Partida9237 fut:vitoriaVisitante true . 
+    
+fut:Partida9232 fut:vitoriaVisitante false . 
+    
+fut:Partida9228 fut:vitoriaVisitante false . 
+    
+fut:Partida9230 fut:vitoriaVisitante true . 
+    
+fut:Partida9229 fut:vitoriaVisitante false . 
+    
+fut:Partida9235 fut:vitoriaVisitante false . 
+    
+fut:Partida9234 fut:vitoriaVisitante false . 
+    
+fut:Partida9231 fut:vitoriaVisitante false . 
+    
+fut:Partida9233 fut:vitoriaVisitante false . 
+    
+fut:Partida9238 fut:vitoriaVisitante false . 
+    
+fut:Partida9246 fut:vitoriaVisitante false . 
+    
+fut:Partida9240 fut:vitoriaVisitante false . 
+    
+fut:Partida9247 fut:vitoriaVisitante false . 
+    
+fut:Partida9244 fut:vitoriaVisitante true . 
+    
+fut:Partida9241 fut:vitoriaVisitante false . 
+    
+fut:Partida9243 fut:vitoriaVisitante false . 
+    
+fut:Partida9245 fut:vitoriaVisitante false . 
+    
+fut:Partida9242 fut:vitoriaVisitante false . 
+    
+fut:Partida9239 fut:vitoriaVisitante false . 
+    
+fut:Partida9252 fut:vitoriaVisitante true . 
+    
+fut:Partida9249 fut:vitoriaVisitante false . 
+    
+fut:Partida9251 fut:vitoriaVisitante false . 
+    
+fut:Partida9248 fut:vitoriaVisitante true . 
+    
+fut:Partida9250 fut:vitoriaVisitante true . 
+    
+fut:Partida9254 fut:vitoriaVisitante false . 
+    
+fut:Partida9253 fut:vitoriaVisitante true . 
+    
+fut:Partida9255 fut:vitoriaVisitante false . 
+    
+fut:Partida9256 fut:vitoriaVisitante false . 
+    
+fut:Partida9257 fut:vitoriaVisitante false . 
+    
+fut:Partida9264 fut:vitoriaVisitante true . 
+    
+fut:Partida9265 fut:vitoriaVisitante true . 
+    
+fut:Partida9267 fut:vitoriaVisitante true . 
+    
+fut:Partida9259 fut:vitoriaVisitante false . 
+    
+fut:Partida9262 fut:vitoriaVisitante false . 
+    
+fut:Partida9266 fut:vitoriaVisitante false . 
+    
+fut:Partida9260 fut:vitoriaVisitante true . 
+    
+fut:Partida9263 fut:vitoriaVisitante true . 
+    
+fut:Partida9261 fut:vitoriaVisitante true . 
+    
+fut:Partida9258 fut:vitoriaVisitante false . 
+    
+fut:Partida9270 fut:vitoriaVisitante false . 
+    
+fut:Partida9276 fut:vitoriaVisitante false . 
+    
+fut:Partida9277 fut:vitoriaVisitante false . 
+    
+fut:Partida9269 fut:vitoriaVisitante false . 
+    
+fut:Partida9268 fut:vitoriaVisitante false . 
+    
+fut:Partida9273 fut:vitoriaVisitante true . 
+    
+fut:Partida9274 fut:vitoriaVisitante false . 
+    
+fut:Partida9271 fut:vitoriaVisitante false . 
+    
+fut:Partida9272 fut:vitoriaVisitante false . 
+    
+fut:Partida9275 fut:vitoriaVisitante true . 
+    
+fut:Partida9278 fut:vitoriaVisitante false . 
+    
+fut:Partida9282 fut:vitoriaVisitante true . 
+    
+fut:Partida9285 fut:vitoriaVisitante false . 
+    
+fut:Partida9280 fut:vitoriaVisitante false . 
+    
+fut:Partida9283 fut:vitoriaVisitante false . 
+    
+fut:Partida9284 fut:vitoriaVisitante false . 
+    
+fut:Partida9287 fut:vitoriaVisitante true . 
+    
+fut:Partida9279 fut:vitoriaVisitante true . 
+    
+fut:Partida9281 fut:vitoriaVisitante false . 
+    
+fut:Partida9286 fut:vitoriaVisitante false . 
+    
+fut:Partida9290 fut:vitoriaVisitante false . 
+    
+fut:Partida9297 fut:vitoriaVisitante true . 
+    
+fut:Partida9293 fut:vitoriaVisitante false . 
+    
+fut:Partida9292 fut:vitoriaVisitante false . 
+    
+fut:Partida9295 fut:vitoriaVisitante false . 
+    
+fut:Partida9291 fut:vitoriaVisitante false . 
+    
+fut:Partida9294 fut:vitoriaVisitante true . 
+    
+fut:Partida9289 fut:vitoriaVisitante true . 
+    
+fut:Partida9296 fut:vitoriaVisitante true . 
+    
+fut:Partida9288 fut:vitoriaVisitante false . 
+    
+fut:Partida9306 fut:vitoriaVisitante false . 
+    
+fut:Partida9304 fut:vitoriaVisitante false . 
+    
+fut:Partida9301 fut:vitoriaVisitante false . 
+    
+fut:Partida9305 fut:vitoriaVisitante true . 
+    
+fut:Partida9298 fut:vitoriaVisitante true . 
+    
+fut:Partida9303 fut:vitoriaVisitante false . 
+    
+fut:Partida9299 fut:vitoriaVisitante true . 
+    
+fut:Partida9307 fut:vitoriaVisitante true . 
+    
+fut:Partida9302 fut:vitoriaVisitante true . 
+    
+fut:Partida9300 fut:vitoriaVisitante false . 
+    
+fut:Partida9314 fut:vitoriaVisitante false . 
+    
+fut:Partida9317 fut:vitoriaVisitante false . 
+    
+fut:Partida9310 fut:vitoriaVisitante false . 
+    
+fut:Partida9312 fut:vitoriaVisitante false . 
+    
+fut:Partida9313 fut:vitoriaVisitante true . 
+    
+fut:Partida9316 fut:vitoriaVisitante true . 
+    
+fut:Partida9315 fut:vitoriaVisitante true . 
+    
+fut:Partida9309 fut:vitoriaVisitante false . 
+    
+fut:Partida9311 fut:vitoriaVisitante false . 
+    
+fut:Partida9308 fut:vitoriaVisitante false . 
+    
+fut:Partida9324 fut:vitoriaVisitante false . 
+    
+fut:Partida9327 fut:vitoriaVisitante true . 
+    
+fut:Partida9320 fut:vitoriaVisitante false . 
+    
+fut:Partida9325 fut:vitoriaVisitante false . 
+    
+fut:Partida9318 fut:vitoriaVisitante false . 
+    
+fut:Partida9321 fut:vitoriaVisitante false . 
+    
+fut:Partida9322 fut:vitoriaVisitante true . 
+    
+fut:Partida9319 fut:vitoriaVisitante true . 
+    
+fut:Partida9326 fut:vitoriaVisitante true . 
+    
+fut:Partida9323 fut:vitoriaVisitante false . 
+    
+fut:Partida9335 fut:vitoriaVisitante false . 
+    
+fut:Partida9328 fut:vitoriaVisitante false . 
+    
+fut:Partida9330 fut:vitoriaVisitante false . 
+    
+fut:Partida9332 fut:vitoriaVisitante false . 
+    
+fut:Partida9334 fut:vitoriaVisitante true . 
+    
+fut:Partida9329 fut:vitoriaVisitante false . 
+    
+fut:Partida9331 fut:vitoriaVisitante false . 
+    
+fut:Partida9333 fut:vitoriaVisitante false . 
+    
+fut:Partida9336 fut:vitoriaVisitante false . 
+    
+fut:Partida9337 fut:vitoriaVisitante false . 
+    
+fut:Partida9341 fut:vitoriaVisitante true . 
+    
+fut:Partida9345 fut:vitoriaVisitante false . 
+    
+fut:Partida9338 fut:vitoriaVisitante false . 
+    
+fut:Partida9339 fut:vitoriaVisitante false . 
+    
+fut:Partida9343 fut:vitoriaVisitante false . 
+    
+fut:Partida9340 fut:vitoriaVisitante false . 
+    
+fut:Partida9344 fut:vitoriaVisitante false . 
+    
+fut:Partida9346 fut:vitoriaVisitante false . 
+    
+fut:Partida9347 fut:vitoriaVisitante true . 
+    
+fut:Partida9342 fut:vitoriaVisitante true . 
+    
+fut:Partida9349 fut:vitoriaVisitante true . 
+    
+fut:Partida9351 fut:vitoriaVisitante true . 
+    
+fut:Partida9348 fut:vitoriaVisitante true . 
+    
+fut:Partida9356 fut:vitoriaVisitante true . 
+    
+fut:Partida9357 fut:vitoriaVisitante true . 
+    
+fut:Partida9350 fut:vitoriaVisitante false . 
+    
+fut:Partida9355 fut:vitoriaVisitante false . 
+    
+fut:Partida9354 fut:vitoriaVisitante false . 
+    
+fut:Partida9353 fut:vitoriaVisitante false . 
+    
+fut:Partida9352 fut:vitoriaVisitante true . 
+    
+fut:Partida9361 fut:vitoriaVisitante true . 
+    
+fut:Partida9363 fut:vitoriaVisitante false . 
+    
+fut:Partida9358 fut:vitoriaVisitante false . 
+    
+fut:Partida9360 fut:vitoriaVisitante false . 
+    
+fut:Partida9359 fut:vitoriaVisitante false . 
+    
+fut:Partida9362 fut:vitoriaVisitante false . 
+    
+fut:Partida9364 fut:vitoriaVisitante false . 
+    
+fut:Partida9365 fut:vitoriaVisitante false . 
+    
+fut:Partida9366 fut:vitoriaVisitante false . 
+    
+fut:Partida9367 fut:vitoriaVisitante false . 
+    
+fut:Partida9372 fut:vitoriaVisitante false . 
+    
+fut:Partida9368 fut:vitoriaVisitante true . 
+    
+fut:Partida9369 fut:vitoriaVisitante false . 
+    
+fut:Partida9370 fut:vitoriaVisitante false . 
+    
+fut:Partida9371 fut:vitoriaVisitante true . 
+    
+fut:Partida9373 fut:vitoriaVisitante false . 
+    
+fut:Partida9374 fut:vitoriaVisitante false . 
+    
+fut:Partida9375 fut:vitoriaVisitante true . 
+    
+fut:Partida9376 fut:vitoriaVisitante false . 
+    
+fut:Partida9377 fut:vitoriaVisitante false . 
+    
+fut:EquipePAL fut:eMandante fut:Partida9000 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9000 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9007 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9007 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida8999 .
+                fut:EquipeSAO fut:eVisitante fut:Partida8999 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9002 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9002 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9005 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9005 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9006 .
+                fut:EquipeINT fut:eVisitante fut:Partida9006 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9003 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9003 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida8998 .
+                fut:EquipeCFC fut:eVisitante fut:Partida8998 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9001 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9001 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9004 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9004 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9008 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9008 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9010 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9010 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9017 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9017 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9013 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9013 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9014 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9014 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9009 .
+                fut:EquipePAL fut:eVisitante fut:Partida9009 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9011 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9011 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9015 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9015 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9012 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9012 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9016 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9016 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9025 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9025 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9026 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9026 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9020 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9020 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9021 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9021 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9022 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9022 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9023 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9023 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9018 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9018 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9024 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9024 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9027 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9027 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9019 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9019 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9033 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9033 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9028 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9028 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9037 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9037 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9030 .
+                fut:EquipeINT fut:eVisitante fut:Partida9030 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9035 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9035 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9036 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9036 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9029 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9029 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9032 .
+                fut:EquipePAL fut:eVisitante fut:Partida9032 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9034 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9034 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9031 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9031 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9041 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9041 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9042 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9042 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9044 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9044 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9047 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9047 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9038 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9038 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9040 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9040 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9043 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9043 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9045 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9045 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9039 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9039 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9046 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9046 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9056 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9056 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9048 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9048 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9050 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9050 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9053 .
+                fut:EquipeINT fut:eVisitante fut:Partida9053 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9049 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9049 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9051 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9051 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9054 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9054 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9052 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9052 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9055 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9055 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9057 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9057 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9066 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9066 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9059 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9059 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9060 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9060 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9062 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9062 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9065 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9065 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9067 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9067 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9061 .
+                fut:EquipePAL fut:eVisitante fut:Partida9061 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9058 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9058 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9064 .
+                fut:EquipeINT fut:eVisitante fut:Partida9064 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9063 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9063 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9075 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9075 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9076 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9076 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9068 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9068 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9077 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9077 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9070 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9070 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9071 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9071 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9074 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9074 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9072 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9072 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9073 .
+                fut:EquipePAL fut:eVisitante fut:Partida9073 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9069 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9069 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9086 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9086 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9083 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9083 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9085 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9085 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9087 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9087 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9081 .
+                fut:EquipeINT fut:eVisitante fut:Partida9081 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9078 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9078 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9084 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9084 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9080 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9080 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9082 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9082 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9079 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9079 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9095 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9095 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9091 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9091 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9093 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9093 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9096 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9096 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9089 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9089 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9097 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9097 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9090 .
+                fut:EquipePAL fut:eVisitante fut:Partida9090 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9094 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9094 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9088 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9088 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9092 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9092 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9100 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9100 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9103 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9103 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9101 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9101 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9098 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9098 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9106 .
+                fut:EquipePAL fut:eVisitante fut:Partida9106 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9104 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9104 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9099 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9099 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9105 .
+                fut:EquipeINT fut:eVisitante fut:Partida9105 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9107 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9107 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9102 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9102 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9115 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9115 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9108 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9108 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9116 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9116 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9113 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9113 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9110 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9110 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9114 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9114 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9111 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9111 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9112 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9112 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9117 .
+                fut:EquipeINT fut:eVisitante fut:Partida9117 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9109 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9109 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9120 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9120 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9118 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9118 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9126 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9126 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9124 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9124 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9121 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9121 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9119 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9119 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9123 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9123 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9125 .
+                fut:EquipePAL fut:eVisitante fut:Partida9125 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9127 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9127 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9122 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9122 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9129 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9129 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9137 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9137 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9133 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9133 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9135 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9135 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9130 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9130 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9131 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9131 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9128 .
+                fut:EquipeINT fut:eVisitante fut:Partida9128 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9132 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9132 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9134 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9134 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9136 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9136 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9139 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9139 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9143 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9143 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9138 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9138 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9140 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9140 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9146 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9146 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9144 .
+                fut:EquipePAL fut:eVisitante fut:Partida9144 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9145 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9145 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9142 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9142 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9141 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9141 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9147 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9147 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9148 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9148 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9150 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9150 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9156 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9156 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9157 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9157 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9154 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9154 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9151 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9151 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9152 .
+                fut:EquipeINT fut:eVisitante fut:Partida9152 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9153 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9153 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9149 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9149 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9155 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9155 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9158 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9158 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9164 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9164 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9165 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9165 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9161 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9161 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9166 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9166 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9163 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9163 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9160 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9160 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9159 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9159 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9167 .
+                fut:EquipePAL fut:eVisitante fut:Partida9167 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9162 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9162 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9171 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9171 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9172 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9172 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9174 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9174 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9168 .
+                fut:EquipePAL fut:eVisitante fut:Partida9168 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9169 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9169 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9170 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9170 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9173 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9173 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9175 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9175 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9176 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9176 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9177 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9177 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9179 .
+                fut:EquipeINT fut:eVisitante fut:Partida9179 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9183 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9183 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9181 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9181 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9184 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9184 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9187 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9187 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9178 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9178 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9186 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9186 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9180 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9180 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9182 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9182 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9185 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9185 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9190 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9190 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9194 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9194 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9188 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9188 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9197 .
+                fut:EquipePAL fut:eVisitante fut:Partida9197 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9193 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9193 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9189 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9189 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9191 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9191 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9195 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9195 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9196 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9196 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9192 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9192 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9198 .
+                fut:EquipeINT fut:eVisitante fut:Partida9198 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9201 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9201 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9202 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9202 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9199 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9199 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9203 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9203 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9207 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9207 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9200 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9200 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9205 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9205 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9206 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9206 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9204 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9204 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9212 .
+                fut:EquipeINT fut:eVisitante fut:Partida9212 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9215 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9215 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9209 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9209 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9214 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9214 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9208 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9208 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9211 .
+                fut:EquipePAL fut:eVisitante fut:Partida9211 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9213 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9213 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9216 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9216 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9217 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9217 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9210 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9210 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9218 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9218 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9224 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9224 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9221 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9221 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9226 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9226 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9225 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9225 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9222 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9222 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9227 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9227 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9220 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9220 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9219 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9219 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9223 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9223 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9236 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9236 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9237 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9237 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9232 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9232 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9228 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9228 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9230 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9230 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9229 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9229 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9235 .
+                fut:EquipeINT fut:eVisitante fut:Partida9235 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9234 .
+                fut:EquipePAL fut:eVisitante fut:Partida9234 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9231 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9231 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9233 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9233 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9238 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9238 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9246 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9246 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9240 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9240 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9247 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9247 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9244 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9244 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9241 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9241 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9243 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9243 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9245 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9245 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9242 .
+                fut:EquipePAL fut:eVisitante fut:Partida9242 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9239 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9239 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9252 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9252 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9249 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9249 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9251 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9251 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9248 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9248 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9250 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9250 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9254 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9254 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9253 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9253 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9255 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9255 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9256 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9256 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9257 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9257 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9264 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9264 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9265 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9265 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9267 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9267 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9259 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9259 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9262 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9262 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9266 .
+                fut:EquipeINT fut:eVisitante fut:Partida9266 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9260 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9260 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9263 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9263 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9261 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9261 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9258 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9258 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9270 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9270 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9276 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9276 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9277 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9277 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9269 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9269 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9268 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9268 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9273 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9273 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9274 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9274 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9271 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9271 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9272 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9272 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9275 .
+                fut:EquipePAL fut:eVisitante fut:Partida9275 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9278 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9278 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9282 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9282 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9285 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9285 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9280 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9280 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9283 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9283 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9284 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9284 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9287 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9287 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9279 .
+                fut:EquipeINT fut:eVisitante fut:Partida9279 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9281 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9281 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9286 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9286 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9290 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9290 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9297 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9297 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9293 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9293 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9292 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9292 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9295 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9295 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9291 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9291 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9294 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9294 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9289 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9289 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9296 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9296 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9288 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9288 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9306 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9306 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9304 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9304 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9301 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9301 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9305 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9305 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9298 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9298 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9303 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9303 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9299 .
+                fut:EquipePAL fut:eVisitante fut:Partida9299 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9307 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9307 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9302 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9302 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9300 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9300 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9314 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9314 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9317 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9317 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9310 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9310 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9312 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9312 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9313 .
+                fut:EquipeINT fut:eVisitante fut:Partida9313 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9316 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9316 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9315 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9315 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9309 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9309 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9311 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9311 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9308 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9308 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9324 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9324 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9327 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9327 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9320 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9320 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9325 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9325 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9318 .
+                fut:EquipePAL fut:eVisitante fut:Partida9318 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9321 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9321 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9322 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9322 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9319 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9319 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9326 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9326 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9323 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9323 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9335 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9335 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9328 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9328 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9330 .
+                fut:EquipeINT fut:eVisitante fut:Partida9330 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9332 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9332 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9334 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9334 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9329 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9329 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9331 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9331 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9333 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9333 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9336 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9336 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9337 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9337 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9341 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9341 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9345 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9345 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9338 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9338 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9339 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9339 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9343 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9343 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9340 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9340 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9344 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9344 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9346 .
+                fut:EquipePAL fut:eVisitante fut:Partida9346 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9347 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9347 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9342 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9342 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9349 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9349 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9351 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9351 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9348 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9348 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9356 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9356 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9357 .
+                fut:EquipeINT fut:eVisitante fut:Partida9357 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9350 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9350 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9355 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9355 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9354 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9354 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9353 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9353 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9352 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9352 .
+    
+fut:EquipeCOR fut:eMandante fut:Partida9361 .
+                fut:EquipeINT fut:eVisitante fut:Partida9361 .
+    
+fut:EquipeCAM fut:eMandante fut:Partida9363 .
+                fut:EquipeSAO fut:eVisitante fut:Partida9363 .
+    
+fut:EquipeFLA fut:eMandante fut:Partida9358 .
+                fut:EquipeCUI fut:eVisitante fut:Partida9358 .
+    
+fut:EquipePAL fut:eMandante fut:Partida9360 .
+                fut:EquipeFLU fut:eVisitante fut:Partida9360 .
+    
+fut:EquipeBOT fut:eMandante fut:Partida9359 .
+                fut:EquipeCRU fut:eVisitante fut:Partida9359 .
+    
+fut:EquipeBGT fut:eMandante fut:Partida9362 .
+                fut:EquipeCFC fut:eVisitante fut:Partida9362 .
+    
+fut:EquipeGRE fut:eMandante fut:Partida9364 .
+                fut:EquipeVAS fut:eVisitante fut:Partida9364 .
+    
+fut:EquipeCAP fut:eMandante fut:Partida9365 .
+                fut:EquipeSAN fut:eVisitante fut:Partida9365 .
+    
+fut:EquipeFOR fut:eMandante fut:Partida9366 .
+                fut:EquipeGOI fut:eVisitante fut:Partida9366 .
+    
+fut:EquipeAMG fut:eMandante fut:Partida9367 .
+                fut:EquipeBAH fut:eVisitante fut:Partida9367 .
+    
+fut:EquipeGOI fut:eMandante fut:Partida9372 .
+                fut:EquipeAMG fut:eVisitante fut:Partida9372 .
+    
+fut:EquipeFLU fut:eMandante fut:Partida9368 .
+                fut:EquipeGRE fut:eVisitante fut:Partida9368 .
+    
+fut:EquipeVAS fut:eMandante fut:Partida9369 .
+                fut:EquipeBGT fut:eVisitante fut:Partida9369 .
+    
+fut:EquipeSAO fut:eMandante fut:Partida9370 .
+                fut:EquipeFLA fut:eVisitante fut:Partida9370 .
+    
+fut:EquipeSAN fut:eMandante fut:Partida9371 .
+                fut:EquipeFOR fut:eVisitante fut:Partida9371 .
+    
+fut:EquipeCRU fut:eMandante fut:Partida9373 .
+                fut:EquipePAL fut:eVisitante fut:Partida9373 .
+    
+fut:EquipeINT fut:eMandante fut:Partida9374 .
+                fut:EquipeBOT fut:eVisitante fut:Partida9374 .
+    
+fut:EquipeCFC fut:eMandante fut:Partida9375 .
+                fut:EquipeCOR fut:eVisitante fut:Partida9375 .
+    
+fut:EquipeBAH fut:eMandante fut:Partida9376 .
+                fut:EquipeCAM fut:eVisitante fut:Partida9376 .
+    
+fut:EquipeCUI fut:eMandante fut:Partida9377 .
+                fut:EquipeCAP fut:eVisitante fut:Partida9377 .
     
