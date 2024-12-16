@@ -144,9 +144,10 @@ namespace Sparql.QueryEasy.Services
 
             var queryBuilder = _queryBuilder
                 .AddDefaultPrefixes()
-                .Select("?property ?propertyLabel")
+                .Select("?property ?propertyLabel ?propertyType")
                 .StartWhere()
-                .GetVariableLabel("?property");
+                .GetVariableLabel("?property")
+                .AddVariableType("?property");
 
             if (!isLocal)
             {
@@ -176,7 +177,10 @@ namespace Sparql.QueryEasy.Services
 
             if (isLocal)
             {
-                return relationships.Where(x => x.PropertyLabel.ToLower().Contains(search.ToLower())).Take(20);
+                return relationships.Where(x => 
+                    x.PropertyLabel.ToLower().Contains(search.ToLower())
+                    && x.PropertyType == "objetoClasse"
+                ).Take(20);
             }
 
             return relationships;

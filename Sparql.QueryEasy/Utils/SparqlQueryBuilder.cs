@@ -20,7 +20,7 @@ namespace Sparql.QueryEasy.Utils
             _query.AppendLine("PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>");
             _query.AppendLine("PREFIX owl: <http://www.w3.org/2002/07/owl#>");
 
-            if(_isWikidata)
+            if (_isWikidata)
             {
                 _query.AppendLine("PREFIX wikibase: <http://wikiba.se/ontology#>");
             }
@@ -44,7 +44,7 @@ namespace Sparql.QueryEasy.Utils
         public SparqlQueryBuilder EndWhere()
         {
             _query.AppendLine("}");
-            if (!string.IsNullOrEmpty(_orderBy)) 
+            if (!string.IsNullOrEmpty(_orderBy))
             {
                 _query.AppendLine(_orderBy);
             }
@@ -88,7 +88,7 @@ namespace Sparql.QueryEasy.Utils
 
         public SparqlQueryBuilder Filter(FilterType filterType, string variable, string value)
         {
-            if(filterType == FilterType.Max || filterType == FilterType.Min)
+            if (filterType == FilterType.Max || filterType == FilterType.Min)
             {
                 var order = filterType == FilterType.Max ? "DESC" : "ASC";
                 _orderBy = $"ORDER BY {order}({variable}) ";
@@ -145,7 +145,16 @@ namespace Sparql.QueryEasy.Utils
 
         public SparqlQueryBuilder AddVariableType(string variableName)
         {
-            _query.AppendLine($"BIND(IF(EXISTS {{ {variableName} rdf:type owl:ObjectProperty}}, \"objeto\", IF(EXISTS {{{variableName} rdf:type owl:DatatypeProperty}}, \"label\", \"outro\")) as {variableName}Type)");
+            _query.AppendLine($@"
+                BIND(IF(
+                    EXISTS {{
+                        {variableName} rdf:type ?parentClass .
+                        ?parentClass rdf:type owl:Class
+                    }},
+                    ""objetoClasse"",
+                    ""outro""
+                ) AS {variableName}Type)
+            ");
 
             return this;
         }
