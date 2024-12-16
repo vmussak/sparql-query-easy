@@ -1,4 +1,5 @@
 ﻿using AngleSharp.Dom;
+using AngleSharp.Io;
 using Microsoft.Extensions.DependencyInjection;
 using Sparql.QueryEasy.Dtos;
 using Sparql.QueryEasy.Repositories;
@@ -192,7 +193,7 @@ namespace Sparql.QueryEasy.Services
 
             _queryBuilder
                 .AddDefaultPrefixes()
-                .Select($"{variableName} {variableName}Label {variableName}RdfType")
+                .Select($"{variableName} {variableName}Label {variableName}RdfType {variableName}Type")
                 .StartWhere();
 
             foreach (var item in where)
@@ -206,7 +207,8 @@ namespace Sparql.QueryEasy.Services
             {
                 _queryBuilder.Where(variableName, "?p", "?o")
                    .GetVariableRdfType(variableName)
-                   .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata);
+                   .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata)
+                   .AddVariableType(variableName);
             } 
 
             string query = _queryBuilder
@@ -227,14 +229,21 @@ namespace Sparql.QueryEasy.Services
                     PropertyLabel = string.IsNullOrEmpty(labelProperty)
                         ? propertyId
                         : labelProperty,
-                    PropertyType = result.GetStringValue($"object"),
+                    PropertyType = result.GetStringValue($"{varName}Type"),
                     PropertyClass = result.GetStringValue($"{varName}RdfType")
                 });
             }
 
-            return relationships.Where(
+            var response = relationships.Where(
                 x => !string.IsNullOrEmpty(x.PropertyLabel)
             );
+
+            if (!where.Any())
+            {
+                response = response.Where(x => x.PropertyType == "objetoClasse");
+            }
+
+            return response;
         }
 
         public async Task<string> GetSparqlQuery(IEnumerable<WhereRequest> where, string variableName, int limit)
