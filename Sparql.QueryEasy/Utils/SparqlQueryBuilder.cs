@@ -143,7 +143,7 @@ namespace Sparql.QueryEasy.Utils
             return this;
         }
 
-        public SparqlQueryBuilder AddVariableType(string variableName)
+        public SparqlQueryBuilder AddVariableParentType(string variableName)
         {
             _query.AppendLine($@"
                 BIND(IF(
@@ -153,8 +153,15 @@ namespace Sparql.QueryEasy.Utils
                     }},
                     ""objetoClasse"",
                     ""outro""
-                ) AS {variableName}Type)
+                ) AS {variableName}ParentType)
             ");
+
+            return this;
+        }
+
+        public SparqlQueryBuilder AddVariableType(string variableName)
+        {
+            _query.AppendLine($"BIND(IF(EXISTS {{ {variableName} rdf:type owl:ObjectProperty}}, \"objeto\", IF(EXISTS {{{variableName} rdf:type owl:DatatypeProperty}}, \"label\", \"outro\")) as {variableName}Type)");
 
             return this;
         }

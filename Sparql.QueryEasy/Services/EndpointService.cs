@@ -145,10 +145,10 @@ namespace Sparql.QueryEasy.Services
 
             var queryBuilder = _queryBuilder
                 .AddDefaultPrefixes()
-                .Select("?property ?propertyLabel ?propertyType")
+                .Select("?property ?propertyLabel ?propertyParentType")
                 .StartWhere()
                 .GetVariableLabel("?property")
-                .AddVariableType("?property");
+                .AddVariableParentType("?property");
 
             if (!isLocal)
             {
@@ -172,7 +172,7 @@ namespace Sparql.QueryEasy.Services
                 {
                     PropertyId = result.GetStringValue("property"),
                     PropertyLabel = result.GetStringValue("propertyLabel"),
-                    PropertyType = result.GetStringValue("propertyType")
+                    PropertyType = result.GetStringValue("propertyParentType")
                 });
             }
 
@@ -208,7 +208,7 @@ namespace Sparql.QueryEasy.Services
                 _queryBuilder.Where(variableName, "?p", "?o")
                    .GetVariableRdfType(variableName)
                    .GetVariableLabel(variableName, ignoreWikidata: ignoreWikidata)
-                   .AddVariableType(variableName);
+                   .AddVariableParentType(variableName);
             } 
 
             string query = _queryBuilder
@@ -229,7 +229,7 @@ namespace Sparql.QueryEasy.Services
                     PropertyLabel = string.IsNullOrEmpty(labelProperty)
                         ? propertyId
                         : labelProperty,
-                    PropertyType = result.GetStringValue($"{varName}Type"),
+                    PropertyType = result.GetStringValue($"{varName}ParentType"),
                     PropertyClass = result.GetStringValue($"{varName}RdfType")
                 });
             }
