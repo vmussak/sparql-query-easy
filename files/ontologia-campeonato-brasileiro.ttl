@@ -1,0 +1,461 @@
+@prefix : <urn:usp:ontology:futebol#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fut: <http://futebol.usp.br#> .
+@base <urn:usp:ontology:futebol#> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://futebol.usp.br#competePor
+<http://futebol.usp.br#competePor> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                   owl:inverseOf <http://futebol.usp.br#formadaPor> ;
+                                   rdfs:domain <http://futebol.usp.br#Atleta> ;
+                                   rdfs:range <http://futebol.usp.br#Equipe> ;
+                                   rdfs:label "competePor"@en .
+
+
+###  http://futebol.usp.br#contem
+<http://futebol.usp.br#contem> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                      owl:inverseOf <http://futebol.usp.br#ocorreEm> ;
+                                      rdfs:domain <http://futebol.usp.br#Rodada> ;
+                                      rdfs:range <http://futebol.usp.br#Partida> ;
+                                      rdfs:label "contem"@en .
+
+
+###  http://futebol.usp.br#formadaPor
+<http://futebol.usp.br#formadaPor> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                   rdfs:domain <http://futebol.usp.br#Equipe> ;
+                                   rdfs:range <http://futebol.usp.br#Atleta> ;
+                                   rdfs:label "formadaPor"@en .
+
+
+###  http://futebol.usp.br#indicaPosicao
+<http://futebol.usp.br#indicaPosicao> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                      owl:inverseOf <http://futebol.usp.br#possuiClassificacao> ;
+                                      rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                      rdfs:range <http://futebol.usp.br#Equipe> ;
+                                      rdfs:label "indicaPosicao"@en .
+
+
+###  http://futebol.usp.br#marcaGol
+<http://futebol.usp.br#marcaGol> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                 owl:inverseOf <http://futebol.usp.br#marcadoPor> ;
+                                 rdfs:domain <http://futebol.usp.br#Atleta> ;
+                                 rdfs:range <http://futebol.usp.br#Gol> ;
+                                 rdfs:label "marcaGol"@en .
+
+
+###  http://futebol.usp.br#marcadoEm
+<http://futebol.usp.br#marcadoEm> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  owl:inverseOf <http://futebol.usp.br#tem> ;
+                                  rdfs:domain <http://futebol.usp.br#Gol> ;
+                                  rdfs:range <http://futebol.usp.br#Partida> ;
+                                  rdfs:label "marcadoEm"@en .
+
+
+###  http://futebol.usp.br#marcadoPor
+<http://futebol.usp.br#marcadoPor> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                   rdfs:domain <http://futebol.usp.br#Gol> ;
+                                   rdfs:range <http://futebol.usp.br#Atleta> ;
+                                   rdfs:label "marcadoPor"@en .
+
+
+###  http://futebol.usp.br#ocorreDurante
+<http://futebol.usp.br#ocorreDurante> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                      owl:inverseOf <http://futebol.usp.br#compostoPor> ;
+                                      rdfs:domain <http://futebol.usp.br#Rodada> ;
+                                      rdfs:range <http://futebol.usp.br#Campeonato> ;
+                                      rdfs:label "ocorreDurante"@en .
+
+
+###  http://futebol.usp.br#ocorreEm
+<http://futebol.usp.br#ocorreEm> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                 rdfs:domain <http://futebol.usp.br#Partida> ;
+                                 rdfs:range <http://futebol.usp.br#Rodada> ;
+                                 rdfs:label "ocorreEm"@en .
+
+
+###  http://futebol.usp.br#participaDe
+<http://futebol.usp.br#participaDe> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                    rdfs:domain <http://futebol.usp.br#Equipe> ;
+                                    rdfs:range <http://futebol.usp.br#Campeonato> ;
+                                    rdfs:label "participaDe"@en .
+
+
+###  http://futebol.usp.br#possuiClassificacao
+<http://futebol.usp.br#possuiClassificacao> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            rdfs:domain <http://futebol.usp.br#Equipe> ;
+                                            rdfs:range <http://futebol.usp.br#Classificacao> ;
+                                            rdfs:label "possuiClassificacao"@en .
+
+
+###  http://futebol.usp.br#realizadaEm
+<http://futebol.usp.br#realizadaEm> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                    owl:inverseOf <http://futebol.usp.br#recebe> ;
+                                    rdfs:domain <http://futebol.usp.br#Partida> ;
+                                    rdfs:range <http://futebol.usp.br#Estadio> ;
+                                    rdfs:label "realizadaEm"@en .
+
+
+###  http://futebol.usp.br#recebe
+<http://futebol.usp.br#recebe> rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               rdfs:domain <http://futebol.usp.br#Estadio> ;
+                               rdfs:range <http://futebol.usp.br#Partida> ;
+                               rdfs:label "recebe"@en .
+
+
+###  http://futebol.usp.br#refereSeA
+<http://futebol.usp.br#refereSeA> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  owl:inverseOf <http://futebol.usp.br#possui> ;
+                                  rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                  rdfs:range <http://futebol.usp.br#Campeonato> ;
+                                  rdfs:label "refere-se"@en .
+
+
+###  http://futebol.usp.br#tem
+<http://futebol.usp.br#tem> rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            rdfs:domain <http://futebol.usp.br#Partida> ;
+                            rdfs:range <http://futebol.usp.br#Gol> ;
+                            rdfs:label "tem"@en .
+
+
+###  http://futebol.usp.br#temMandante
+<http://futebol.usp.br#temMandante> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                    owl:inverseOf <http://futebol.usp.br#eMandante> ;
+                                    rdfs:domain <http://futebol.usp.br#Partida> ;
+                                    rdfs:range <http://futebol.usp.br#Equipe> ;
+                                    rdfs:label "temMandante"@en .
+
+
+###  http://futebol.usp.br#temVisitante
+<http://futebol.usp.br#temVisitante> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     owl:inverseOf <http://futebol.usp.br#eVisitante> ;
+                                     rdfs:domain <http://futebol.usp.br#Partida> ;
+                                     rdfs:range <http://futebol.usp.br#Equipe> ;
+                                     rdfs:label "temVisitante"@en .
+
+###  <http://futebol.usp.br#possui>
+<http://futebol.usp.br#possui> rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain <http://futebol.usp.br#Campeonato> ;
+            rdfs:range <http://futebol.usp.br#Classificacao> ;
+            rdfs:label "possui"@en .
+
+###  urn:usp:ontology:futebol#compostoPor
+<http://futebol.usp.br#compostoPor> rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain <http://futebol.usp.br#Campeonato> ;
+             rdfs:range <http://futebol.usp.br#Rodada> ;
+             rdfs:label "compostoPor"@en .
+
+
+###  urn:usp:ontology:futebol#eMandante
+<http://futebol.usp.br#eMandante> rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain <http://futebol.usp.br#Equipe> ;
+       rdfs:range <http://futebol.usp.br#Partida> ;
+       rdfs:label "eMandante"@en .
+
+
+###  urn:usp:ontology:futebol#eVisitante
+<http://futebol.usp.br#eVisitante> rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain <http://futebol.usp.br#Equipe> ;
+        rdfs:range <http://futebol.usp.br#Partida> ;
+        rdfs:label "eVisitante"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://futebol.usp.br#classificadoLibertadores
+<http://futebol.usp.br#classificadoLibertadores> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                 rdf:type owl:FunctionalProperty ;
+                                                 rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                                 rdfs:range xsd:boolean ;
+                                                 rdfs:label "classificadoLibertadores"@en .
+
+
+###  http://futebol.usp.br#classificadoSulamericana
+<http://futebol.usp.br#classificadoSulamericana> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                 rdf:type owl:FunctionalProperty ;
+                                                 rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                                 rdfs:range xsd:boolean ;
+                                                 rdfs:label "classificadoSulamericana"@en .
+
+
+###  http://futebol.usp.br#disputadoAoLongoDoAno
+<http://futebol.usp.br#disputadoAoLongoDoAno> rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                              rdf:type owl:FunctionalProperty ;
+                                              rdfs:domain <http://futebol.usp.br#Campeonato> ;
+                                              rdfs:range xsd:positiveInteger ;
+                                              rdfs:label "disputadoAoLongoDoAno"@en .
+
+
+###  http://futebol.usp.br#foiContra
+<http://futebol.usp.br#foiContra> rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                  rdf:type owl:FunctionalProperty ;
+                                  rdfs:domain <http://futebol.usp.br#Gol> ;
+                                  rdfs:range xsd:boolean ;
+                                  rdfs:label "foiContra"@en .
+
+
+###  http://futebol.usp.br#incluiDerrotas
+<http://futebol.usp.br#incluiDerrotas> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdf:type owl:FunctionalProperty ;
+                                       rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                       rdfs:range xsd:int ;
+                                       rdfs:label "incluiDerrotas"@en .
+
+
+###  http://futebol.usp.br#incluiEmpates
+<http://futebol.usp.br#incluiEmpates> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdf:type owl:FunctionalProperty ;
+                                      rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                      rdfs:range xsd:int ;
+                                      rdfs:label "incluiEmpates"@en .
+
+
+###  http://futebol.usp.br#incluiGolsContra
+<http://futebol.usp.br#incluiGolsContra> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                         rdf:type owl:FunctionalProperty ;
+                                         rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                         rdfs:range xsd:int ;
+                                         rdfs:label "incluiGolsContra"@en .
+
+
+###  http://futebol.usp.br#incluiGolsPro
+<http://futebol.usp.br#incluiGolsPro> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdf:type owl:FunctionalProperty ;
+                                      rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                      rdfs:range xsd:int ;
+                                      rdfs:label "incluiGolsPro"@en .
+
+###  http://futebol.usp.br#incluiSaldoGols
+<http://futebol.usp.br#incluiSaldoGols> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdf:type owl:FunctionalProperty ;
+                                      rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                      rdfs:range xsd:int ;
+                                      rdfs:label "incluiSaldoGols"@en .
+
+###  http://futebol.usp.br#incluiPontuacao
+<http://futebol.usp.br#incluiPontuacao> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                        rdfs:range xsd:int ;
+                                        rdfs:label "incluiPontuacao"@en .
+
+
+###  http://futebol.usp.br#incluiVitorias
+<http://futebol.usp.br#incluiVitorias> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdf:type owl:FunctionalProperty ;
+                                       rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                       rdfs:range xsd:positiveInteger ;
+                                       rdfs:label "incluiVitorias"@en .
+
+
+###  http://futebol.usp.br#indicaColocacao
+<http://futebol.usp.br#indicaColocacao> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                        rdfs:range xsd:positiveInteger ;
+                                        rdfs:label "indicaColocacao"@en .
+
+
+###  http://futebol.usp.br#marcadoNoMinuto
+<http://futebol.usp.br#marcadoNoMinuto> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Gol> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:label "marcadoNoMinuto"@en .
+
+
+###  http://futebol.usp.br#marcadoNoPrimeiroTempo
+<http://futebol.usp.br#marcadoNoPrimeiroTempo> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdf:type owl:FunctionalProperty ;
+                                               rdfs:domain <http://futebol.usp.br#Gol> ;
+                                               rdfs:range xsd:boolean ;
+                                               rdfs:label "marcadoNoPrimeiroTempo"@en .
+
+
+###  http://futebol.usp.br#placarMandante
+<http://futebol.usp.br#placarMandante> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdf:type owl:FunctionalProperty ;
+                                       rdfs:domain <http://futebol.usp.br#Partida> ;
+                                       rdfs:range xsd:int ;
+                                       rdfs:label "placarMandante"@en .
+
+
+###  http://futebol.usp.br#placarVisitante
+<http://futebol.usp.br#placarVisitante> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:int ;
+                                        rdfs:label "placarVisitante"@en .
+
+
+###  http://futebol.usp.br#possuiIdentificacao
+<http://futebol.usp.br#possuiIdentificacao> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdf:type owl:FunctionalProperty ;
+                                            rdfs:domain <http://futebol.usp.br#Rodada> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:label "possuiIdentificacao"@en .
+
+
+###  http://futebol.usp.br#possuiNome
+<http://futebol.usp.br#possuiNome> rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                   rdf:type owl:FunctionalProperty ;
+                                   rdfs:domain <http://futebol.usp.br#Atleta> ,
+                                               <http://futebol.usp.br#Campeonato> ,
+                                               <http://futebol.usp.br#Equipe> ,
+                                               <http://futebol.usp.br#Estadio> ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:label "possuiNome"@en .
+
+
+###  http://futebol.usp.br#possuiNumero
+<http://futebol.usp.br#possuiNumero> rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                     rdf:type owl:FunctionalProperty ;
+                                     rdfs:domain <http://futebol.usp.br#Rodada> ;
+                                     rdfs:range xsd:positiveInteger ;
+                                     rdfs:label "possuiNumero"@en .
+
+
+###  http://futebol.usp.br#possuiPlacar
+<http://futebol.usp.br#possuiPlacar> rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                     rdf:type owl:FunctionalProperty ;
+                                     rdfs:domain <http://futebol.usp.br#Partida> ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:label "possuiPlacar"@en .
+
+
+###  http://futebol.usp.br#realizadaNaData
+<http://futebol.usp.br#realizadaNaData> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:dateTime ;
+                                        rdfs:label "realizadaNaData"@en .
+
+###  http://futebol.usp.br#vitoriaMandante
+<http://futebol.usp.br#vitoriaMandante> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:boolean ;
+                                        rdfs:label "vitoriaMandante"@en .
+
+###  http://futebol.usp.br#vitoriaVisitante
+<http://futebol.usp.br#vitoriaVisitante> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:boolean ;
+                                        rdfs:label "vitoriaVisitante"@en .
+
+###  http://futebol.usp.br#empate
+<http://futebol.usp.br#empate> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                        rdf:type owl:FunctionalProperty ;
+                                        rdfs:domain <http://futebol.usp.br#Partida> ;
+                                        rdfs:range xsd:boolean ;
+                                        rdfs:label "empate"@en .
+
+
+###  http://futebol.usp.br#rebaixado
+<http://futebol.usp.br#rebaixado> rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                  rdf:type owl:FunctionalProperty ;
+                                  rdfs:domain <http://futebol.usp.br#Classificacao> ;
+                                  rdfs:range xsd:boolean ;
+                                  rdfs:label "rebaixado"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://futebol.usp.br#Atleta
+<http://futebol.usp.br#Atleta> rdf:type owl:Class ;
+                               rdfs:label "Atleta"@en .
+
+
+###  http://futebol.usp.br#Campeonato
+<http://futebol.usp.br#Campeonato> rdf:type owl:Class ;
+                                   rdfs:label "Campeonato"@en .
+
+
+###  http://futebol.usp.br#Classificacao
+<http://futebol.usp.br#Classificacao> rdf:type owl:Class ;
+                                      rdfs:label "Classificacao"@en .
+
+
+###  http://futebol.usp.br#Equipe
+<http://futebol.usp.br#Equipe> rdf:type owl:Class ;
+                               rdfs:label "Equipe"@en .
+
+
+###  http://futebol.usp.br#Estadio
+<http://futebol.usp.br#Estadio> rdf:type owl:Class ;
+                                rdfs:label "Estadio"@en .
+
+
+###  http://futebol.usp.br#Gol
+<http://futebol.usp.br#Gol> rdf:type owl:Class ;
+                            rdfs:label "Gol"@en .
+
+
+###  http://futebol.usp.br#Partida
+<http://futebol.usp.br#Partida> rdf:type owl:Class ;
+                                rdfs:label "Partida"@en .
+
+
+###  http://futebol.usp.br#Rodada
+<http://futebol.usp.br#Rodada> rdf:type owl:Class ;
+                               rdfs:label "Rodada"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
